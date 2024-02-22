@@ -4,9 +4,9 @@ public class StudentCourse {
     private double grade;
 
     public StudentCourse(boolean isCompleted, int classAtempts, double grade) {
-        setIsCompleted(isCompleted);
-        setClassAttempts(classAtempts);
-        setGrade(grade);
+        this.setIsCompleted(isCompleted);
+        this.setClassAttempts(classAtempts);
+        this.setGrade(grade);
     }
 
     public void setIsCompleted(boolean completed) {
@@ -18,7 +18,7 @@ public class StudentCourse {
     }
 
     public void setGrade(double grade) {
-        if (grade < 0 || grade > 100)
+        if (grade < 0.0 || grade > 100.0)
             throw new Exception("THAT GRADE IS NOT POSSIBLE")
         this.grade = grade;
     }

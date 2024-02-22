@@ -19,10 +19,10 @@ public class Student extends User{
      */
     public Student(String standing, Major major, double GPA, ArrayList<StudentCourse> courses, ArrayList<StudentCourse> currentCourses, ArrayList<String> notes) {
         super(username, password, firstName, lastName);
-        this.standing = standing;
-        this.major = major;
-        this.GPA = GPA;
-        this.courses = courses;
+        this.standing = standing;                       // jackson - remember to use the setters in the constructor
+        this.major = major;                             // you also need to add the parameters (id, username, password, firstName, lastName)
+        this.GPA = GPA;                                 // in order to for the super() command to work and change the uml to reflact that
+        this.courses = courses;                         // thank u - spencer
         this.currentCourses = currentCourses;
         this.notes = notes;
     }

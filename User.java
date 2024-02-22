@@ -7,6 +7,15 @@ public class User {
     private String firstName;
     private String lastName;
 
+    /**
+     * this constructor uses the setters to set the values for each variable
+     * @param UUID id
+     * @param String username
+     * @param String password
+     * @param String firstName
+     * @param String lastName
+     */
+
     public User(UUID id, String username, String password, String firstName, String lastName) {
         this.setUUID(id);
         this.setUsername(username);

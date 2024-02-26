@@ -1,5 +1,6 @@
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.UUID;
 
 public class Faculty extends User{
     private ArrayList<Student> assignedStudents = new ArrayList<>();
@@ -9,7 +10,7 @@ public class Faculty extends User{
         
     }
 
-    public void addCourse(HashMap<Course, courseNumber> courses) {
+    public void addCourse(HashMap<Course, Integer> courses) {
         
     }
     public void removeCourse(ArrayList<Course> courses, Course course) {
@@ -28,7 +29,7 @@ public class Faculty extends User{
 
     }
     public ArrayList<Student> getAssignedStudents() {
-
+        return null;
     }
     public void addNote(Student student) {
         

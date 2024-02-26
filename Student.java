@@ -27,4 +27,30 @@ public class Student extends User{
         this.notes = notes;
     }
 
+    public void displayEightSemesterPlan() {
+        // Need to access the major's Courses and display them.
+        // Need to get each course's credit hours, 
+        // Take the classes that equal out to 15,
+        // Display that for each semester.
+        // Display each semester.
+        // The difficulty is that the classes can't be chosen at random,
+        // but the prereqs have to be taken first. 
+        
+        // I think it fills out classes as normal, then checks prereqs.
+        // If there are prereqs, then put the prereqs in the plan for that semester, repeat.
+
+        // Will also have to check each time we add a course to the eight semester plan
+        // if the course has already been taken by the student.
+        //
+    }
+    public String getGradDate() {
+
+    }
+    public String getTranscript() {
+
+    }
+    public void whatIf() {
+
+    }
+
 }

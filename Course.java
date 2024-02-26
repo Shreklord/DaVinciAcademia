@@ -5,14 +5,14 @@ public class Course {
     private UUID id;
     private int hours;
     private String subject;
-    private int coursenumber;
+    private int courseNumber;
     private ArrayList<String> prereqs;
 
     public Course(UUID id, int hours, String subject, int coursenumber, ArrayList<String> prereqs){
         this.id = id;
         this.hours = hours;
         this.subject = subject;
-        this.coursenumber = coursenumber;
+        this.courseNumber = coursenumber;
         this.prereqs = prereqs;
     }
 
@@ -25,11 +25,11 @@ public class Course {
     }
 
     public int getCourseNumber(){
-        return this.coursenumber;
+        return this.courseNumber;
     }
 
     public void setCourseNumber(int coursenumber){
-        this.coursenumber = coursenumber;
+        this.courseNumber = coursenumber;
     }
 
     public String getSubject(){

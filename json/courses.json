@@ -1,0 +1,18 @@
+[
+    {
+        "id": "03e5935c-42c8-40d7-a9ae-1c4090bce58f",
+        "title": "Software Engineering",
+        "courseNumber": "247",
+        "hours": "3",
+        "subject": "CSCE",
+        "prereqs": "C<CSCE146"
+    },
+    {
+        "id": "fbe348d9-9e66-4da1-b714-d1950b37e402",
+        "title": "Advancing Programming Techniques",
+        "courseNumber": "240",
+        "hours": "3",
+        "subject": "CSCE",
+        "prereqs": "D<CSCE211&C<CSCE146"
+    }
+]

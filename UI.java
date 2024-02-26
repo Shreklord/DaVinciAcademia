@@ -10,5 +10,6 @@ public class UI {
 
     public void displayLoginMenu() {
         System.out.println("Hello DaVinci Academia Students!");
+        System.out.println();
     }
 }

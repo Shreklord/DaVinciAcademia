@@ -7,9 +7,11 @@ public class Course {
     private String subject;
     private int courseNumber;
     private ArrayList<String> prereqs;
+    private String title;
 
-    public Course(UUID id, int hours, String subject, int coursenumber, ArrayList<String> prereqs){
+    public Course(UUID id, String title, int hours, String subject, int coursenumber, ArrayList<String> prereqs){
         this.id = id;
+        this.title = title;
         this.hours = hours;
         this.subject = subject;
         this.courseNumber = coursenumber;

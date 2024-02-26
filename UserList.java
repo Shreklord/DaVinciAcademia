@@ -8,7 +8,9 @@ public class UserList {
     private ArrayList<Faculty> faculty = new ArrayList<Faculty>();
     
     private UserList(){
-        
+        users = DataLoader.getUsers();
+        students = DataLoader.getStudents();
+        faculty = DataLoader.getFaculty();
     }
 
     public UserList getInstance(){
@@ -34,6 +36,6 @@ public class UserList {
     }
 
     public void setInstance(UserList userList){
-        this.userList = userList;
+        UserList.userList = userList;
     }
 }

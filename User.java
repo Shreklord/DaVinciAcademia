@@ -24,6 +24,22 @@ public class User {
         this.setLastName(lastName);
     }
 
+    public String getGradDate() {
+        return null;
+    }
+
+    public String getTranscript() {
+        return null;
+    }
+
+    public int calculateGPA() {
+        return 0;
+    }
+
+    public void whatIf() {
+        //TODO
+    }
+
     public void setLastName(String lastName) {
         this.lastName = lastName;
     }
@@ -51,7 +67,7 @@ public class User {
     }
 
     public String getUsername() {
-        return this.password;
+        return this.password; // should this be this.username? and should there be a getPassword method? - Jackson
     }
 
     public String getfirstName() {

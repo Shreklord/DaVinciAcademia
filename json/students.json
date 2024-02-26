@@ -6,9 +6,11 @@
        "lastName":"Smith",
        "userName":"JS20",
        "password":"password",
+       "major":"CSCE",
        "GPA":"3.54",
-       "courses Taken":"MATH111/97.6-ENGL101/83.4-CSCE145/86-BIOL101/78.6-HIST108",
-       "current Courses":"CSCE145/CSCE146",
+       "coursesTaken":{"03e5935c-42c8-40d7-a9ae-1c4090bce58f":"true/1/95.5",
+                       "fbe348d9-9e66-4da1-b714-d1950b37e402":"true/1/63.0"},
+       "currentCourses":"CSCE145/CSCE146",
        "notes":"you need to pass 145/you need to pass 146"
     },
     {
@@ -18,9 +20,11 @@
         "lastName":"Kosgei",
         "userName":"KS34",
         "password":"sk1234",
+        "major":"CIS",
         "GPA":"3.82",
-        "courses Taken":"MATH122/97.6-ENGL102/83.4-CSCE145/86-BIOL101/78.6-HIST108/94-CSCE215/97.6-ENGL102/83.4-CSCE146/86-BIOL102/78.6-ASLG121",
-        "current Courses":"CSCE145/CSCE146",
+        "coursesTaken":{"03e5935c-42c8-40d7-a9ae-1c4090bce58f":"true/1/95.5",
+                        "fbe348d9-9e66-4da1-b714-d1950b37e402":"true/1/63.0"},
+        "currentCourses":"CSCE145/CSCE146",
         "notes":"you need to pass 145/you need to pass 146"
     }
 ]

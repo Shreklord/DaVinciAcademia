@@ -1,19 +1,25 @@
-import java.util.HashMap;
-import java.util.Map;
+import java.util.ArrayList;
 
 public class CourseList {
     private static CourseList courseList;
-    private Map<Course, Integer> courses = new HashMap<>();
+    private static ArrayList<Course> courses = new ArrayList<Course>();
 
     private static void Courselist() {
-        
+        courses = DataLoader.getCourses();
     }
 
-    public CourseList getInstance() {
-        return null;
+    public static CourseList getInstance() {
+        if (courseList == null) {
+            courseList = new CourseList();
+        }
+        return courseList;
     }
 
-    public HashMap<Course, Integer> getCourses(String major) {
+    public ArrayList<Course> getCourses() {
+        return courses;
+    }
+
+    public ArrayList<Course> getCoursesByMajor(String major) {
         return null;
     }
 

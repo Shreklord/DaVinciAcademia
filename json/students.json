@@ -1,7 +1,6 @@
 [
     {
        "id":"df75b2af-b95d-4548-91f6-18871af1d6ef",
-       "studentID":"12345678",
        "standing":"freshman",
        "firstName":"Josh",
        "lastName":"Smith",
@@ -12,7 +11,6 @@
     },
     {
         "id":"d95876ab-358b-462f-aa93-8993fe7d5ae6",
-        "studentID":"12345679",
         "standing":"sophomore",
         "firstName":"Sarah",
         "lastName":"Kosgei",

@@ -4,6 +4,8 @@ public class UI {
     private Scanner scanner;
     private Facade facade;
 
+    // COURSE LIST MUST BE INITIALIZED BEFORE WE LOAD ANY STUDENTS WHAT SO EVER
+
     public void main(String[] args) {
         displayLoginMenu();
     }

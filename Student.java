@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.UUID;
 
 public class Student extends User{
     private String standing;
@@ -17,14 +18,14 @@ public class Student extends User{
      * @param currentCourses list of current courses being taken
      * @param notes notes from advisor 
      */
-    public Student(String standing, Major major, double GPA, ArrayList<StudentCourse> courses, ArrayList<StudentCourse> currentCourses, ArrayList<String> notes) {
-        super(username, password, firstName, lastName);
-        this.standing = standing;                       // jackson - remember to use the setters in the constructor
-        this.major = major;                             // you also need to add the parameters (id, username, password, firstName, lastName)
-        this.GPA = GPA;                                 // in order to for the super() command to work and change the uml to reflact that
-        this.courses = courses;                         // thank u - spencer
-        this.currentCourses = currentCourses;
-        this.notes = notes;
+    public Student(UUID id, String username, String password, String firstName, String lastName, String standing, Major major, double GPA, ArrayList<StudentCourse> courses, ArrayList<StudentCourse> currentCourses, ArrayList<String> notes) {
+        super(id, username, password, firstName, lastName);
+                                                            
+        this.setMajor(major);               
+        this.setGPA(GPA);                               // jackson - remember to use the setters in the constructor
+        this.setCourses(currentCourses);                // you also need to add the parameters (id, username, password, firstName, lastName)
+        this.setCurrentCourses(currentCourses);         // in order to for the super() command to work and change the uml to reflact that. thank u - spencer
+        this.setNotes(notes);
     }
 
     public void displayEightSemesterPlan() {
@@ -43,14 +44,73 @@ public class Student extends User{
         // if the course has already been taken by the student.
         //
     }
-    public String getGradDate() {
-
-    }
-    public String getTranscript() {
-
-    }
-    public void whatIf() {
-
+    
+    public UUID getId() {
+        return super.getID();
     }
 
+    public String getUsername() {
+        return super.getUsername();
+    }
+
+    public String getPassword() {
+        return super.getUsername();
+    }
+    public String getFirstName() {
+        return super.getfirstName();
+    }
+
+    public String getLastName() {
+        return super.getLastName();
+    }
+
+    public String getStanding() {
+        return this.standing;
+    }
+
+    public Major getMajor() {
+        return this.major;
+    }
+
+    public double getGPA() {
+        return this.GPA;
+    }
+
+    public ArrayList<StudentCourse> getCourses() {
+        return this.courses;
+    }
+
+    public ArrayList<StudentCourse> getCurrentCourses() {
+        return this.currentCourses;
+    }
+
+    public ArrayList<String> getNotes() {
+        return this.notes;
+    }
+
+    public void setStanding(String standing) {
+        this.standing = standing;
+    }
+
+    public void setMajor(Major major) {
+        this.major = major;
+    }
+    
+    public void setGPA(double GPA) {
+        this.GPA = GPA;
+    }
+
+    public void setCourses(ArrayList<StudentCourse> courses) {
+        this.courses = courses;
+    }
+
+    public void setCurrentCourses(ArrayList<StudentCourse> currentCourses) {
+        this.currentCourses = currentCourses;
+    }
+
+    public void setNotes(ArrayList<String> notes) {
+        this.notes = notes;
+    }
+
+    
 }

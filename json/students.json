@@ -1,0 +1,24 @@
+[
+    {
+       "id":"df75b2af-b95d-4548-91f6-18871af1d6ef",
+       "studentID":"12345678",
+       "standing":"freshman",
+       "firstName":"Josh",
+       "lastName":"Smith",
+       "userName":"JS20",
+       "password":"password",
+       "GPA":"3.54",
+       "courses Taken":"MATH111/97.6-ENGL101/83.4-CSCE145/86-BIOL101/78.6-HIST108/94"
+    },
+    {
+        "id":"d95876ab-358b-462f-aa93-8993fe7d5ae6",
+        "studentID":"12345679",
+        "standing":"sophomore",
+        "firstName":"Sarah",
+        "lastName":"Kosgei",
+        "userName":"KS34",
+        "password":"sk1234",
+        "GPA":"3.82",
+        "courses Taken":"MATH122/97.6-ENGL102/83.4-CSCE145/86-BIOL101/78.6-HIST108/94-CSCE215/97.6-ENGL102/83.4-CSCE146/86-BIOL102/78.6-ASLG121/94"
+    }
+]

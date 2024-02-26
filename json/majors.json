@@ -1,0 +1,19 @@
+[
+    {
+        "id": "",
+        "title": "Computer Science",
+        "type": "BS",
+        "hours": "120",
+        "majorreq": "CSCE145&CSCE146&CSCE215",
+        "electivereq": ""
+
+    },
+    {
+        "id": "",
+        "title": "Economics",
+        "type": "BA",
+        "hours": "120",
+        "majorreq": "ECON221&ECON222&ECON436",
+        "electivereq": ""
+    }
+]

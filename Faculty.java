@@ -30,9 +30,6 @@ public class Faculty extends User{
     public void editStudent(UUID id) {
 
     }
-    public ArrayList<Student> getAssignedStudents() {
-        return assignedStudents;
-    }
 
     public void setAssignedStudents(ArrayList<Student> assignedStudents) {
         this.assignedStudents = assignedStudents;

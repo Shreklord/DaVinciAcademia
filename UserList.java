@@ -3,9 +3,9 @@ import java.util.UUID;
 
 public class UserList {
     private static UserList userList;
-    private ArrayList<User> users;
-    private ArrayList<Student> students;
-    private ArrayList<Faculty> faculty;
+    private ArrayList<User> users = new ArrayList<>();
+    private ArrayList<Student> students = new ArrayList<Student>();
+    private ArrayList<Faculty> faculty = new ArrayList<Faculty>();
     
     private UserList(){
         

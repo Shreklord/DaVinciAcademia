@@ -6,7 +6,6 @@ public class Student extends User{
     private Major major;
     private double GPA;
     private ArrayList<StudentCourse> courses;
-    private ArrayList<StudentCourse> currentCourses;
     private ArrayList<String> notes;
 
     /**
@@ -18,13 +17,11 @@ public class Student extends User{
      * @param currentCourses list of current courses being taken
      * @param notes notes from advisor 
      */
-    public Student(UUID id, String username, String password, String firstName, String lastName, String standing, Major major, double GPA, ArrayList<StudentCourse> courses, ArrayList<StudentCourse> currentCourses, ArrayList<String> notes) {
+    public Student(UUID id, String username, String password, String firstName, String lastName, String standing, Major major, double GPA, ArrayList<StudentCourse> courses,  ArrayList<String> notes) {
         super(id, username, password, firstName, lastName);
                                                             
         this.setMajor(major);               
-        this.setGPA(GPA);                               // jackson - remember to use the setters in the constructor
-        this.setCourses(currentCourses);                // you also need to add the parameters (id, username, password, firstName, lastName)
-        this.setCurrentCourses(currentCourses);         // in order to for the super() command to work and change the uml to reflact that. thank u - spencer
+        this.setGPA(GPA);
         this.setNotes(notes);
     }
 
@@ -80,10 +77,6 @@ public class Student extends User{
         return this.courses;
     }
 
-    public ArrayList<StudentCourse> getCurrentCourses() {
-        return this.currentCourses;
-    }
-
     public ArrayList<String> getNotes() {
         return this.notes;
     }
@@ -102,10 +95,6 @@ public class Student extends User{
 
     public void setCourses(ArrayList<StudentCourse> courses) {
         this.courses = courses;
-    }
-
-    public void setCurrentCourses(ArrayList<StudentCourse> currentCourses) {
-        this.currentCourses = currentCourses;
     }
 
     public void setNotes(ArrayList<String> notes) {

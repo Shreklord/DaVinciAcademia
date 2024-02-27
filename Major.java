@@ -10,7 +10,7 @@ public class Major {
     private ArrayList<Course> majorRequirements;
     private ArrayList<Course> electiveCourseReq;
 
-    public Major(String name, String type, String college, int hours, ArrayList<Course> majorReqs, ArrayList<Course> electiveReqs) {
+    public Major(UUID id, String name, String type, String college, int hours, ArrayList<Course> majorReqs, ArrayList<Course> electiveReqs) {
         setID(id);
         setName(name);
         setType(type);

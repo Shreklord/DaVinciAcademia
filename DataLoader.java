@@ -31,21 +31,40 @@ public class DataLoader extends DataConstants {
                 String userName = (String)studentJSON.get("userName");
                 String password = (String)studentJSON.get("password");
                 double GPA = Double.parseDouble((String)studentJSON.get("GPA"));
+                Major major = MajorList.getMajorByName((String)studentJSON.get("major")); // not working
 
-                //Major major = (Major)studentJSON.get("major"); // not working
-                //String coursesTaken = studentJSON.get("coursesTaken"); // ???
-                
+               
+                ArrayList<StudentCourse> coursesTaken = new ArrayList<StudentCourse>();
+                JSONArray courseArray = (JSONArray)studentJSON.get("coursesTaken");
+                for (int j = 0; j < courseArray.size(); j++) {
+                    JSONObject courseJSON = (JSONObject)courseArray.get(j);
+                    String courseID = (String)courseJSON.get("courseid");
+                    Double courseGrade = Double.parseDouble((String)courseJSON.get("grade"));
+                    int attempts = Integer.parseInt((String)courseJSON.get("attempts"));
+                    boolean isCompleted = Boolean.parseBoolean((String)courseJSON.get("isCompleted"));
 
-                String currentCourses = (String)studentJSON.get("currentCourses"); // split
-                String notes = (String)studentJSON.get("notes"); // split
+                    CourseList list = CourseList.getInstance();
+                    Course c = list.getByUUID(courseID);
+
+                    coursesTaken.add(new StudentCourse(c.getID(), c.getTitle(), c.getHours(),
+                                                       c.getSubject(), c.getCourseNumber(),
+                                                       c.getPrereqs(), isCompleted, attempts, courseGrade));
+                }
+
+
+                String[] notes = ((String)studentJSON.get("notes")).split("/");
+                ArrayList<String> notesList = new ArrayList<String>();
+                for (String note : notes) {
+                    notesList.add(note);
+                }
 
                 students.add(new Student(id, userName, password,
-                         firstName, lastName, standing,
-                         null, GPA, null, null, null));
+                            firstName, lastName, standing,
+                            major, GPA, coursesTaken, notesList));
 
             }
         
-            // UNFINISHED AND NOT WORKING
+            // finished but not tested - almost 100% likely its not working
 
         } catch (Exception e) {
             e.printStackTrace();
@@ -89,7 +108,6 @@ public class DataLoader extends DataConstants {
 
         return courses;
     }
-
 
     /**
      * FINISHED AND WORKING AS OF 2/27/2024
@@ -141,8 +159,6 @@ public class DataLoader extends DataConstants {
         } catch (Exception e) {
             e.printStackTrace();
         }
-
-
 
         return majors;
     }

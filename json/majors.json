@@ -4,16 +4,16 @@
         "name": "Computer Science",
         "type": "BS",
         "hours": "120",
-        "majorreq": "CSCE145&CSCE146&CSCE215",
-        "electivereq": "CSCE145&CSCE146&CSCE215"
+        "majorreq": "CSCE145&CSCE146&CSCE215&CSCE247",
+        "electivereq": "CSCE145&CSCE146&CSCE215&CSCE247"
 
     },
     {
         "id": "eba5ba09-0a62-4bba-99d6-1dd88e28e173",
-        "title": "Economics",
+        "name": "Economics",
         "type": "BA",
         "hours": "120",
         "majorreq": "ECON221&ECON222&ECON436",
-        "electivereq": "CSCE145&CSCE146&CSCE215"
+        "electivereq": "CSCE145&CSCE146&CSCE215&CSCE247"
     }
 ]

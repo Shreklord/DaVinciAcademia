@@ -2,26 +2,24 @@ import java.util.ArrayList;
 import java.util.UUID;
 
 public class MajorList {
-    private MajorList majorList;
-    private ArrayList<Major> majors = new ArrayList<Major>();
+    private static MajorList majorList;
+    private static ArrayList<Major> majors = new ArrayList<Major>();
 
-    public MajorList() {
-        this.setMajors(majors);
-    }
+    public MajorList() {}
 
     public ArrayList<Major> getMajors() {
         return majors;
     }   
 
-    public void setMajorList(MajorList majorList) {
-        this.majorList = majorList;
+    public static void setMajors(ArrayList<Major> majorsList) {
+        majors = majorsList;
     }
 
-    public void setMajors(ArrayList<Major> majors) {
-        this.majors = majors;
-    }
-
-    public MajorList getInstance() {
+    public static MajorList getInstance() {
+        if (majorList == null) {
+            majorList = new MajorList();
+            setMajors(DataLoader.getMajors());
+        }
         return majorList;
     }
 
@@ -29,7 +27,15 @@ public class MajorList {
         return null;
     }
 
-    public Major getByUUID(UUID id) {
+    /**
+     * @param String
+     * @return major
+     */
+    public Major getByUUID(String id) {
+        for (Major m : majors) {
+            if (m.getID().toString() == id)
+                return m;
+        }
         return null;
     }
 }

@@ -9,7 +9,6 @@ import org.json.simple.parser.JSONParser;
 
 public class DataLoader extends DataConstants {
 
-
     /**
      * NOT FINISHED
      */
@@ -60,7 +59,7 @@ public class DataLoader extends DataConstants {
 
     /**
      * FINISHED AND WORKING AS OF 2/26/2024
-     * Spencer Philips
+     * Spencer Philips and Anthony Goldhammer
      */
     public static ArrayList<Course> getCourses() {
         
@@ -90,11 +89,17 @@ public class DataLoader extends DataConstants {
 
         return courses;
     }
-    public ArrayList<Major> getMajors() {
+
+
+    /**
+     * FINISHED AND WORKING AS OF 2/27/2024
+     * Spencer Philips and Anthony Goldhammer
+     */
+    public static ArrayList<Major> getMajors() {
 
         ArrayList<Major> majors = new ArrayList<Major>();
         try {
-            FileReader reader = new FileReader(COURSE_FILE_PATH);
+            FileReader reader = new FileReader(MAJOR_FILE_PATH);
             JSONArray majorsJSON = (JSONArray)new JSONParser().parse(reader);
             for (int i = 0; i < majorsJSON.size(); i++) {
                 JSONObject majorJSON = (JSONObject)majorsJSON.get(i);
@@ -106,10 +111,31 @@ public class DataLoader extends DataConstants {
                 String[] requirements = ((String)majorJSON.get("majorreq")).split("&"); // split
                 String[] electiveRequirements = ((String)majorJSON.get("electivereq")).split("&"); //split
 
-                CourseList list = CourseList.getInstance();
-                ArrayList<Course> requirementsList = new ArrayList<Course>();
+                CourseList list = CourseList.getInstance(); // here we create our instance variables to be used
+                ArrayList<Course> requirementsList = new ArrayList<Course>(); 
+                ArrayList<Course> electiveRequirementsList = new ArrayList<Course>();
 
-                // NOT FINISHED AND NOT WORKING
+                // iterate through the list of requirements and search in CourseList to convert into courses
+                for (int j = 0; j < requirements.length; j++) {
+                    String title = requirements[j].substring(0, 4);
+                    int courseNumber = Integer.parseInt(requirements[j].substring(4, 7));
+
+                    Course foundCourse = list.getByTitleAndNumber(title, courseNumber);
+                    if (foundCourse != null)
+                        requirementsList.add(foundCourse);
+                }
+
+                // iterate through the list of requirements and search in CourseList to convert into courses
+                for (int j = 0; j < electiveRequirements.length; j++) {
+                    String title = electiveRequirements[j].substring(0, 4);
+                    int courseNumber = Integer.parseInt(electiveRequirements[j].substring(4, 7));
+
+                    Course foundCourse = list.getByTitleAndNumber(title, courseNumber);
+                    if (foundCourse != null)
+                        electiveRequirementsList.add(foundCourse);
+                }
+
+                majors.add(new Major(id, name, type, hours, requirementsList, electiveRequirementsList));
             }
 
         } catch (Exception e) {

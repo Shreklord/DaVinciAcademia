@@ -1,7 +1,7 @@
 [
     {
         "id": "dbc833d3-84f9-477c-8c17-70238011e337",
-        "name": "Computer Science",
+        "name": "CSCE",
         "type": "BS",
         "hours": "120",
         "majorreq": "CSCE145&CSCE146&CSCE215&CSCE247",
@@ -10,7 +10,7 @@
     },
     {
         "id": "eba5ba09-0a62-4bba-99d6-1dd88e28e173",
-        "name": "Economics",
+        "name": "ECON",
         "type": "BA",
         "hours": "120",
         "majorreq": "ECON221&ECON222&ECON436",

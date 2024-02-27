@@ -29,7 +29,6 @@ public class DataWriter extends DataConstants {
                 jStudent.put("major", student.getMajor());
                 jStudent.put("GPA",student.getGPA());
 
-                saveJSONOBJECT(jStudent, STUDENT_FILE_PATH);
             }
             return true;
         }

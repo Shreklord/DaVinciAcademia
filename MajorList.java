@@ -23,7 +23,12 @@ public class MajorList {
         return majorList;
     }
 
-    public Major getMajor(String major) {
+    public static Major getMajorByName(String major) {
+        for (Major m : majors) {
+            if (m.getName().equals(major)) {
+                return m;
+            }
+        }
         return null;
     }
 

@@ -20,7 +20,10 @@ public class Student extends User{
     public Student(UUID id, String username, String password, String firstName, String lastName, String standing, Major major, double GPA, ArrayList<StudentCourse> courses,  ArrayList<String> notes) {
         super(id, username, password, firstName, lastName);
                                                             
-        this.setMajor(major);               
+        this.setMajor(major);
+        this.setGPA(GPA);                               // jackson - remember to use the setters in the constructor
+        this.setCourses(courses);                // you also need to add the parameters (id, username, password, firstName, lastName)
+        this.setCourses(courses);         // in order for the super() command to work and change the uml to reflact that. thank u - spencer
         this.setGPA(GPA);
         this.setNotes(notes);
     }
@@ -42,7 +45,8 @@ public class Student extends User{
         //
     }
     
-    public UUID getId() {
+    @Override
+    public UUID getID() {
         return super.getID();
     }
 

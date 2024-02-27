@@ -19,7 +19,6 @@ public class DataLoader extends DataConstants {
         try {
             
             FileReader reader = new FileReader(STUDENT_FILE_PATH);
-            JSONParser parser = new JSONParser();
             JSONArray studentsJSON = (JSONArray)new JSONParser().parse(reader);
 
             for (int i = 0; i < studentsJSON.size(); i++) {
@@ -155,7 +154,6 @@ public class DataLoader extends DataConstants {
 
                 majors.add(new Major(id, name, type, hours, requirementsList, electiveRequirementsList));
             }
-
         } catch (Exception e) {
             e.printStackTrace();
         }

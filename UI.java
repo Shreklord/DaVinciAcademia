@@ -38,7 +38,7 @@ public class UI {
     public void scenario2() {
         System.out.println("");
         System.out.println("Testing Login Fail Scenario");
-        ArrayList studentList = DataLoader.getStudents();
+        ArrayList<Student> studentList = DataLoader.getStudents();
         Student s = (Student)studentList.get(0);
         if(facade.login(s.getUsername(), "wrongpassword")) {
             System.out.println("Invalid username or password");

@@ -7,14 +7,20 @@ public class UserList {
     private static ArrayList<Student> students = new ArrayList<Student>();
     private static ArrayList<Faculty> faculty = new ArrayList<Faculty>();
     
-    private UserList(){}
+    private UserList(){
+
+    }
 
     public static UserList getInstance(){
         return userList;
     }
 
-    public ArrayList<Student> getStudents() {
+    public static ArrayList<Student> getStudents() {
+        students = DataLoader.getStudents();
         return students;
+    }
+    public ArrayList<Faculty> getFaculty() {
+        return faculty;
     }
 
     public User getUser(String userName){

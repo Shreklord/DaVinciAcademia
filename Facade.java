@@ -11,7 +11,7 @@ public class Facade {
     }
 
     public void ProgramFacade() {
-
+        
     }
 
     public ArrayList<StudentCourse> getStudentCourses() {
@@ -22,8 +22,8 @@ public class Facade {
         return null;
     }
 
-    public User login(String userName, String password) {
-        return null;
+    public boolean login(String userName, String password) {
+        return true;
     }
 
     public Course addCourse(UUID id, int hours, String subject, int courseNumber, ArrayList<String> prereqs) {

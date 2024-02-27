@@ -9,13 +9,13 @@ public class Major {
     private ArrayList<Course> majorRequirements;
     private ArrayList<Course> electiveCourseReq;
 
-    public Major(String name, String type, String college) {
+    public Major(String name, String type, String college, ArrayList<Course> majorReqs, ArrayList<Course> electiveReqs) {
         setID(id);
         setName(name);
         setType(type);
         setCollege(college);
-        setMajorRequirements();
-        setElectiveCourseReqs();
+        setMajorRequirements(majorReqs);
+        setElectiveCourseReqs(electiveReqs);
     }
 
     public UUID getID() {
@@ -51,19 +51,19 @@ public class Major {
     }
 
     public ArrayList<Course> getMajorRequirements() {
-        return this.getMajorRequirements();
+        return this.majorRequirements;
     }
 
-    private void setMajorRequirements() {
-
+    private void setMajorRequirements(ArrayList<Course> reqs) {
+        this.majorRequirements = reqs;
     }
 
     public ArrayList<Course> getElectiveCourseReqs() {
         return this.electiveCourseReq;
     }
 
-    private void setElectiveCourseReqs() {
-
+    private void setElectiveCourseReqs(ArrayList<Course> reqs) {
+        this.electiveCourseReq = reqs;
     }
 
 

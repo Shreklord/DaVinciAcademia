@@ -22,6 +22,9 @@ public class CourseList {
         return courses;
     }
 
+    /**
+     * not finished - returns null
+     */
     public ArrayList<Course> getCoursesByMajor(String major) {
         return null;
     }

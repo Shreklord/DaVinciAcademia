@@ -21,9 +21,11 @@ public class UI {
         System.out.println("Hello DaVinci Academia Students!");
         System.out.println("Loading courses...");
         
-        ArrayList<Course> list = DataLoader.getCourses();
 
-        System.out.println("Printing stuff");
+        CourseList instance = CourseList.getInstance();
+        ArrayList<Course> list = instance.getCourses();
+
+        System.out.println("Printing stuff::::::::::::::::::::::::");
         for (int i = 0; i < list.size(); i++) {
             System.out.println(i+"------------------------------------------");
             Course c = list.get(i);
@@ -33,6 +35,17 @@ public class UI {
             System.out.println(c.getPrereqs());
             System.out.println(c.getCourseNumber());
             System.out.println(c.getTitle());
+        }
+
+        System.out.println("now testing loading students---------------------------");
+        ArrayList<Student> studentList = DataLoader.getStudents();
+
+        for (int i = 0; i < studentList.size(); i++) {
+            Student s = studentList.get(i);
+            System.out.println(s.getFirstName());
+            System.out.println(s.getLastName());
+            System.out.println(s.getUsername());
+            System.out.println(s.getPassword());
         }
 
     }

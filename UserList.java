@@ -3,18 +3,18 @@ import java.util.UUID;
 
 public class UserList {
     private static UserList userList;
-    private ArrayList<User> users = new ArrayList<>();
-    private ArrayList<Student> students = new ArrayList<Student>();
-    private ArrayList<Faculty> faculty = new ArrayList<Faculty>();
+    private static ArrayList<User> users = new ArrayList<>();
+    private static ArrayList<Student> students = new ArrayList<Student>();
+    private static ArrayList<Faculty> faculty = new ArrayList<Faculty>();
     
-    private UserList(){
-        users = DataLoader.getUsers();
-        students = DataLoader.getStudents();
-        faculty = DataLoader.getFaculty();
+    private UserList(){}
+
+    public static UserList getInstance(){
+        return userList;
     }
 
-    public UserList getInstance(){
-        return userList;
+    public ArrayList<Student> getStudents() {
+        return students;
     }
 
     public User getUser(String userName){

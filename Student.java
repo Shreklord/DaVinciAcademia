@@ -54,7 +54,7 @@ public class Student extends User{
     }
 
     public String getPassword() {
-        return super.getUsername();
+        return super.getPassword();
     }
     public String getFirstName() {
         return super.getfirstName();

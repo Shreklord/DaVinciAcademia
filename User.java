@@ -56,6 +56,10 @@ public class User {
         this.password = password;
     }
 
+    public String getPassword() {
+        return this.password;
+    }
+
     private void setUUID(UUID id) {
         // it is my professional opinion that we will not be setting
         // the UUID outside of the contructor hence the function is private
@@ -67,7 +71,7 @@ public class User {
     }
 
     public String getUsername() {
-        return this.password; // should this be this.username? and should there be a getPassword method? - Jackson
+        return this.username;
     }
 
     public String getfirstName() {

@@ -27,6 +27,10 @@ public class CourseList {
     }
 
     public Course getByUUID(String id) {
+        for (Course c : courses) {
+            if (c.getID().toString() == id)
+                return c;
+        }
         return null;
     }
 }

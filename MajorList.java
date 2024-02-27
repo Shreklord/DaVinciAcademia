@@ -9,10 +9,6 @@ public class MajorList {
         this.setMajors(majors);
     }
 
-    public MajorList getMajorList() {
-        return majorList;
-    }
-
     public ArrayList<Major> getMajors() {
         return majors;
     }   
@@ -26,7 +22,7 @@ public class MajorList {
     }
 
     public MajorList getInstance() {
-        return null;
+        return majorList;
     }
 
     public Major getMajor(String major) {

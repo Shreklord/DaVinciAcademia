@@ -24,7 +24,7 @@ public class Student extends User{
         this.setMajor(major);               
         this.setGPA(GPA);                               // jackson - remember to use the setters in the constructor
         this.setCourses(currentCourses);                // you also need to add the parameters (id, username, password, firstName, lastName)
-        this.setCurrentCourses(currentCourses);         // in order to for the super() command to work and change the uml to reflact that. thank u - spencer
+        this.setCurrentCourses(currentCourses);         // in order for the super() command to work and change the uml to reflact that. thank u - spencer
         this.setNotes(notes);
     }
 
@@ -45,7 +45,8 @@ public class Student extends User{
         //
     }
     
-    public UUID getId() {
+    @Override
+    public UUID getID() {
         return super.getID();
     }
 

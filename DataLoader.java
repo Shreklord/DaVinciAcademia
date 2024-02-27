@@ -137,13 +137,9 @@ public class DataLoader extends DataConstants {
 
                 majors.add(new Major(id, name, type, hours, requirementsList, electiveRequirementsList));
             }
-
         } catch (Exception e) {
             e.printStackTrace();
         }
-
-
-
         return majors;
     }
 

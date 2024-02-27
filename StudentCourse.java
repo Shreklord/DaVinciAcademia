@@ -1,9 +1,15 @@
-public class StudentCourse {
+import java.util.ArrayList;
+import java.util.UUID;
+
+public class StudentCourse extends Course {
     private boolean isCompleted;
     private int classAtempts;
     private double grade;
 
-    public StudentCourse(boolean isCompleted, int classAtempts, double grade) throws Exception {
+    public StudentCourse(UUID id, String title, int hours, String subject,
+                         int courseNumber, ArrayList<String> prereqs, boolean isCompleted,
+                          int classAtempts, double grade) throws Exception {
+        super(id, title, hours, subject, courseNumber, prereqs);
         this.setIsCompleted(isCompleted);
         this.setClassAttempts(classAtempts);
         this.setGrade(grade);

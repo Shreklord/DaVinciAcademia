@@ -6,16 +6,26 @@ public class Major {
     private String name;
     private String type;
     private String college;
+    private int hours;
     private ArrayList<Course> majorRequirements;
     private ArrayList<Course> electiveCourseReq;
 
-    public Major(String name, String type, String college, ArrayList<Course> majorReqs, ArrayList<Course> electiveReqs) {
+    public Major(String name, String type, String college, int hours, ArrayList<Course> majorReqs, ArrayList<Course> electiveReqs) {
         setID(id);
         setName(name);
         setType(type);
+        setHours(hours);
         setCollege(college);
         setMajorRequirements(majorReqs);
         setElectiveCourseReqs(electiveReqs);
+    }
+
+    public int getHours() {
+        return this.hours;
+    }
+    
+    public void setHours(int hours) {
+        this.hours = hours;
     }
 
     public UUID getID() {

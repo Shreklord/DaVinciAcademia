@@ -6,6 +6,10 @@ public class CourseList {
 
     private static void CourseList() {}
 
+    /**
+     * if 'this' is null then it loads the courses
+     * returns itself
+     */
     public static CourseList getInstance() {
         if (courseList == null) {
             courseList = new CourseList();

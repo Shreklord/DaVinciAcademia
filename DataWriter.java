@@ -9,7 +9,7 @@ import org.json.simple.parser.JSONParser;
 
 public class DataWriter extends DataConstants {
     
-    public boolean saveStudent() {
+    public boolean saveStudents() {
         try {
             FileWriter fileWriter = new FileWriter(STUDENT_FILE_PATH);
             // JSONParser parser = new JSONParser();
@@ -37,8 +37,14 @@ public class DataWriter extends DataConstants {
             return false;
         }
     }
+    public boolean saveStudent(Student student) {
+        return true;
+    }
 
     public boolean saveFaculty() {
+        return true;
+    }
+    public boolean saveFacultySingular() {
         return true;
     }
 
@@ -46,7 +52,18 @@ public class DataWriter extends DataConstants {
         return true;
     }
 
+    public boolean saveCourse(Course course) {
+
+        JSONObject jsonCourse = new JSONObject();
+
+        return true;
+    }
+
     public boolean saveMajors() {
+        return true;
+    }
+
+    public boolean saveMajor() {
         return true;
     }
 }

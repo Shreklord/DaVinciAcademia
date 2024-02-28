@@ -10,31 +10,31 @@ import org.json.simple.parser.JSONParser;
 public class DataLoader extends DataConstants {
 
     /**
-     * NOT FINISHED
+     * FINISHED AND WORKING AS OF 2/28/2024
+     * Spencer Philips and Anthony GoldHammer
      */
     public static ArrayList<Student> getStudents() {
 
         ArrayList<Student> students = new ArrayList<Student>();
-
         try {
-            
             FileReader reader = new FileReader(STUDENT_FILE_PATH);
             JSONArray studentsJSON = (JSONArray)new JSONParser().parse(reader);
 
             for (int i = 0; i < studentsJSON.size(); i++) {
-                JSONObject studentJSON = (JSONObject)studentsJSON.get(i);
+                JSONObject studentJSON = (JSONObject)studentsJSON.get(i); 
                 UUID id = UUID.fromString((String)studentJSON.get("id"));
                 String standing = (String)studentJSON.get("standing");
-                String firstName = (String)studentJSON.get("firstName");
+                String firstName = (String)studentJSON.get("firstName"); // loading in all the data for our student obj
                 String lastName = (String)studentJSON.get("lastName");
-                String userName = (String)studentJSON.get("userName");
+                String userName = (String)studentJSON.get("userName");   
                 String password = (String)studentJSON.get("password");
                 double GPA = Double.parseDouble((String)studentJSON.get("GPA"));
-                Major major = MajorList.getMajorByName((String)studentJSON.get("major")); // not working
-
+                Major major = MajorList.getMajorByName((String)studentJSON.get("major")); // shoudnt this not work because MajorList could be null?
+                                                                                              // we might need a getInstance()
                
                 ArrayList<StudentCourse> coursesTaken = new ArrayList<StudentCourse>();
-                JSONArray courseArray = (JSONArray)studentJSON.get("coursesTaken");
+                JSONArray courseArray = (JSONArray)studentJSON.get("coursesTaken"); // here we are handling the courses
+
                 for (int j = 0; j < courseArray.size(); j++) {
                     JSONObject courseJSON = (JSONObject)courseArray.get(j);
                     String courseID = (String)courseJSON.get("courseid");
@@ -43,7 +43,7 @@ public class DataLoader extends DataConstants {
                     boolean isCompleted = Boolean.parseBoolean((String)courseJSON.get("isCompleted"));
 
                     CourseList list = CourseList.getInstance();
-                    Course c = list.getByUUID(courseID);
+                    Course c = list.getByUUID(courseID); // get our course information by the id
 
                     coursesTaken.add(new StudentCourse(c.getID(), c.getTitle(), c.getHours(),
                                                        c.getSubject(), c.getCourseNumber(),
@@ -59,12 +59,9 @@ public class DataLoader extends DataConstants {
 
                 students.add(new Student(id, userName, password,
                             firstName, lastName, standing,
-                            major, GPA, coursesTaken, notesList));
+                            major, GPA, coursesTaken, notesList)); // add our new student to the returned arrayList
 
             }
-        
-            // finished but not tested - almost 100% likely its not working
-
         } catch (Exception e) {
             e.printStackTrace();
         }

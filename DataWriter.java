@@ -9,29 +9,21 @@ import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 
 public class DataWriter extends DataConstants {
-    // ArrayList<Student> students = new ArrayList<Student>();
-    // ArrayList<Faculty> faculty = new ArrayList<Faculty>();
-    // ArrayList<Course> courses = new ArrayList<Course>();
     
     public static boolean saveStudents() {
+        UserList listOfStudents = UserList.getInstance();
+        ArrayList<Student> allStudents = listOfStudents.getStudents();
+        JSONArray jsonStudents = new JSONArray();
+
+        for (int i = 0; i < allStudents.size(); i++) {
+            jsonStudents.add(getStudentJSON(allStudents.get(i)));
+        }
+
         try {
-            FileWriter writer = new FileWriter(STUDENT_FILE_PATH);
-            // JSONParser parser = new JSONParser();
-            // JSONArray studentsJSON = (JSONArray)new JSONParser().parse(reader);
-
-            //Gets student list from UserList.java
-            ArrayList<Student> students = UserList.getStudents();
-
-            JSONObject jStudent = new JSONObject();
-            for(Student student: students) {
-                jStudent.put("id", student.getID());
-                jStudent.put("standing", student.getStanding());
-                jStudent.put("firstname", student.getFirstName());
-                jStudent.put("lastname", student.getLastName());
-                jStudent.put("username", student.getUsername());
-                jStudent.put("password", student.getPassword());
-                jStudent.put("major", student.getMajor());
-                jStudent.put("GPA",student.getGPA());
+            
+            try (FileWriter file = new FileWriter(STUDENT_FILE_PATH)) {
+            file.write(jsonStudents.toJSONString());
+            file.flush();
 
             }
             return true;
@@ -41,8 +33,22 @@ public class DataWriter extends DataConstants {
         }
         return false;
     }
-    public static boolean saveStudent(Student student) {
-        return true;
+
+    public static JSONObject getStudentJSON(Student student) {
+        JSONObject studentDetails = new JSONObject();
+        studentDetails.put("id", student.getID());
+        studentDetails.put("standing", student.getStanding());
+        studentDetails.put("firstName", student.getfirstName());
+        studentDetails.put("lastName", student.getLastName());
+        studentDetails.put("userName", student.getUsername());
+        studentDetails.put("password", student.getPassword());
+        studentDetails.put("major", student.getMajor());
+        studentDetails.put("GPA", student.getGPA());
+        studentDetails.put("coursesTaken", student.getCoursesTaken());
+        studentDetails.put("notes", student.getNotes());
+
+
+        return studentDetails;
     }
 
     //NOT WORKING BECAUSE getFacultyJSON() isn't.

@@ -50,6 +50,16 @@ public class Student extends User{
         return super.getID();
     }
 
+
+    /**
+     * only returns false as of 2/29
+     */
+    public boolean meetsPrereqs() {
+
+
+        return false;
+    }
+
     public String getUsername() {
         return super.getUsername();
     }

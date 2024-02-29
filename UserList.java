@@ -29,8 +29,9 @@ public class UserList {
 
     public User getUser(String userName){
         for(int i = 0; i < users.size(); i++){
-            if(users.get(i).getUsername().equals(userName)){
-                return users.get(i);
+            User user = users.get(i);
+            if(user.getUsername().equals(userName)){
+                return user;
             }
         }
         return null;
@@ -38,12 +39,24 @@ public class UserList {
 
     public User getUser(UUID id){
         for(int i = 0; i < users.size(); i++){
-            if(users.get(i).getID().equals(id)){
-                return users.get(i);
+            User user = users.get(i);
+            if(user.getID().equals(id)){
+                return user;
             }
         }
         return null;
     }
+
+    public Student getStudentByID(UUID id) {
+        for (int i = 0; i < students.size(); i++)  {
+            Student s = students.get(i);
+            if (s.getID().equals(id))
+                return s;
+        }
+        return null;
+    }
+
+
 
     public void setInstance(UserList userList){
         UserList.userList = userList;

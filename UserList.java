@@ -12,11 +12,15 @@ public class UserList {
     }
 
     public static UserList getInstance(){
+        if (userList == null) {
+            userList = new UserList();
+            students = DataLoader.getStudents();
+            faculty = DataLoader.getFaculty();
+        }
         return userList;
     }
 
     public static ArrayList<Student> getStudents() {
-        students = DataLoader.getStudents();
         return students;
     }
     public ArrayList<Faculty> getFaculty() {

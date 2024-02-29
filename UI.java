@@ -15,6 +15,7 @@ public class UI {
 
         displayLoginMenu(); //Testing JSON file loading and login scenarios 
         scenario1();
+        scenario2();
     }
 
     public void displayLoginMenu() {
@@ -25,14 +26,37 @@ public class UI {
     public void scenario1() {
         System.out.println("");
         System.out.println("Testing Login Success Scenario");
-        ArrayList<Student> studentList = DataLoader.getStudents();
-        Student s = studentList.get(0);
-        if(facade.login(s.getUsername(), s.getPassword())) {
-            System.out.println("Welcome " + s.getFirstName() + " " + s.getLastName());
-            return;
+        Boolean temp = facade.login("JS20", "password");
+        if(temp) {
+            System.out.println("Welcome " + facade.currentUser.getFirstName() + " " + facade.currentUser.getLastName());
         }
-        System.out.println("Invalid username or password");
+        else
+            System.out.println("Invalid username or password");
+        temp = facade.login("LD30", "ilovemykids");
+        if(temp) {
+            System.out.println("Welcome " + facade.currentUser.getFirstName() + " " + facade.currentUser.getLastName());
+        }
+        else
+            System.out.println("Invalid username or password");
+        return;
+    }
 
+    public void scenario2(){
+        System.out.println();
+        System.out.println("Testing Login Failure Scenario");
+        Boolean temp = facade.login("JS20", "password1");
+        if(temp) {
+            System.out.println("Welcome " + facade.currentUser.getFirstName() + " " + facade.currentUser.getLastName());
+        }
+        else
+            System.out.println("Invalid username or password");
+        temp = facade.login("LD30", "ilovemykids1");
+        if(temp) {
+            System.out.println("Welcome " + facade.currentUser.getFirstName() + " " + facade.currentUser.getLastName());
+        }
+        else
+            System.out.println("Invalid username or password");
+        return;
     }
 
     public static void main(String[] args) {

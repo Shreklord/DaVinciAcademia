@@ -3,8 +3,9 @@ import java.util.UUID;
 
 public class Facade {
     public User currentUser;
-    private String currentUserType;
-    private ArrayList<Course> courses;
+    private UserList users = UserList.getInstance();
+    private CourseList courses = CourseList.getInstance();
+    private MajorList majors = MajorList.getInstance();
 
     public Facade() {
         ProgramFacade();
@@ -23,7 +24,13 @@ public class Facade {
     }
 
     public boolean login(String userName, String password) {
-        return true;
+       if(users.getUser(userName, password) != null) {
+           currentUser = users.getUser(userName, password);
+           return true;
+       } else {
+            currentUser = null;
+            return false;
+       }
     }
 
     public Course addCourse(UUID id, int hours, String subject, int courseNumber, ArrayList<String> prereqs) {
@@ -44,6 +51,10 @@ public class Facade {
 
     public void whatIf() {
         
+    }
+
+    public User getCurrentUser() {
+        return currentUser;
     }
 
 }

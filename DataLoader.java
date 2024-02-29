@@ -69,7 +69,7 @@ public class DataLoader extends DataConstants {
     }
 
     /**
-     * working and tested as of 2/29/2024
+     * finished and not tested
      */
     public static ArrayList<Faculty> getFaculty() {
         ArrayList<Faculty> faculty = new ArrayList<Faculty>();
@@ -84,15 +84,15 @@ public class DataLoader extends DataConstants {
                 String lastName = (String)facJSON.get("lastName");
                 String userName = (String)facJSON.get("userName");
                 String password = (String)facJSON.get("password");
-                String[] studentsArray = ((String)facJSON.get("assignedStudents")).split("&&");
 
                 ArrayList<Student> studentsList = new ArrayList<Student>();
+                JSONArray studentArray = (JSONArray)facJSON.get("coursesTaken"); 
                 UserList list = UserList.getInstance();
-                for (String s : studentsArray) {
-                    UUID studentID = UUID.fromString(s);
-                    Student student = list.getStudentByID(studentID);
-                    if (student != null)
-                        studentsList.add(student);
+                for (int j = 0; j < studentArray.size(); i++) {
+                    UUID studentID = UUID.fromString((String)studentArray.get(i));
+                    Student s = list.getStudentByID(studentID);
+                    if (s != null)
+                        studentsList.add(s);
                 }
 
                 faculty.add(new Faculty(id, userName, password, firstName, lastName, studentsList));

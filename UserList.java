@@ -3,7 +3,6 @@ import java.util.UUID;
 
 public class UserList {
     private static UserList userList;
-    private static ArrayList<User> users = new ArrayList<>();
     private static ArrayList<Student> students = new ArrayList<Student>();
     private static ArrayList<Faculty> faculty = new ArrayList<Faculty>();
     
@@ -27,10 +26,16 @@ public class UserList {
         return faculty;
     }
 
-    public User getUser(String userName){
-        for(int i = 0; i < users.size(); i++){
-            User user = users.get(i);
-            if(user.getUsername().equals(userName)){
+    public User getUser(String userName, String password){
+        for(int i = 0; i < students.size(); i++){
+            User user = students.get(i);
+            if(user.getUsername().equals(userName) && user.getPassword().equals(password)){
+                return user;
+            }
+        }
+        for(int i = 0; i < faculty.size(); i++){
+            User user = faculty.get(i);
+            if(user.getUsername().equals(userName) && user.getPassword().equals(password)){
                 return user;
             }
         }
@@ -38,8 +43,8 @@ public class UserList {
     }
 
     public User getUser(UUID id){
-        for(int i = 0; i < users.size(); i++){
-            User user = users.get(i);
+        for(int i = 0; i < students.size(); i++){
+            User user = students.get(i);
             if(user.getID().equals(id)){
                 return user;
             }

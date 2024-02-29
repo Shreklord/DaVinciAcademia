@@ -32,6 +32,10 @@ public class MajorList {
         return null;
     }
 
+    public static void addMajortoMajorList(Major major) {
+        majors.add(major);
+    }
+
     /**
      * @param String
      * @return major

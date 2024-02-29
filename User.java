@@ -24,22 +24,6 @@ public class User {
         this.setLastName(lastName);
     }
 
-    public String getGradDate() {
-        return null;
-    }
-
-    public String getTranscript() {
-        return null;
-    }
-
-    public int calculateGPA() {
-        return 0;
-    }
-
-    public void whatIf() {
-        //TODO
-    }
-
     public void setLastName(String lastName) {
         this.lastName = lastName;
     }

@@ -38,7 +38,7 @@ public class DataWriter extends DataConstants {
         JSONObject studentDetails = new JSONObject();
         studentDetails.put("id", student.getID());
         studentDetails.put("standing", student.getStanding());
-        studentDetails.put("firstName", student.getfirstName());
+        studentDetails.put("firstName", student.getFirstName());
         studentDetails.put("lastName", student.getLastName());
         studentDetails.put("userName", student.getUsername());
         studentDetails.put("password", student.getPassword());
@@ -83,7 +83,7 @@ public class DataWriter extends DataConstants {
         JSONObject facultyDetails = new JSONObject();
 
         facultyDetails.put("id", faculty.getID());
-        facultyDetails.put("firstName", faculty.getfirstName());
+        facultyDetails.put("firstName", faculty.getFirstName());
         facultyDetails.put("lastName", faculty.getLastName());
         facultyDetails.put("userName", faculty.getUsername());
         facultyDetails.put("password", faculty.getPassword());
@@ -162,8 +162,19 @@ public class DataWriter extends DataConstants {
         majorDetails.put("name", major.getName());
         majorDetails.put("type", major.getType());
         majorDetails.put("hours", major.getHours());
-        majorDetails.put("majorreq", major.getMajorRequirements());
-        majorDetails.put("electivereq", major.getElectiveCourseReqs());
+
+        JSONArray majorClassJSON = new JSONArray();
+        JSONArray majorElectJSON = new JSONArray();
+
+        for (Course course : major.getMajorRequirements()) {
+            majorClassJSON.add(course.getTitle() + String.valueOf(course.getCourseNumber()));
+        }
+        for (Course course : major.getElectiveCourseReqs()) {
+            majorElectJSON.add(course.getTitle() + String.valueOf(course.getCourseNumber()));
+        }
+
+        majorDetails.put("majorreq", majorClassJSON);
+        majorDetails.put("electivereq", majorElectJSON);
 
         return majorDetails;
     }

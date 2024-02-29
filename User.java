@@ -74,7 +74,7 @@ public class User {
         return this.username;
     }
 
-    public String getfirstName() {
+    public String getFirstName() {
         return this.firstName;
     }
 

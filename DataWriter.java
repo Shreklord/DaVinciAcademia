@@ -54,7 +54,7 @@ public class DataWriter extends DataConstants {
         return studentDetails;
     }
 
-    //NOT WORKING BECAUSE getFacultyJSON() isn't.
+    //SHOULD WORK
     //NOT TESTED
     public static boolean saveFaculty() {
         UserList listOfFaculty = UserList.getInstance();

@@ -81,7 +81,6 @@ public class DataWriter extends DataConstants {
     //NOT TESTED
     public static JSONObject getFacultyJSON(Faculty faculty) {
         JSONObject facultyDetails = new JSONObject();
-        StringBuilder assignedStudentIDs = new StringBuilder();
 
         facultyDetails.put("id", faculty.getID());
         facultyDetails.put("firstName", faculty.getfirstName());
@@ -89,14 +88,13 @@ public class DataWriter extends DataConstants {
         facultyDetails.put("userName", faculty.getUsername());
         facultyDetails.put("password", faculty.getPassword());
 
-        ArrayList<Student> assignedStudents = new ArrayList<Student>();
-        assignedStudents = faculty.getAssignedStudents();
+        JSONArray assignedStudentIDs = new JSONArray();
 
-        for(Student student : assignedStudents) {
-            assignedStudentIDs.append(student.getID()).append("&");
+        for(Student student : faculty.getAssignedStudents()) {
+            assignedStudentIDs.add(student.getID());
         }
         
-        facultyDetails.put("assignedStudents", assignedStudentIDs.toString());
+        facultyDetails.put("assignedStudents", assignedStudentIDs);
 
         return facultyDetails;
     }
@@ -168,5 +166,10 @@ public class DataWriter extends DataConstants {
         majorDetails.put("electivereq", major.getElectiveCourseReqs());
 
         return majorDetails;
+    }
+
+
+    public static void courseJSONToString() {
+        
     }
 }

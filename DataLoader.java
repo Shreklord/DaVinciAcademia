@@ -86,10 +86,10 @@ public class DataLoader extends DataConstants {
                 String password = (String)facJSON.get("password");
 
                 ArrayList<Student> studentsList = new ArrayList<Student>();
-                JSONArray studentArray = (JSONArray)facJSON.get("coursesTaken"); 
+                JSONArray studentArray = (JSONArray)facJSON.get("assignedStudents"); 
                 UserList list = UserList.getInstance();
-                for (int j = 0; j < studentArray.size(); i++) {
-                    UUID studentID = UUID.fromString((String)studentArray.get(i));
+                for (int j = 0; j < studentArray.size(); j++) {
+                    UUID studentID = UUID.fromString((String)studentArray.get(j));
                     Student s = list.getStudentByID(studentID);
                     if (s != null)
                         studentsList.add(s);

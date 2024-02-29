@@ -44,7 +44,10 @@ public class DataWriter extends DataConstants {
         studentDetails.put("password", student.getPassword());
         studentDetails.put("major", student.getMajor());
         studentDetails.put("GPA", student.getGPA());
-        studentDetails.put("coursesTaken", student.getCoursesTaken());
+
+        // NEED to loop through getCourses() and create new arraylist and then add each class 
+        // and it's info to the json in the second parameter.
+        studentDetails.put("coursesTaken", student.getCourses());
         studentDetails.put("notes", student.getNotes());
 
 
@@ -78,19 +81,22 @@ public class DataWriter extends DataConstants {
     //NOT TESTED
     public static JSONObject getFacultyJSON(Faculty faculty) {
         JSONObject facultyDetails = new JSONObject();
+        StringBuilder assignedStudentIDs = new StringBuilder();
+
         facultyDetails.put("id", faculty.getID());
         facultyDetails.put("firstName", faculty.getfirstName());
         facultyDetails.put("lastName", faculty.getLastName());
         facultyDetails.put("userName", faculty.getUsername());
         facultyDetails.put("password", faculty.getPassword());
 
-        //NOT WORKING BECAUSE OF THIS BUT I CAN FIX IT PROBABLY MAYBE
-        // getAssignedStudents() returns an arraylist. We will have to loop through each and
-        // get the id from each then append it to the array inside of the json, 
-        // but it is a nested array so it could be funky. Also might have to create
-        // a new array each time and then update it because Arrays cannot change length
-        // dynamically in java booooooooo.
-        facultyDetails.put("assignedStudents", faculty.getAssignedStudents());
+        ArrayList<Student> assignedStudents = new ArrayList<Student>();
+        assignedStudents = faculty.getAssignedStudents();
+
+        for(Student student : assignedStudents) {
+            assignedStudentIDs.append(student.getID()).append("&");
+        }
+        
+        facultyDetails.put("assignedStudents", assignedStudentIDs.toString());
 
         return facultyDetails;
     }

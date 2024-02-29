@@ -68,8 +68,40 @@ public class DataLoader extends DataConstants {
         return students;
     }
 
+    /**
+     * working and tested as of 2/29/2024
+     */
     public static ArrayList<Faculty> getFaculty() {
-        return null;
+        ArrayList<Faculty> faculty = new ArrayList<Faculty>();
+        try {
+            FileReader reader = new FileReader(FACULTY_FILE_PATH);
+            JSONArray facultyJSON = (JSONArray)new JSONParser().parse(reader);
+
+            for (int i = 0; i < facultyJSON.size(); i++) {
+                JSONObject facJSON = (JSONObject)facultyJSON.get(i);
+                UUID id = UUID.fromString((String)facJSON.get("id"));
+                String firstName = (String)facJSON.get("firstName");
+                String lastName = (String)facJSON.get("lastName");
+                String userName = (String)facJSON.get("userName");
+                String password = (String)facJSON.get("password");
+                String[] studentsArray = ((String)facJSON.get("assignedStudents")).split("&&");
+
+                ArrayList<Student> studentsList = new ArrayList<Student>();
+                UserList list = UserList.getInstance();
+                for (String s : studentsArray) {
+                    UUID studentID = UUID.fromString(s);
+                    Student student = list.getStudentByID(studentID);
+                    if (student != null)
+                        studentsList.add(student);
+                }
+
+                faculty.add(new Faculty(id, userName, password, firstName, lastName, studentsList));
+            }
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return faculty;
     }
 
     /**

@@ -5,7 +5,8 @@
        "lastName":"David",
        "userName":"LD30",
        "password":"ilovemykids",
-       "assignedStudents": "df75b2af-b95d-4548-91f6-18871af1d6ef&&d95876ab-358b-462f-aa93-8993fe7d5ae6"
+       "assignedStudents": ["df75b2af-b95d-4548-91f6-18871af1d6ef",
+                            "d95876ab-358b-462f-aa93-8993fe7d5ae6"]
                             
     },
     {
@@ -14,6 +15,7 @@
         "lastName":"Skywalker",
         "userName":"R2D2",
         "password":"padme",
-        "assignedStudents":"df75b2af-b95d-4548-91f6-18871af1d6ef&&d95876ab-358b-462f-aa93-8993fe7d5ae6"
+        "assignedStudents":["df75b2af-b95d-4548-91f6-18871af1d6ef",
+                            "d95876ab-358b-462f-aa93-8993fe7d5ae6"]
     }
 ]

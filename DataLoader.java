@@ -154,32 +154,39 @@ public class DataLoader extends DataConstants {
                 String name = (String)majorJSON.get("name");
                 String type = (String)majorJSON.get("type");
                 int hours = Integer.parseInt((String)majorJSON.get("hours"));
-                String[] requirements = ((String)majorJSON.get("majorreq")).split("&"); // split
-                String[] electiveRequirements = ((String)majorJSON.get("electivereq")).split("&"); //split
+                
+                JSONArray requirementsJSON = (JSONArray) majorJSON.get("majorreq");
+                ArrayList<Course> requirementsList = parseCourses(requirementsJSON);
+    
+                // Parse elective requirements into ArrayList<Course>
+                JSONArray electiveRequirementsJSON = (JSONArray) majorJSON.get("electivereq");
+                ArrayList<Course> electiveRequirementsList = parseCourses(electiveRequirementsJSON);
+
+                //String requirements = ((String)majorJSON.get("majorreq"));
+                //String electiveRequirements = ((String)majorJSON.get("electivereq")); 
 
                 CourseList list = CourseList.getInstance(); // here we create our instance variables to be used
-                ArrayList<Course> requirementsList = new ArrayList<Course>(); 
-                ArrayList<Course> electiveRequirementsList = new ArrayList<Course>();
+
 
                 // iterate through the list of requirements and search in CourseList to convert into courses
-                for (int j = 0; j < requirements.length; j++) {
-                    String title = requirements[j].substring(0, 4);
-                    int courseNumber = Integer.parseInt(requirements[j].substring(4, 7));
+                // for (int j = 0; j < requirements.length; j++) {
+                //     String title = requirements[j].substring(0, 4);
+                //     int courseNumber = Integer.parseInt(requirements[j].substring(4, 7));
 
-                    Course foundCourse = list.getByTitleAndNumber(title, courseNumber);
-                    if (foundCourse != null)
-                        requirementsList.add(foundCourse);
-                }
+                //     Course foundCourse = list.getByTitleAndNumber(title, courseNumber);
+                //     if (foundCourse != null)
+                //         requirementsList.add(foundCourse);
+                // }
 
-                // iterate through the list of requirements and search in CourseList to convert into courses
-                for (int j = 0; j < electiveRequirements.length; j++) {
-                    String title = electiveRequirements[j].substring(0, 4);
-                    int courseNumber = Integer.parseInt(electiveRequirements[j].substring(4, 7));
+                // // iterate through the list of requirements and search in CourseList to convert into courses
+                // for (int j = 0; j < electiveRequirements.length; j++) {
+                //     String title = electiveRequirements[j].substring(0, 4);
+                //     int courseNumber = Integer.parseInt(electiveRequirements[j].substring(4, 7));
 
-                    Course foundCourse = list.getByTitleAndNumber(title, courseNumber);
-                    if (foundCourse != null)
-                        electiveRequirementsList.add(foundCourse);
-                }
+                //     Course foundCourse = list.getByTitleAndNumber(title, courseNumber);
+                //     if (foundCourse != null)
+                //         electiveRequirementsList.add(foundCourse);
+                // }
 
                 majors.add(new Major(id, name, type, hours, requirementsList, electiveRequirementsList));
             }
@@ -188,6 +195,25 @@ public class DataLoader extends DataConstants {
         }
 
         return majors;
+    }
+
+    private static ArrayList<Course> parseCourses(JSONArray coursesJSON) {
+        ArrayList<Course> coursesList = new ArrayList<>();
+        CourseList courseList = CourseList.getInstance(); // Get the singleton instance of CourseList
+
+        for (Object o : coursesJSON) {
+            String courseCode = (String) o;
+            // first 4 characters are the subject and the last 3 are the course number
+            String subject = courseCode.substring(0, 4);
+            int courseNumber = Integer.parseInt(courseCode.substring(4));
+
+            // Attempt to find the matching Course object
+            Course course = courseList.getByTitleAndNumber(subject, courseNumber);
+            if (course != null) {
+                coursesList.add(course);
+            }
+        }
+        return coursesList;
     }
 
 }

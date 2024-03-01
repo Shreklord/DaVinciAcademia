@@ -58,7 +58,7 @@
     {
         "id": "24d3c686-a139-42fa-b285-6d42d263e957",
         "title": "General Chemistry I Lab",
-        "courseNumber": "111L",
+        "courseNumber": "111",
         "hours": "3",
         "subject": "CHEM",
         "prereqs": "C<MATH111/MATH115/MATH122/MATH141/PHYS211"
@@ -82,7 +82,7 @@
     {
         "id": "3c94a085-ce35-4fe3-9138-3a30b3b79f78",
         "title": "Introduction to Statistics",
-        "courseNumber": "STAT 201",
+        "courseNumber": "201",
         "hours": "3",
         "subject": "STAT",
         "prereqs": "C<MATH111/MATH112/MATH115/MATH116"
@@ -139,7 +139,7 @@
     {
         "id": "a195cfb9-0fa1-4daf-adfb-5b032bc148d4",
         "title": "Applied Linear Algebra Lab",
-        "courseNumber": "344L",
+        "courseNumber": "344",
         "hours": "3",
         "subject": "MATH",
         "prereqs": "C<MATH142"
@@ -209,7 +209,7 @@
         "prereqs": "C<CSCE146"
     },
     {
-        "id":"",
+        "id":"1b35f7ba-f1fa-4635-b66d-41b273e496e9",
         "title":"Technical Writing",
         "courseNumber":"462",
         "hours":"3",
@@ -255,125 +255,5 @@
         "hours": "3",
         "subject": "CSCE",
         "prereqs": "D<CSCE240&CSCE350&CSCE490"
-    },
-    {
-        "id":"",
-        "title":"",
-        "courseNumber":"",
-        "hours":"",
-        "subject": "",
-        "prereqs": ""
-    },
-    {
-        "id":"",
-        "title":"",
-        "courseNumber":"",
-        "hours":"",
-        "subject": "",
-        "prereqs": ""
-    },
-    {
-        "id":"",
-        "title":"",
-        "courseNumber":"",
-        "hours":"",
-        "subject": "",
-        "prereqs": ""
-    },
-    {
-        "id":"",
-        "title":"",
-        "courseNumber":"",
-        "hours":"",
-        "subject": "",
-        "prereqs": ""
-    },
-    {
-        "id":"",
-        "title":"",
-        "courseNumber":"",
-        "hours":"",
-        "subject": "",
-        "prereqs": ""
-    },
-    {
-        "id":"",
-        "title":"",
-        "courseNumber":"",
-        "hours":"",
-        "subject": "",
-        "prereqs": ""
-    },
-    {
-        "id":"",
-        "title":"",
-        "courseNumber":"",
-        "hours":"",
-        "subject": "",
-        "prereqs": ""
-    },
-    {
-        "id":"",
-        "title":"",
-        "courseNumber":"",
-        "hours":"",
-        "subject": "",
-        "prereqs": ""
-    },
-    {
-        "id":"",
-        "title":"",
-        "courseNumber":"",
-        "hours":"",
-        "subject": "",
-        "prereqs": ""
-    },
-    {
-        "id":"",
-        "title":"",
-        "courseNumber":"",
-        "hours":"",
-        "subject": "",
-        "prereqs": ""
-    },
-    {
-        "id":"",
-        "title":"",
-        "courseNumber":"",
-        "hours":"",
-        "subject": "",
-        "prereqs": ""
-    },
-    {
-        "id":"",
-        "title":"",
-        "courseNumber":"",
-        "hours":"",
-        "subject": "",
-        "prereqs": ""
-    },
-    {
-        "id":"",
-        "title":"",
-        "courseNumber":"",
-        "hours":"",
-        "subject": "",
-        "prereqs": ""
-    },
-    {
-        "id":"",
-        "title":"",
-        "courseNumber":"",
-        "hours":"",
-        "subject": "",
-        "prereqs": ""
-    },
-    {
-        "id":"",
-        "title":"",
-        "courseNumber":"",
-        "hours":"",
-        "subject": "",
-        "prereqs": ""
     }
 ]

@@ -14,8 +14,22 @@ public class UI {
     public void run() {
 
         displayLoginMenu(); //Testing JSON file loading and login scenarios 
-        scenario1();
-        scenario2();
+        getMajorTest();
+        //scenario1();
+        //scenario2();
+    }
+
+    public void getMajorTest(){
+       MajorList majortest = new MajorList();
+       ArrayList<Major> major = new ArrayList<Major>();
+       majortest = MajorList.getInstance();
+       major = majortest.getMajors();
+       for(Major c : major){
+        System.out.println(c.getElectiveCourseReqs());
+       }
+
+       
+       
     }
 
     public void displayLoginMenu() {

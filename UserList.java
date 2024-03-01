@@ -56,7 +56,7 @@ public class UserList {
                 return user;
             }
         }
-        for(int i = 0; i<faculty.size(), i++){
+        for(int i = 0; i<faculty.size(); i++){
             User user = faculty.get(i);
             if(user.getID().equals(id)){
                 return user;

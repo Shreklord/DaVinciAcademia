@@ -158,35 +158,10 @@ public class DataLoader extends DataConstants {
                 JSONArray requirementsJSON = (JSONArray) majorJSON.get("majorreq");
                 ArrayList<Course> requirementsList = parseCourses(requirementsJSON);
     
-                // Parse elective requirements into ArrayList<Course>
                 JSONArray electiveRequirementsJSON = (JSONArray) majorJSON.get("electivereq");
                 ArrayList<Course> electiveRequirementsList = parseCourses(electiveRequirementsJSON);
 
-                //String requirements = ((String)majorJSON.get("majorreq"));
-                //String electiveRequirements = ((String)majorJSON.get("electivereq")); 
-
                 CourseList list = CourseList.getInstance(); // here we create our instance variables to be used
-
-
-                // iterate through the list of requirements and search in CourseList to convert into courses
-                // for (int j = 0; j < requirements.length; j++) {
-                //     String title = requirements[j].substring(0, 4);
-                //     int courseNumber = Integer.parseInt(requirements[j].substring(4, 7));
-
-                //     Course foundCourse = list.getByTitleAndNumber(title, courseNumber);
-                //     if (foundCourse != null)
-                //         requirementsList.add(foundCourse);
-                // }
-
-                // // iterate through the list of requirements and search in CourseList to convert into courses
-                // for (int j = 0; j < electiveRequirements.length; j++) {
-                //     String title = electiveRequirements[j].substring(0, 4);
-                //     int courseNumber = Integer.parseInt(electiveRequirements[j].substring(4, 7));
-
-                //     Course foundCourse = list.getByTitleAndNumber(title, courseNumber);
-                //     if (foundCourse != null)
-                //         electiveRequirementsList.add(foundCourse);
-                // }
 
                 majors.add(new Major(id, name, type, hours, requirementsList, electiveRequirementsList));
             }

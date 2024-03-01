@@ -19,17 +19,20 @@ public class UI {
         //scenario2();
     }
 
-    public void getMajorTest(){
-       MajorList majortest = new MajorList();
-       ArrayList<Major> major = new ArrayList<Major>();
-       majortest = MajorList.getInstance();
-       major = majortest.getMajors();
-       for(Major c : major){
-        System.out.println(c.getElectiveCourseReqs());
-       }
-
-       
-       
+    public void getMajorTest() {
+        MajorList majorList = MajorList.getInstance(); // Assuming MajorList is correctly implemented as a singleton
+        ArrayList<Major> majors = majorList.getMajors();
+    
+        for (Major major : majors) {
+            System.out.println("Major Requirements for " + major.getName() + ":");
+            for (Course course : major.getMajorRequirements()) {
+                System.out.println(course.getTitle() + " (" + course.getCourseNumber() + ")");
+            }
+            System.out.println("Elective Requirements:");
+            for (Course course : major.getElectiveCourseReqs()) {
+                System.out.println(course.getTitle() + " (" + course.getCourseNumber() + ")");
+            }
+        }
     }
 
     public void displayLoginMenu() {

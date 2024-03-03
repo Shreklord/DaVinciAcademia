@@ -10,6 +10,8 @@ import org.json.simple.parser.JSONParser;
 
 public class DataWriter extends DataConstants {
     
+    //SHOULD WORK
+    //NOT TESTED
     public static boolean saveStudents() {
         UserList listOfStudents = UserList.getInstance();
         ArrayList<Student> allStudents = listOfStudents.getStudents();
@@ -43,13 +45,33 @@ public class DataWriter extends DataConstants {
         studentDetails.put("userName", student.getUsername());
         studentDetails.put("password", student.getPassword());
         studentDetails.put("major", student.getMajor());
-        studentDetails.put("GPA", student.getGPA());
+        studentDetails.put("GPA", String.valueOf(student.getGPA()));
 
-        // NEED to loop through getCourses() and create new arraylist and then add each class 
-        // and it's info to the json in the second parameter.
-        studentDetails.put("coursesTaken", student.getCourses());
+        //Define new JSONArray for the courses key
+        // for each Student
+        JSONArray coursesToAdd = new JSONArray();
+
+        //Loop through all of the student's courses.
+        for (int i = 0; i < student.getCourses().size(); i++) {
+            //Grabs the current course
+            StudentCourse c = (student.getCourses().get(i));
+            
+            //If the course is taken,
+            // create and fill out the JSONObject with the course's info.
+            if (c.getIsCompleted()) {
+                JSONObject courseTaken = new JSONObject();
+                courseTaken.put("courseid", c.getID());
+                courseTaken.put("grade", String.valueOf(c.getGrade()));
+                courseTaken.put("attempts", String.valueOf(c.getAttempts()));
+                courseTaken.put("isCompleted", String.valueOf(c.getIsCompleted()));
+
+                //Add the course object to the JSONArray
+                coursesToAdd.add(courseTaken);
+            }
+        }
+        //Finally, add the JSONArray as the value for "coursestaken"
+        studentDetails.put("coursesTaken", coursesToAdd);
         studentDetails.put("notes", student.getNotes());
-
 
         return studentDetails;
     }
@@ -77,7 +99,7 @@ public class DataWriter extends DataConstants {
         return true;
     }
 
-    //NOT WORKING 
+    //SHOULD WORK
     //NOT TESTED
     public static JSONObject getFacultyJSON(Faculty faculty) {
         JSONObject facultyDetails = new JSONObject();
@@ -98,6 +120,7 @@ public class DataWriter extends DataConstants {
 
         return facultyDetails;
     }
+    
     //SHOULD WORK
     //NOT TESTED
     public static boolean saveCourses() {
@@ -125,10 +148,17 @@ public class DataWriter extends DataConstants {
         JSONObject courseDetails = new JSONObject();
         courseDetails.put("id", course.getID());
         courseDetails.put("title", course.getTitle());
-        courseDetails.put("courseNumber", course.getCourseNumber());
-        courseDetails.put("hours", course.getHours());
+        courseDetails.put("courseNumber", String.valueOf(course.getCourseNumber()));
+        courseDetails.put("hours", String.valueOf(course.getHours()));
         courseDetails.put("subject", course.getSubject());
-        courseDetails.put("prereqs", course.getPrereqs());
+
+        //Had to turn the prereq list into a string for the sake of the JSON and
+        // because dataloader was already written with it as a string.
+        StringBuilder str = new StringBuilder();
+        for (int i = 0; i < course.getPrereqs().size(); i++) {
+            str.append(course.getPrereqs().get(i)).append("&");
+        }
+        courseDetails.put("prereqs", str);
 
         return courseDetails;
     }
@@ -161,7 +191,7 @@ public class DataWriter extends DataConstants {
         majorDetails.put("id", major.getID());
         majorDetails.put("name", major.getName());
         majorDetails.put("type", major.getType());
-        majorDetails.put("hours", major.getHours());
+        majorDetails.put("hours", String.valueOf(major.getHours()));
 
         JSONArray majorClassJSON = new JSONArray();
         JSONArray majorElectJSON = new JSONArray();
@@ -177,10 +207,5 @@ public class DataWriter extends DataConstants {
         majorDetails.put("electivereq", majorElectJSON);
 
         return majorDetails;
-    }
-
-
-    public static void courseJSONToString() {
-        
     }
 }

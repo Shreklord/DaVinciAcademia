@@ -1,5 +1,6 @@
 import java.util.ArrayList;
 import java.util.Scanner;
+import java.util.UUID;
 
 public class UI {
     private Scanner scanner;
@@ -14,9 +15,10 @@ public class UI {
     public void run() {
 
         displayLoginMenu(); //Testing JSON file loading and login scenarios 
-        getMajorTest();
+        //getMajorTest();
         //scenario1();
         //scenario2();
+        testDataWriter();
     }
 
     public void getMajorTest() {
@@ -74,6 +76,23 @@ public class UI {
         else
             System.out.println("Invalid username or password");
         return;
+    }
+
+    public void testDataWriter() {
+        System.out.println();
+        DataLoader dl = new DataLoader();
+
+        Course a = dl.getCourses().getFirst();
+        StudentCourse b = new StudentCourse(a.getID(), a.getTitle(), a.getHours(), a.getSubject(), a.getCourseNumber(), a.getPrereqs(), true, 1, 95);
+        ArrayList<StudentCourse> courses = new ArrayList<StudentCourse>();
+        courses.add(b);
+        ArrayList<Student> st = dl.getStudents();
+        Major cs = dl.getMajors().getFirst();
+        ArrayList<String> not = new ArrayList<String>();
+        Student michael = new Student(UUID.randomUUID(), "u n", "4675", "Owen", "Lars", "sophomore", cs, 14.3, courses, not);
+        System.out.println(michael.getStanding());
+        st.add(michael);
+        DataWriter.saveStudents(st);
     }
 
     public static void main(String[] args) {

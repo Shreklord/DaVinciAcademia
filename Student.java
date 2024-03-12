@@ -26,6 +26,7 @@ public class Student extends User{
                                          // in order for the super() command to work and change the uml to reflact that. thank u - spencer
         this.setGPA(GPA);
         this.setNotes(notes);
+        this.setStanding(standing);
     }
 
     public void displayEightSemesterPlan() {

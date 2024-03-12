@@ -8,8 +8,9 @@ public class Major {
     private int hours;
     private ArrayList<Course> majorRequirements;
     private ArrayList<Course> electiveCourseReq;
+    private int reccomendedSemester;
 
-    public Major(UUID id, String name, String type, int hours, ArrayList<Course> majorReqs, ArrayList<Course> electiveReqs) {
+    public Major(UUID id, String name, String type, int hours, ArrayList<Course> majorReqs, ArrayList<Course> electiveReqs, int reccomendedSemester) {
         setID(id);
         setName(name);
         setType(type);
@@ -64,5 +65,9 @@ public class Major {
 
     private void setElectiveCourseReqs(ArrayList<Course> reqs) {
         this.electiveCourseReq = reqs;
+    }
+
+    public int getReccomendedSemester() {
+        return this.reccomendedSemester;
     }
 }

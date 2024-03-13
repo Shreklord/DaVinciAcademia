@@ -4,14 +4,39 @@
         "name": "CSCE",
         "type": "BS",
         "hours": "120",
-        "majorreq": ["CSCE145",
-                    "CSCE146",
-                    "CSCE215",
-                    "CSCE247"],
-        "electivereq": ["CSCE145",
-                        "CSCE146",
-                        "CSCE215",  
-                        "CSCE247"]  
+        "majorreq": [{
+            "courseName": "CSCE145",
+            "reccomendedSemester": "1"
+        },
+        {
+            "courseName": "CSCE146",
+            "reccomendedSemester": "2"
+        },
+        {
+            "courseName": "CSCE215",
+            "reccomendedSemester": "3"
+        },
+        {
+            "courseName": "CSCE247",
+            "reccomendedSemester": "4"
+        }
+        ],
+        "electivereq": [{
+            "courseName": "CSCE145",
+            "reccomendedSemester": "1"
+        },
+        {
+            "courseName": "CSCE146",
+            "reccomendedSemester": "2"
+        },
+        {
+            "courseName": "CSCE215",
+            "reccomendedSemester": "3"
+        },
+        {
+            "courseName": "CSCE247",
+            "reccomendedSemester": "4"
+        }]  
 
     },
     {
@@ -19,13 +44,37 @@
         "name": "ECON",
         "type": "BA",
         "hours": "120",
-        "majorreq": ["CSCE145",
-                    "CSCE146",
-                    "CSCE215",  
-                    "CSCE247"],
-        "electivereq": ["CSCE145",
-                        "CSCE146",
-                        "CSCE215",  
-                        "CSCE247"] 
+        "majorreq": [{
+            "courseName": "ECON202",
+            "reccomendedSemester": "1"
+        },
+        {
+            "courseName": "ECON203",
+            "reccomendedSemester": "2"
+        },
+        {
+            "courseName": "ECON204",
+            "reccomendedSemester": "3"
+        },
+        {
+            "courseName": "ECON205",
+            "reccomendedSemester": "4"
+        }],
+        "electivereq": [{
+            "courseName": "ECON202",
+            "reccomendedSemester": "1"
+        },
+        {
+            "courseName": "ECON203",
+            "reccomendedSemester": "2"
+        },
+        {
+            "courseName": "ECON204",
+            "reccomendedSemester": "3"
+        },
+        {
+            "courseName": "ECON205",
+            "reccomendedSemester": "4"
+        }] 
     }
 ]

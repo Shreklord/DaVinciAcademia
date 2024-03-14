@@ -8,7 +8,7 @@ public class StudentCourse extends Course {
 
     public StudentCourse(UUID id, String title, int hours, String subject,
                          int courseNumber, ArrayList<String> prereqs, boolean isCompleted,
-                          int classAtempts, double grade) throws Exception {
+                          int classAtempts, double grade){
         super(id, title, hours, subject, courseNumber, prereqs);
         this.setIsCompleted(isCompleted);
         this.setClassAttempts(classAtempts);
@@ -23,9 +23,9 @@ public class StudentCourse extends Course {
         this.classAtempts = attempts;
     }
 
-    public void setGrade(double grade) throws Exception {
+    public void setGrade(double grade){
         if (grade < 0.0 || grade > 100.0)
-            throw new Exception("THAT GRADE IS NOT POSSIBLE");
+            System.out.println("THAT GRADE IS NOT POSSIBLE");
         this.grade = grade;
     }
 

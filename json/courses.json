@@ -8,6 +8,62 @@
         "prereqs": "C<CSCE146"
     },
     {
+        "id": "598d16e8-d602-4cd7-bcd9-eb199ad348fa",
+        "title": "Carolina Core VSR",
+        "courseNumber": "",
+        "hours": "3",
+        "subject": "",
+        "prereqs": "" 
+    },
+    {
+        "id": "b168d1ac-3b7d-486d-9163-61bb02a3d5dc",
+        "title": "Carolina Core GFL",
+        "courseNumber": "",
+        "hours": "3",
+        "subject": "",
+        "prereqs": "" 
+    },
+    {
+        "id": "a2d09af4-1a87-4177-9233-c6fbfcfc2754",
+        "title": "Carolina Core GSS",
+        "courseNumber": "",
+        "hours": "3",
+        "subject": "",
+        "prereqs": "" 
+    },
+    {
+        "id": "c650a617-66da-4970-a8ec-b667aa450b1b",
+        "title": "Carolina Core GHS",
+        "courseNumber": "",
+        "hours": "3",
+        "subject": "",
+        "prereqs": "" 
+    },
+    {
+        "id": "b47a90a5-2770-42b0-9ce6-67cf4dc704aa",
+        "title": "Carolina Core AIU",
+        "courseNumber": "",
+        "hours": "3",
+        "subject": "",
+        "prereqs": ""
+    },
+    {
+        "id": "49c4cd5b-4d0e-47b6-9607-3b3c98f42991",
+        "title": "Carolina Core SCI",
+        "courseNumber": "",
+        "hours": "3",
+        "subject": "",
+        "prereqs": ""
+    },
+    {
+        "id": "de5bbdb3-d011-4512-a783-7c66232c08df",
+        "title": "Carolina Core CMS",
+        "courseNumber": "",
+        "hours": "3",
+        "subject": "",
+        "prereqs": ""
+    },
+    {
         "id": "fbe348d9-9e66-4da1-b714-d1950b37e402",
         "title": "Advancing Programming Techniques",
         "courseNumber": "240",

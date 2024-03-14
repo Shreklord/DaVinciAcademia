@@ -156,10 +156,13 @@ public class DataLoader extends DataConstants {
                 int hours = Integer.parseInt((String)majorJSON.get("hours"));
                 
                 JSONArray requirementsJSON = (JSONArray) majorJSON.get("majorreq");
+                for(Object o : requirementsJSON) {
+                    String courseName = (String)majorJSON.get("courseName");
+                    int courseNumber = Integer.parseInt((String)majorJSON.get("courseNumber"));
+                }
                 ArrayList<Course> requirementsList = parseCourses(requirementsJSON);
     
                 JSONArray electiveRequirementsJSON = (JSONArray) majorJSON.get("electivereq");
-                ArrayList<Course> electiveRequirementsList = parseCourses(electiveRequirementsJSON);
 
                 CourseList list = CourseList.getInstance(); // here we create our instance variables to be used
 
@@ -172,23 +175,24 @@ public class DataLoader extends DataConstants {
         return majors;
     }
 
-    private static ArrayList<Course> parseCourses(JSONArray coursesJSON) {
-        ArrayList<Course> coursesList = new ArrayList<>();
-        CourseList courseList = CourseList.getInstance(); // Get the singleton instance of CourseList
+    // --------- pissy caca --------------
+    // private static ArrayList<Course> parseCourses(JSONArray coursesJSON) {
+    //     ArrayList<Course> coursesList = new ArrayList<>();
+    //     CourseList courseList = CourseList.getInstance(); // Get the singleton instance of CourseList
 
-        for (Object o : coursesJSON) {
-            String courseCode = (String) o;
-            // first 4 characters are the subject and the last 3 are the course number
-            String subject = courseCode.substring(0, 4);
-            int courseNumber = Integer.parseInt(courseCode.substring(4));
+    //     for (Object o : coursesJSON) {
+    //         String courseCode = (String) o;
+    //         // first 4 characters are the subject and the last 3 are the course number
+    //         String subject = courseCode.substring(0, 4);
+    //         int courseNumber = Integer.parseInt(courseCode.substring(4));
 
-            // Attempt to find the matching Course object
-            Course course = courseList.getByTitleAndNumber(subject, courseNumber);
-            if (course != null) {
-                coursesList.add(course);
-            }
-        }
-        return coursesList;
-    }
+    //         // Attempt to find the matching Course object
+    //         Course course = courseList.getByTitleAndNumber(subject, courseNumber);
+    //         if (course != null) {
+    //             coursesList.add(course);
+    //         }
+    //     }
+    //     return coursesList;
+    // }
 
 }

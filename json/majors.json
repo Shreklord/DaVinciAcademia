@@ -1,36 +1,36 @@
 [
     {
         "id": "dbc833d3-84f9-477c-8c17-70238011e337",
-        "name": "CSCE",
+        "name": "Computer Science",
         "type": "BS",
-        "hours": "120",
+        "hours": "125",
         "majorreq": [{
             "courseName": "CSCE145",
             "reccomendedSemester": "1"
         },
         {
-            "courseName": "CSCE146",
-            "reccomendedSemester": "2"
-        },
-        {
-            "courseName": "CSCE215",
-            "reccomendedSemester": "3"
-        },
-        {
-            "courseName": "CSCE247",
-            "reccomendedSemester": "4"
-        }
-        ],
-        "electivereq": [{
-            "courseName": "CSCE145",
+            "courseName": "CSCE190",
             "reccomendedSemester": "1"
         },
         {
-            "courseName": "CSCE146",
+            "courseName": "",
+            "reccomendedSemester": "1"
+        },
+        {
+            "courseName": "",
+            "reccomendedSemester": "1"
+        }
+        ],
+        "electivereq": [{
+            "courseName": "1028df38-cdc6-4bbf-a7b3-abf1bf9b4b43",
+            "reccomendedSemester": "1"
+        },
+        {
+            "courseName": "cc74abf2-339a-4ac8-9c2b-7f9b79a4f233",
             "reccomendedSemester": "2"
         },
         {
-            "courseName": "CSCE215",
+            "courseName": "",
             "reccomendedSemester": "3"
         },
         {

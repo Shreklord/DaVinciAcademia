@@ -18,7 +18,7 @@ public class UI {
         //getMajorTest();
         //scenario1();
         //scenario2();
-        testDataWriter();
+        // testDataWriter();
     }
 
     public void getMajorTest() {

@@ -189,14 +189,17 @@ public class DataWriter extends DataConstants {
         JSONArray majorElectJSON = new JSONArray();
 
         JSONObject majorClassWithRec = new JSONObject();
-        JSONObject majorElecClassWithRec = new JSONObject();
+        JSONObject majorElecWithRec = new JSONObject();
 
         for (Course course : major.getMajorRequirements()) {
             majorClassWithRec.put("courseName", course.getTitle() + String.valueOf(course.getCourseNumber()));  
-            majorClassJSON.add(course.getTitle() + String.valueOf(course.getCourseNumber()));
+            majorClassWithRec.put("reccomendedSemester", String.valueOf(course.getRecSemester())); 
+            majorClassJSON.add(majorClassWithRec);
         }
         for (Course course : major.getElectiveCourseReqs()) {
-            majorElectJSON.add(course.getTitle() + String.valueOf(course.getCourseNumber()));
+            majorElecWithRec.put("courseName", course.getTitle() + String.valueOf(course.getCourseNumber()));  
+            majorElecWithRec.put("reccomendedSemester", String.valueOf(course.getRecSemester())); 
+            majorElectJSON.add(majorElecWithRec);
         }
 
         majorDetails.put("majorreq", majorClassJSON);

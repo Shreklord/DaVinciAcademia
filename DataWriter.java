@@ -13,8 +13,6 @@ public class DataWriter extends DataConstants {
     //SHOULD WORK
     //NOT TESTED
     public static boolean saveStudents(ArrayList<Student> students) {
-    //     UserList listOfStudents = UserList.getInstance();
-    //     ArrayList<Student> allStudents = listOfStudents.getStudents();
         JSONArray jsonStudents = new JSONArray();
 
         for (int i = 0; i < students.size(); i++) {
@@ -79,8 +77,6 @@ public class DataWriter extends DataConstants {
     //SHOULD WORK
     //NOT TESTED
     public static boolean saveFaculty(ArrayList<Faculty> faculty) {
-        // UserList listOfFaculty = UserList.getInstance();
-        // ArrayList<Faculty> allFaculty = listOfFaculty.getFaculty();
         JSONArray jsonFaculty = new JSONArray();
 
         for (int i = 0; i < faculty.size(); i++) {
@@ -124,8 +120,6 @@ public class DataWriter extends DataConstants {
     //SHOULD WORK
     //NOT TESTED
     public static boolean saveCourses(ArrayList<Course> courses) {
-        // CourseList listOfCourses = CourseList.getInstance();
-        // ArrayList<Course> allCourses = listOfCourses.getCourses();
         JSONArray jsonCourses = new JSONArray();
 
         for (int i = 0; i < courses.size(); i++) {
@@ -166,8 +160,6 @@ public class DataWriter extends DataConstants {
     //SHOULD WORK
     //NOT TESTED
     public static boolean saveMajors(ArrayList<Major> majors) {
-        // MajorList listOfMajors = MajorList.getInstance();
-        // ArrayList<Major> allMajors = listOfMajors.getMajors();
         JSONArray jsonMajors = new JSONArray();
 
         for (int i = 0; i < majors.size(); i++) {
@@ -196,7 +188,11 @@ public class DataWriter extends DataConstants {
         JSONArray majorClassJSON = new JSONArray();
         JSONArray majorElectJSON = new JSONArray();
 
+        JSONObject majorClassWithRec = new JSONObject();
+        JSONObject majorElecClassWithRec = new JSONObject();
+
         for (Course course : major.getMajorRequirements()) {
+            majorClassWithRec.put("courseName", course.getTitle() + String.valueOf(course.getCourseNumber()));  
             majorClassJSON.add(course.getTitle() + String.valueOf(course.getCourseNumber()));
         }
         for (Course course : major.getElectiveCourseReqs()) {

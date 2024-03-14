@@ -79,6 +79,7 @@ public class UI {
     }
 
     public void testDataWriter() {
+        //This can be deleted eventually. 
         System.out.println();
         DataLoader dl = new DataLoader();
 

@@ -16,6 +16,14 @@
         "prereqs": "" 
     },
     {
+        "id": "",
+        "title": "Lab Science Elective",
+        "courseNumber": "",
+        "hours": "4",
+        "subject": "",
+        "prereqs": "" 
+    },
+    {
         "id": "b168d1ac-3b7d-486d-9163-61bb02a3d5dc",
         "title": "Carolina Core GFL",
         "courseNumber": "",
@@ -118,6 +126,22 @@
         "hours": "3",
         "subject": "CHEM",
         "prereqs": "C<MATH111/MATH115/MATH122/MATH141/PHYS211"
+    },
+    {
+        "id": "c663c627-ea6f-4c85-8806-f9dec0199c03",
+        "title": "General Chemistry II",
+        "courseNumber": "112",
+        "hours": "3",
+        "subject": "CHEM",
+        "prereqs": "C<CHEM111/CHEM111L/CHEM141"
+    },
+    {
+        "id": "a01321d4-cba5-467d-86b1-938b7c03d37c",
+        "title": "General Chemistry II Lab",
+        "courseNumber": "112",
+        "hours": "3",
+        "subject": "CHEM",
+        "prereqs": "C<CHEM111/CHEM111L/CHEM141&MATH111/MATH115/MATH122/MATH141"
     },
     {
         "id": "04d4c585-3ff3-454c-b6bd-ddc2698a5640",
@@ -311,5 +335,13 @@
         "hours": "3",
         "subject": "CSCE",
         "prereqs": "D<CSCE240&CSCE350&CSCE490"
+    },
+    {
+        "id": "2ea21702-a697-40da-a8a7-93688d0d570f",
+        "title": "Public Communication",
+        "courseNumber": "140",
+        "hours": "3",
+        "subject": "SPCH",
+        "prereqs": ""
     }
 ]

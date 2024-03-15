@@ -5,57 +5,121 @@
         "type": "BS",
         "hours": "125",
         "majorreq": [{
-            "courseName": "d1433d4e-8c32-4edc-adba-348b5ddcc087",
+            "courseName": "CSCE145",
+            "courseID": "d1433d4e-8c32-4edc-adba-348b5ddcc087",
             "reccomendedSemester": "1"
         },
         {
-            "courseName": "04d4c585-3ff3-454c-b6bd-ddc2698a5640",
+            "courseName": "CSCE190",
+            "courseID": "04d4c585-3ff3-454c-b6bd-ddc2698a5640",
             "reccomendedSemester": "1"
         },
         {
-            "courseName": "211f112f-9d26-4531-a9d5-106433e8f79b",
+            "courseName": "CSCE146",
+            "courseID": "211f112f-9d26-4531-a9d5-106433e8f79b",
             "reccomendedSemester": "2"
         },
         {
-            "courseName": "82bcab5c-8252-455e-b0e7-4f3864d827f5",
+            "courseName": "CSCE215",
+            "courseID": "82bcab5c-8252-455e-b0e7-4f3864d827f5",
             "reccomendedSemester": "2"
-        }
-        ],
+        },
+        {
+            "courseName": "CSCE211",
+            "courseID": "ab2b65e5-1865-4cbc-a74e-d9ab47d66026",
+            "reccomendedSemester": "3"
+        },
+        {
+            "courseName": "CSCE240",
+            "courseID": "fbe348d9-9e66-4da1-b714-d1950b37e402",
+            "reccomendedSemester": "3"
+        },
+        {
+            "courseName": "MATH374",
+            "courseID": "f40b2ed7-971a-4190-aaf8-98f0035bc5e2",
+            "reccomendedSemester": "3"
+        },
+        {
+            "courseName": "CSCE212",
+            "courseID": "077be7a4-d4f2-4f99-bf5d-618824b9bfe7",
+            "reccomendedSemester": "4"
+        },
+        {
+            "courseName": "CSCE247",
+            "courseID": "10fa13e6-f148-4495-a059-6642f5d952bb",
+            "reccomendedSemester": "4"
+        },
+        {
+            "courseName": "Laboratory Science Elective",
+            "courseID": "170d8de1-2c8d-4d81-975e-ab3b77b0409d",
+            "reccomendedSemester": "4"
+        },
+        {
+            "courseName": "MATH241",
+            "courseID": "8aab2d59-4815-463f-9406-444d42b8e62b",
+            "reccomendedSemester": "4"
+        }],
         "electivereq": [{
-             
-            "courseName": "1028df38-cdc6-4bbf-a7b3-abf1bf9b4b43",
+            "courseName": "ENGL101",
+            "courseID": "1028df38-cdc6-4bbf-a7b3-abf1bf9b4b43",
             "reccomendedSemester": "1"
         },
         {
-            "courseName": "cc74abf2-339a-4ac8-9c2b-7f9b79a4f233",
+            "courseName": "MATH141",
+            "courseID": "cc74abf2-339a-4ac8-9c2b-7f9b79a4f233",
             "reccomendedSemester": "1"
         },
         {
-            "courseName": "b47a90a5-2770-42b0-9ce6-67cf4dc704aa",
+            "courseName": "Carolina Core AIU",
+            "courseID": "b47a90a5-2770-42b0-9ce6-67cf4dc704aa",
             "reccomendedSemester": "1"
         },
         {
-            "courseName": "e2aed192-03ff-4494-bb44-1f9ed300ef6c",
+            "courseName": "CHEM111",
+            "courseID": "e2aed192-03ff-4494-bb44-1f9ed300ef6c",
             "reccomendedSemester": "2"
         },
         {
-            "courseName": "24d3c686-a139-42fa-b285-6d42d263e957",
+            "courseName": "CHEM111L",
+            "courseID": "24d3c686-a139-42fa-b285-6d42d263e957",
             "reccomendedSemester": "2"
         },
         {
-            "courseName": "e2aed192-03ff-4494-bb44-1f9ed300ef6c",
+            "courseName": "MATH142",
+            "courseID": "c0d9833b-6686-41f6-88ac-b6395ba51560",
             "reccomendedSemester": "2"
         },
         {
-            "courseName": "24d3c686-a139-42fa-b285-6d42d263e957",
+            "courseName": "ENGL102",
+            "courseID": "fe1fc2f9-1684-463c-8317-c23dbc72c4f7",
             "reccomendedSemester": "2"
+        },
+        {
+            "courseName": "CHEM112",
+            "courseID": "c663c627-ea6f-4c85-8806-f9dec0199c03",
+            "reccomendedSemester": "3"
+        },
+        {
+            "courseName": "CHEM112L",
+            "courseID": "a01321d4-cba5-467d-86b1-938b7c03d37c",
+            "reccomendedSemester": "3"
+        },
+        {
+            "courseName": "SPCH140",
+            "courseID": "2ea21702-a697-40da-a8a7-93688d0d570f",
+            "reccomendedSemester": "3"
+        },
+        {  
+            "courseName": "Carolina Core GSS",
+            "courseID": "a2d09af4-1a87-4177-9233-c6fbfcfc2754",
+            "reccomendedSemester": "4"
         }]  
     },
     {
         "id": "eba5ba09-0a62-4bba-99d6-1dd88e28e173",
-        "name": "ECON",
-        "type": "BA",
-        "hours": "120",
+        "name": "Computer Information Systems",
+        "type": "BS",
+        "hours": "125",
         "majorreq": [{
             "courseName": "ECON202",
             "reccomendedSemester": "1"

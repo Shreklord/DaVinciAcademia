@@ -2,6 +2,8 @@ import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
 import java.util.UUID;
 
 import org.json.simple.JSONArray;
@@ -191,14 +193,26 @@ public class DataWriter extends DataConstants {
         JSONObject majorClassWithRec = new JSONObject();
         JSONObject majorElecWithRec = new JSONObject();
 
-        for (Course course : major.getMajorRequirements()) {
-            majorClassWithRec.put("courseName", course.getTitle() + String.valueOf(course.getCourseNumber()));  
-            majorClassWithRec.put("reccomendedSemester", String.valueOf(course.getRecSemester())); 
+        HashMap<Course, Integer> majorReqs = major.getMajorRequirements();
+        HashMap<Course, Integer> majorElectiveReqs = major.getElectiveCourseReqs();
+
+        for (HashMap.Entry<Course, Integer> entry : majorReqs.entrySet()) {
+            Course targetCourse = entry.getKey();
+            String recSemester = String.valueOf(entry.getValue());
+
+            majorClassWithRec.put("courseName", targetCourse.getTitle() + String.valueOf(targetCourse.getCourseNumber()));  
+            majorClassWithRec.put("courseID", targetCourse.getID());
+            majorClassWithRec.put("reccomendedSemester", recSemester);
+
             majorClassJSON.add(majorClassWithRec);
         }
-        for (Course course : major.getElectiveCourseReqs()) {
-            majorElecWithRec.put("courseName", course.getTitle() + String.valueOf(course.getCourseNumber()));  
-            majorElecWithRec.put("reccomendedSemester", String.valueOf(course.getRecSemester())); 
+        for (HashMap.Entry<Course, Integer> entry : majorElectiveReqs.entrySet()) {
+            Course targetCourse = entry.getKey();
+            String recSemester = String.valueOf(entry.getValue());
+            
+            majorElecWithRec.put("courseName", targetCourse.getTitle() + String.valueOf(targetCourse.getCourseNumber()));  
+            majorElecWithRec.put("courseID", targetCourse.getID());
+            majorElecWithRec.put("reccomendedSemester", recSemester); 
             majorElectJSON.add(majorElecWithRec);
         }
 

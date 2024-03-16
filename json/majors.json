@@ -224,43 +224,5 @@
             "courseID": "c650a617-66da-4970-a8ec-b667aa450b1b",
             "reccomendedSemester": "8"
         }]  
-    },
-    {
-        "id": "eba5ba09-0a62-4bba-99d6-1dd88e28e173",
-        "name": "Computer Information Systems",
-        "type": "BS",
-        "hours": "120",
-        "majorreq": [{
-            "courseName": "ECON202",
-            "reccomendedSemester": "1"
-        },
-        {
-            "courseName": "ECON203",
-            "reccomendedSemester": "2"
-        },
-        {
-            "courseName": "ECON204",
-            "reccomendedSemester": "3"
-        },
-        {
-            "courseName": "ECON205",
-            "reccomendedSemester": "4"
-        }],
-        "electivereq": [{
-            "courseName": "ECON202",
-            "reccomendedSemester": "1"
-        },
-        {
-            "courseName": "ECON203",
-            "reccomendedSemester": "2"
-        },
-        {
-            "courseName": "ECON204",
-            "reccomendedSemester": "3"
-        },
-        {
-            "courseName": "ECON205",
-            "reccomendedSemester": "4"
-        }] 
     }
 ]

@@ -27,20 +27,22 @@ public class UI {
     
         for(Major major : majors) { 
             HashMap<Course, Integer> temp = major.getMajorRequirements();
+            HashMap<Course, Integer> temp2 = major.getElectiveCourseReqs();
+            System.out.println("---------------------------------------------");
+            System.out.println("Printing Major Requirements Test");
+            System.out.println("---------------------------------------------");
             for(HashMap.Entry<Course, Integer> entry : temp.entrySet()) {
-                System.out.println("Course: " + entry.getKey().getTitle() + " (" + entry.getKey().getSubject() + " " + entry.getKey().getCourseNumber() + ") " + "Reccomended Semester: " + entry.getValue());
+                    System.out.println("Course: " + entry.getKey().getTitle() + " (" + entry.getKey().getSubject() + " " + entry.getKey().getCourseNumber() + ") " + "Reccomended Semester: " + entry.getValue());
+            
+            }
+            System.out.println();
+            System.out.println("---------------------------------------------");
+            System.out.println("Printing Elective Requirements Test");
+            System.out.println("---------------------------------------------");
+            for(HashMap.Entry<Course, Integer> entry : temp2.entrySet()) {
+                    System.out.println("Course: " + entry.getKey().getTitle() + " (" + entry.getKey().getSubject() + " " + entry.getKey().getCourseNumber() + ") " + "Reccomended Semester: " + entry.getValue());
             }
         }
-        // for (Major major : majors) {
-        //     System.out.println("Major Requirements for " + major.getName() + ":");
-        //     for (Course course : major.getMajorRequirements()) {
-        //         System.out.println(course.getTitle() + " (" + course.getCourseNumber() + ")");
-        //     }
-        //     System.out.println("Elective Requirements:");
-        //     for (Course course : major.getElectiveCourseReqs()) {
-        //         System.out.println(course.getTitle() + " (" + course.getCourseNumber() + ")");
-        //     }
-        // }
     }
 
     public void displayLoginMenu() {

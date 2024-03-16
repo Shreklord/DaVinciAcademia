@@ -1,6 +1,7 @@
 import java.util.ArrayList;
 import java.util.Scanner;
 import java.util.UUID;
+import java.util.HashMap;
 
 public class UI {
     private Scanner scanner;
@@ -13,9 +14,8 @@ public class UI {
     }
 
     public void run() {
-
         displayLoginMenu(); //Testing JSON file loading and login scenarios 
-        //getMajorTest();
+        getMajorTest();
         //scenario1();
         //scenario2();
         // testDataWriter();
@@ -25,16 +25,22 @@ public class UI {
         MajorList majorList = MajorList.getInstance(); // Assuming MajorList is correctly implemented as a singleton
         ArrayList<Major> majors = majorList.getMajors();
     
-        for (Major major : majors) {
-            System.out.println("Major Requirements for " + major.getName() + ":");
-            for (Course course : major.getMajorRequirements()) {
-                System.out.println(course.getTitle() + " (" + course.getCourseNumber() + ")");
-            }
-            System.out.println("Elective Requirements:");
-            for (Course course : major.getElectiveCourseReqs()) {
-                System.out.println(course.getTitle() + " (" + course.getCourseNumber() + ")");
+        for(Major major : majors) { 
+            HashMap<Course, Integer> temp = major.getMajorRequirements();
+            for(HashMap.Entry<Course, Integer> entry : temp.entrySet()) {
+                System.out.println("Course: " + entry.getKey().getTitle() + " (" + entry.getKey().getSubject() + " " + entry.getKey().getCourseNumber() + ") " + "Reccomended Semester: " + entry.getValue());
             }
         }
+        // for (Major major : majors) {
+        //     System.out.println("Major Requirements for " + major.getName() + ":");
+        //     for (Course course : major.getMajorRequirements()) {
+        //         System.out.println(course.getTitle() + " (" + course.getCourseNumber() + ")");
+        //     }
+        //     System.out.println("Elective Requirements:");
+        //     for (Course course : major.getElectiveCourseReqs()) {
+        //         System.out.println(course.getTitle() + " (" + course.getCourseNumber() + ")");
+        //     }
+        // }
     }
 
     public void displayLoginMenu() {
@@ -77,23 +83,21 @@ public class UI {
             System.out.println("Invalid username or password");
         return;
     }
-
     public void testDataWriter() {
-        //This can be deleted eventually. 
-        System.out.println();
-        DataLoader dl = new DataLoader();
-
-        Course a = dl.getCourses().getFirst();
-        StudentCourse b = new StudentCourse(a.getID(), a.getTitle(), a.getHours(), a.getSubject(), a.getCourseNumber(), a.getPrereqs(), true, 1, 95);
-        ArrayList<StudentCourse> courses = new ArrayList<StudentCourse>();
-        courses.add(b);
-        ArrayList<Student> st = dl.getStudents();
-        Major cs = dl.getMajors().getFirst();
-        ArrayList<String> not = new ArrayList<String>();
-        Student michael = new Student(UUID.randomUUID(), "u n", "4675", "Owen", "Lars", "sophomore", cs, 14.3, courses, not);
-        System.out.println(michael.getStanding());
-        st.add(michael);
-        DataWriter.saveStudents(st);
+        // //This can be deleted eventually. 
+        // System.out.println();
+        // DataLoader dl = new DataLoader();
+        // Course a = dl.getCourses().getFirst();
+        // StudentCourse b = new StudentCourse(a.getID(), a.getTitle(), a.getHours(), a.getSubject(), a.getCourseNumber(), a.getPrereqs(), true, 1, 95);
+        // ArrayList<StudentCourse> courses = new ArrayList<StudentCourse>();
+        // courses.add(b);
+        // ArrayList<Student> st = dl.getStudents();
+        // Major cs = dl.getMajors().getFirst();
+        // ArrayList<String> not = new ArrayList<String>();
+        // Student michael = new Student(UUID.randomUUID(), "u n", "4675", "Owen", "Lars", "sophomore", cs, 14.3, courses, not);
+        // System.out.println(michael.getStanding());
+        // st.add(michael);
+        // DataWriter.saveStudents(st);
     }
 
     public static void main(String[] args) {

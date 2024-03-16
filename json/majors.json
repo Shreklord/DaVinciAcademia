@@ -229,7 +229,7 @@
         "id": "eba5ba09-0a62-4bba-99d6-1dd88e28e173",
         "name": "Computer Information Systems",
         "type": "BS",
-        "hours": "125",
+        "hours": "120",
         "majorreq": [{
             "courseName": "ECON202",
             "reccomendedSemester": "1"

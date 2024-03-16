@@ -58,6 +58,106 @@
             "courseName": "MATH241",
             "courseID": "8aab2d59-4815-463f-9406-444d42b8e62b",
             "reccomendedSemester": "4"
+        },
+        {
+            "courseName": "CSCE311",
+            "courseID": "da6d031b-70d9-4aeb-ab7f-73d25a088033",
+            "reccomendedSemester": "5"
+        },
+        {
+            "courseName": "CSCE330",
+            "courseID": "12be9ba0-3156-4b39-bd3f-00849c5df3d1",
+            "reccomendedSemester": "5"
+        },
+        {
+            "courseName": "CSCE350",
+            "courseID": "06236ad6-a1ea-4bb2-b9e5-468e3b5acc51",
+            "reccomendedSemester": "5"
+        },
+        {
+            "courseName": "ENGL 462",
+            "courseID": "1b35f7ba-f1fa-4635-b66d-41b273e496e9",
+            "reccomendedSemester": "5"
+        },
+        {
+            "courseName": "Application Area Elective",
+            "courseID": "6884c146-329b-4798-a687-70c411f8aeac",
+            "reccomendedSemester": "5"
+        },
+        {  
+            "courseName": "CSCE 416",
+            "courseID": "5a0303cc-c7a0-4cae-9400-848c17cc8a79",
+            "reccomendedSemester": "6"
+        },
+        {  
+            "courseName": "CSCE Major Elective",
+            "courseID": "b8ef19b5-58b8-4bae-a126-723b77df0532",
+            "reccomendedSemester": "6"
+        },
+        {  
+            "courseName": "STAT 509",
+            "courseID": "0ee5dfd1-d4bd-46b5-a70d-c0c006a6ee7e",
+            "reccomendedSemester": "6"
+        },
+        {  
+            "courseName": "Liberal Arts Elective",
+            "courseID": "febe96e4-b98e-4379-8e18-acb1397ff1a9",
+            "reccomendedSemester": "6"
+        },
+        {  
+            "courseName": "Application Area Elective",
+            "courseID": "6884c146-329b-4798-a687-70c411f8aeac",
+            "reccomendedSemester": "6"
+        },
+        {  
+            "courseName": "CSCE 490",
+            "courseID": "7b7ad695-2ab2-4e7e-ad12-b07f8ad1e7c1",
+            "reccomendedSemester": "7"
+        },
+        {  
+            "courseName": "CSCE 355",
+            "courseID": "cc8af1e8-11db-4e76-93f6-4b2407451b2b",
+            "reccomendedSemester": "7"
+        },
+        {  
+            "courseName": "CSCE Major Elective",
+            "courseID": "b8ef19b5-58b8-4bae-a126-723b77df0532",
+            "reccomendedSemester": "7"
+        },
+        {  
+            "courseName": "MATH 344",
+            "courseID": "0d593112-6bc5-4817-8509-14fc5efb1083",
+            "reccomendedSemester": "7"
+        },
+        {  
+            "courseName": "MATH 344L",
+            "courseID": "a195cfb9-0fa1-4daf-adfb-5b032bc148d4",
+            "reccomendedSemester": "7"
+        },
+        {  
+            "courseName": "Application Area Elective",
+            "courseID": "6884c146-329b-4798-a687-70c411f8aeac",
+            "reccomendedSemester": "7"
+        },
+        {
+            "courseName": "CSCE 492",
+            "courseID": "b16d1381-999b-4be9-81cf-d664f75b2521",
+            "reccomendedSemester": "8"
+        },
+        {
+            "courseName": "CSCE Major Elective",
+            "courseID": "b8ef19b5-58b8-4bae-a126-723b77df0532",
+            "reccomendedSemester": "8"
+        },
+        {
+            "courseName": "Liberal Arts Elective",
+            "courseID": "febe96e4-b98e-4379-8e18-acb1397ff1a9",
+            "reccomendedSemester": "8"
+        },
+        {
+            "courseName": "Liberal Arts Elective",
+            "courseID": "febe96e4-b98e-4379-8e18-acb1397ff1a9",
+            "reccomendedSemester": "8"
         }],
         "electivereq": [{
             "courseName": "ENGL101",
@@ -113,6 +213,16 @@
             "courseName": "Carolina Core GSS",
             "courseID": "a2d09af4-1a87-4177-9233-c6fbfcfc2754",
             "reccomendedSemester": "4"
+        },
+        {  
+            "courseName": "CSCE 390",
+            "courseID": "cc64bfdf-44aa-4ef3-a0cf-acb2abcafa26",
+            "reccomendedSemester": "5"
+        },
+        {
+            "courseName": "Carolina Core GHS",
+            "courseID": "c650a617-66da-4970-a8ec-b667aa450b1b",
+            "reccomendedSemester": "8"
         }]  
     },
     {

@@ -16,6 +16,30 @@
         "prereqs": "" 
     },
     {
+        "id": "febe96e4-b98e-4379-8e18-acb1397ff1a9",
+        "title": "Liberal Arts Elective",
+        "courseNumber": "",
+        "hours": "3",
+        "subject": "",
+        "prereqs": "" 
+    },
+    {
+        "id": "b8ef19b5-58b8-4bae-a126-723b77df0532",
+        "title": "CSCE Major Elective",
+        "courseNumber": "",
+        "hours": "3",
+        "subject": "",
+        "prereqs": "" 
+    },
+    {
+        "id": "6884c146-329b-4798-a687-70c411f8aeac",
+        "title": "Application Area Elective",
+        "courseNumber": "",
+        "hours": "3",
+        "subject": "",
+        "prereqs": "" 
+    },
+    {
         "id": "170d8de1-2c8d-4d81-975e-ab3b77b0409d",
         "title": "Laboratory Science Elective",
         "courseNumber": "",

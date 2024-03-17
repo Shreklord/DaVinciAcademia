@@ -16,6 +16,10 @@ public class UI {
     public void run() {
         displayLoginMenu(); //Testing JSON file loading and login scenarios 
         getMajorTest();
+        System.out.println();
+        System.out.println("Testing Eight Semester Plan");
+        System.out.println("---------------------------------------------");
+        testEightSemesterPlan();
         //scenario1();
         //scenario2();
         // testDataWriter();
@@ -24,7 +28,6 @@ public class UI {
     public void getMajorTest() {
         MajorList majorList = MajorList.getInstance(); // Assuming MajorList is correctly implemented as a singleton
         ArrayList<Major> majors = majorList.getMajors();
-    
         for(Major major : majors) { 
             HashMap<Course, Integer> temp = major.getMajorRequirements();
             HashMap<Course, Integer> temp2 = major.getElectiveCourseReqs();
@@ -100,6 +103,19 @@ public class UI {
         // System.out.println(michael.getStanding());
         // st.add(michael);
         // DataWriter.saveStudents(st);
+    }
+
+    public void testEightSemesterPlan() {
+        ArrayList<Student> students = UserList.getStudents();
+        Student temp = students.get(0);
+        int totalHours = 0;
+        System.out.println("Student Name: " + temp.getFirstName() + " " + temp.getLastName());
+        System.out.println("Student Major: " + temp.getMajor().getName());
+        for(Course course : temp.displayEightSemesterPlan()) {
+            System.out.println("Course: " + course.getTitle() + " (" + course.getSubject() + " " + course.getCourseNumber() + ")");
+            totalHours += course.getHours();
+        }
+        System.out.println("Total Hours: " + totalHours);
     }
 
     public static void main(String[] args) {

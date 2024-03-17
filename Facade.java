@@ -41,12 +41,15 @@ public class Facade {
 
     }
 
-    public ArrayList<Course> getEightSemesterPlan() {
-        return null;
+    public ArrayList<Course> getEightSemesterPlan(UUID id) {
+        
+        Student temp = users.getStudentByID(id);
+        System.out.println(temp.getMajor().getName());
+        return temp.displayEightSemesterPlan();
     }
 
     public ArrayList<Major> getMajors() {
-        return null;
+        return majors.getMajors();
     }
 
     public void whatIf() {

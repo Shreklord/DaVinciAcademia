@@ -30,8 +30,7 @@ public class DataLoader extends DataConstants {
                 String password = (String)studentJSON.get("password");
                 double GPA = Double.parseDouble((String)studentJSON.get("GPA"));
                 Major major = MajorList.getMajorByName((String)studentJSON.get("major")); // shoudnt this not work because MajorList could be null?
-                                                                                              // we might need a getInstance()
-               
+                                                                                              // we might need a getInstance
                 ArrayList<StudentCourse> coursesTaken = new ArrayList<StudentCourse>();
                 JSONArray courseArray = (JSONArray)studentJSON.get("coursesTaken"); // here we are handling the courses
 

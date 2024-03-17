@@ -1,5 +1,11 @@
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.UUID;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+import java.util.Comparator;
 
 public class Student extends User{
     private String standing;
@@ -29,28 +35,34 @@ public class Student extends User{
         this.setStanding(standing);
     }
 
-    public void displayEightSemesterPlan() {
-        // Need to access the major's Courses and display them.
-        // Need to get each course's credit hours, 
-        // Take the classes that equal out to 15,
-        // Display that for each semester.
-        // Display each semester.
-        // The difficulty is that the classes can't be chosen at random,
-        // but the prereqs have to be taken first. 
-        
-        // I think it fills out classes as normal, then checks prereqs.
-        // If there are prereqs, then put the prereqs in the plan for that semester, repeat.
+    public ArrayList<Course> displayEightSemesterPlan() {
+        ArrayList<Course> plan = new ArrayList<Course>();
+        HashMap<Course, Integer> majorReqs = major.getMajorRequirements();
+        HashMap<Course, Integer> electiveReqs = major.getElectiveCourseReqs();
+        majorReqs.putAll(electiveReqs);
+         
 
-        // Will also have to check each time we add a course to the eight semester plan
-        // if the course has already been taken by the student.
-        //
+        List<Map.Entry<Course, Integer>> entryList = new ArrayList<>(majorReqs.entrySet());
+        Collections.sort(entryList, new Comparator<Map.Entry<Course, Integer>>() {
+            @Override
+            public int compare(Map.Entry<Course, Integer> o1, Map.Entry<Course, Integer> o2) {
+                return o1.getValue().compareTo(o2.getValue());
+            }
+        });
+
+        ArrayList<Course> sortedMajorReqs = new ArrayList<>();
+        for(Map.Entry<Course, Integer> entry : entryList) {
+            sortedMajorReqs.add(entry.getKey());
+        }
+
+        plan = sortedMajorReqs;
+        return plan;
     }
     
     @Override
     public UUID getID() {
         return super.getID();
     }
-
 
     /**
      * only returns false as of 2/29

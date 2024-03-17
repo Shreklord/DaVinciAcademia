@@ -6,7 +6,7 @@
        "lastName":"Smith",
        "userName":"JS20",
        "password":"password",
-       "major":"CSCE",
+       "major":"Computer Science",
        "GPA": "3.54",
        "coursesTaken":[{
             "courseid":"03e5935c-42c8-40d7-a9ae-1c4090bce58f",

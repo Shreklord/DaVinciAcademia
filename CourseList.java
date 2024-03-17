@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.HashMap;
 
 public class CourseList {
     private static CourseList courseList;
@@ -27,10 +28,20 @@ public class CourseList {
     }
 
     /**
-     * not finished - returns null
+     * returns an unsorted list of major reqs and elective reqs
+     * input string is case sensitive
      */
     public ArrayList<Course> getCoursesByMajor(String major) {
-        return null;
+        ArrayList<Course> majorCourses = new ArrayList<Course>();
+        Major currentMajor = MajorList.getMajorByName(major);
+        
+        for (Course c : currentMajor.getMajorRequirements().keySet())
+            majorCourses.add(c);
+
+        for (Course c : currentMajor.getElectiveCourseReqs().keySet())
+            majorCourses.add(c);
+
+        return majorCourses;
     }
 
     /**

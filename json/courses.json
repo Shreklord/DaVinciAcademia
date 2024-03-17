@@ -361,7 +361,7 @@
         "prereqs": "D<CSCE240&CSCE350&CSCE490"
     },
     {
-        "id":"",
+        "id":"3fe12e99-832c-4a5e-b771-33ec9b1b48e7",
         "title":"Calc. for Bus Admin & Soc. Sci.",
         "courseNumber":"122",
         "hours":"3",
@@ -369,7 +369,7 @@
         "prereqs":"C<MATH111/MATHI111"
     },
     {
-        "id":"",
+        "id":"00682ec9-d314-401c-ae1d-4d30c961d936",
         "title":"Computer Hardware Foundations",
         "courseNumber":"210",
         "hours":"3",
@@ -377,7 +377,7 @@
         "prereqs":"C<CSCE145/CSCE204/CSCE205/CSCE206/CSCE207"
     },
     {
-        "id":"",
+        "id":"083462b4-5d9e-4f2b-9327-507021c986cc",
         "title":"Introduction to Economics",
         "courseNumber":"224",
         "hours":"3",
@@ -385,15 +385,7 @@
         "prereqs":""
     },
     {
-        "id":"",
-        "title":"Public Communication",
-        "courseNumber":"140",
-        "hours":"3",
-        "subject":"SPCH",
-        "prereqs":""
-    },
-    {
-        "id":"",
+        "id":"e021dd81-271e-48e5-9f41-27820d3f447a",
         "title":"Introduction to Computer Security",
         "courseNumber":"201",
         "hours":"3",
@@ -401,7 +393,7 @@
         "prereqs":"C<CSCE101/CSCE102/CSCE145"
     },
     {
-        "id":"",
+        "id":"3ae8576c-d061-4360-9064-2a5f4f9d196a",
         "title":"Discrete Math. for Computer Sci.",
         "courseNumber":"174",
         "hours":"3",
@@ -409,7 +401,7 @@
         "prereqs":"C<MATH111/MATH112/MATH115/MATH116"
     },
     {
-        "id":"",
+        "id":"7ac11741-b2f4-4252-b767-ac932ee3f99a",
         "title":"Introduction to Accounting",
         "courseNumber":"222",
         "hours":"3",
@@ -417,7 +409,7 @@
         "prereqs":"C<MATH122/MATH141"
     },
     {
-        "id":"",
+        "id":"3da944eb-985f-4076-9223-764ea62fec84",
         "title":"Principles of Management",
         "courseNumber":"371",
         "hours":"3",
@@ -425,7 +417,7 @@
         "prereqs":""
     },
     {
-        "id":"",
+        "id":"39fe0d2e-8345-46ef-b999-f332883caf41",
         "title":"Buisness Applications Programming",
         "courseNumber":"205",
         "hours":"3",
@@ -433,7 +425,7 @@
         "prereqs":"C<MSGC290/CSCE101"
     },
     {
-        "id":"",
+        "id":"0a9429d3-c0eb-49bf-a90e-e0d82480fb23",
         "title":"Statistical Methods I",
         "courseNumber":"515",
         "hours":"3",
@@ -441,7 +433,7 @@
         "prereqs":"C<MATH112/MATH141"
     },
     {
-        "id":"",
+        "id":"196f4ae1-2974-4667-9c25-5acdc630e401",
         "title":"Database System Design",
         "courseNumber":"520",
         "hours":"3",
@@ -449,7 +441,7 @@
         "prereqs":"C<CSCE240/GEOG563"
     },
     {
-        "id":"",
+        "id":"575ee062-552d-43ee-bb22-e62a2532a517",
         "title":"Statistical Methods II",
         "courseNumber":"516",
         "hours":"3",
@@ -457,7 +449,7 @@
         "prereqs":"C<STAT515/STAT509/STAT512"
     },
     {
-        "id":"",
+        "id":"c2656f4b-a66f-4a7e-b1e3-569aa2b4d60a",
         "title":"Information Security Principles",
         "courseNumber":"522",
         "hours":"3",
@@ -465,7 +457,7 @@
         "prereqs":"C<CSCE146&MATH174/MATH374"
     },
     {
-        "id":"",
+        "id":"1a8cd589-1ee6-4fc9-ba20-083c9d3ba2fd",
         "title":"Info. Systems Analysis & Design",
         "courseNumber":"490",
         "hours":"3",
@@ -473,7 +465,7 @@
         "prereqs":"C<MGSC298&MGSC390"
     },
     {
-        "id":"",
+        "id":"60de8570-7b19-461e-b222-87fd68fa2edd",
         "title":"E-Commerce Concepts & Research Topics",
         "courseNumber":"590",
         "hours":"3",
@@ -481,7 +473,7 @@
         "prereqs":"C<MGSC390"
     },
     {
-        "id":"",
+        "id":"58513575-b937-4182-986d-de0b2c45b466",
         "title":"Computer Information Systems in Business",
         "courseNumber":"290",
         "hours":"3",
@@ -489,7 +481,7 @@
         "prereqs":""
     },
     {
-        "id":"",
+        "id":"eee63b42-898e-4e10-ba65-bde80f54d12c",
         "title":"Intensive Basic College Mathematics",
         "courseNumber":"111",
         "hours":"3",
@@ -497,7 +489,7 @@
         "prereqs":""
     },
     {
-        "id":"",
+        "id":"06808788-4884-4cdc-972a-d06cda4df2d7",
         "title":"Basic College Mathematics",
         "courseNumber":"111",
         "hours":"3",
@@ -505,7 +497,7 @@
         "prereqs":""
     },
     {
-        "id":"",
+        "id":"289d46a5-7c90-4884-bdb0-8e772843d619",
         "title":"Trigonometry",
         "courseNumber":"112",
         "hours":"2",
@@ -513,7 +505,7 @@
         "prereqs":"C<MATHI111/MATH111"
     },
     {
-        "id":"",
+        "id":"94074a90-16ad-4bd6-aa64-91e60813f12a",
         "title":"Precalculus Mathematics",
         "courseNumber":"115",
         "hours":"4",
@@ -521,7 +513,7 @@
         "prereqs":"C<MATHI111/MATH111"
     },
     {
-        "id":"",
+        "id":"09442542-18bb-4fa8-988b-faf830d62c2f",
         "title":"Brief Precalculus Mathematics",
         "courseNumber":"116",
         "hours":"2",

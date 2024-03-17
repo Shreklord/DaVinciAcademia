@@ -1,50 +1,171 @@
 [
     {
-       "id":"df75b2af-b95d-4548-91f6-18871af1d6ef",
-       "standing":"freshman",
-       "firstName":"Josh",
-       "lastName":"Smith",
-       "userName":"JS20",
-       "password":"password",
-       "major":"Computer Science",
-       "GPA": "3.54",
-       "coursesTaken":[{
-            "courseid":"03e5935c-42c8-40d7-a9ae-1c4090bce58f",
-            "grade":"95.5",
-            "attempts":"1",
-            "isCompleted":"true"
-        },
-        {
-            "courseid":"fbe348d9-9e66-4da1-b714-d1950b37e402",
-            "grade":"63.0",
-            "attempts":"1",
-            "isCompleted":"true"
-        }
+        "standing": "freshman",
+        "firstName": "Josh",
+        "lastName": "Smith",
+        "password": "password",
+        "coursesTaken": [
+            {
+                "grade": "95.5",
+                "courseid": "03e5935c-42c8-40d7-a9ae-1c4090bce58f",
+                "attempts": "1",
+                "isCompleted": "true"
+            },
+            {
+                "grade": "63.0",
+                "courseid": "fbe348d9-9e66-4da1-b714-d1950b37e402",
+                "attempts": "1",
+                "isCompleted": "true"
+            }
         ],
-       "notes":"you need to pass 145/you need to pass 146"
+        "notes": [
+            "you need to pass 145",
+            "you need to pass 146"
+        ],
+        "major": "Computer Science",
+        "GPA": "3.54",
+        "id": "df75b2af-b95d-4548-91f6-18871af1d6ef",
+        "userName": "JS20"
     },
     {
-        "id":"d95876ab-358b-462f-aa93-8993fe7d5ae6",
-        "standing":"sophomore",
-        "firstName":"Sarah",
-        "lastName":"Kosgei",
-        "userName":"KS34",
-        "password":"sk1234",
-        "major":"CIS",
-        "GPA":"3.82",
-        "coursesTaken":[{
-            "courseid":"03e5935c-42c8-40d7-a9ae-1c4090bce58f",
-            "grade":"95.5",
-            "attempts":"1",
-            "isCompleted":"true"
-        },
-        {
-            "courseid":"fbe348d9-9e66-4da1-b714-d1950b37e402",
-            "grade":"63.0",
-            "attempts":"1",
-            "isCompleted":"true"
-        }
+        "standing": "junior",
+        "firstName": "Brax",
+        "lastName": "West",
+        "password": "password",
+        "coursesTaken": [
+            {
+                "grade": "90.23149398724682",
+                "courseid": "cc8af1e8-11db-4e76-93f6-4b2407451b2b",
+                "attempts": "1",
+                "isCompleted": "true"
+            },
+            {
+                "grade": "86.40754024772058",
+                "courseid": "0d593112-6bc5-4817-8509-14fc5efb1083",
+                "attempts": "1",
+                "isCompleted": "true"
+            },
+            {
+                "grade": "58.52440625686393",
+                "courseid": "8aab2d59-4815-463f-9406-444d42b8e62b",
+                "attempts": "1",
+                "isCompleted": "true"
+            },
+            {
+                "grade": "64.61432797597631",
+                "courseid": "10fa13e6-f148-4495-a059-6642f5d952bb",
+                "attempts": "1",
+                "isCompleted": "true"
+            },
+            {
+                "grade": "76.0814998312279",
+                "courseid": "da6d031b-70d9-4aeb-ab7f-73d25a088033",
+                "attempts": "1",
+                "isCompleted": "true"
+            },
+            {
+                "grade": "90.91582392793713",
+                "courseid": "077be7a4-d4f2-4f99-bf5d-618824b9bfe7",
+                "attempts": "1",
+                "isCompleted": "true"
+            },
+            {
+                "grade": "76.21122784876255",
+                "courseid": "6884c146-329b-4798-a687-70c411f8aeac",
+                "attempts": "1",
+                "isCompleted": "true"
+            },
+            {
+                "grade": "91.24436004250651",
+                "courseid": "211f112f-9d26-4531-a9d5-106433e8f79b",
+                "attempts": "1",
+                "isCompleted": "true"
+            },
+            {
+                "grade": "63.08608636439589",
+                "courseid": "fbe348d9-9e66-4da1-b714-d1950b37e402",
+                "attempts": "1",
+                "isCompleted": "true"
+            },
+            {
+                "grade": "98.75524638617891",
+                "courseid": "d1433d4e-8c32-4edc-adba-348b5ddcc087",
+                "attempts": "1",
+                "isCompleted": "true"
+            },
+            {
+                "grade": "89.18739810548891",
+                "courseid": "febe96e4-b98e-4379-8e18-acb1397ff1a9",
+                "attempts": "1",
+                "isCompleted": "true"
+            },
+            {
+                "grade": "82.27864563765092",
+                "courseid": "06236ad6-a1ea-4bb2-b9e5-468e3b5acc51",
+                "attempts": "1",
+                "isCompleted": "true"
+            },
+            {
+                "grade": "92.08967274519765",
+                "courseid": "ab2b65e5-1865-4cbc-a74e-d9ab47d66026",
+                "attempts": "1",
+                "isCompleted": "true"
+            },
+            {
+                "grade": "73.66553741712438",
+                "courseid": "f40b2ed7-971a-4190-aaf8-98f0035bc5e2",
+                "attempts": "1",
+                "isCompleted": "true"
+            },
+            {
+                "grade": "98.30741021968454",
+                "courseid": "1b35f7ba-f1fa-4635-b66d-41b273e496e9",
+                "attempts": "1",
+                "isCompleted": "true"
+            },
+            {
+                "grade": "98.851602867798",
+                "courseid": "e2aed192-03ff-4494-bb44-1f9ed300ef6c",
+                "attempts": "1",
+                "isCompleted": "true"
+            },
+            {
+                "grade": "55.74589885380017",
+                "courseid": "b47a90a5-2770-42b0-9ce6-67cf4dc704aa",
+                "attempts": "1",
+                "isCompleted": "true"
+            },
+            {
+                "grade": "96.98171294937164",
+                "courseid": "c650a617-66da-4970-a8ec-b667aa450b1b",
+                "attempts": "1",
+                "isCompleted": "true"
+            },
+            {
+                "grade": "85.07173815928577",
+                "courseid": "1028df38-cdc6-4bbf-a7b3-abf1bf9b4b43",
+                "attempts": "1",
+                "isCompleted": "true"
+            },
+            {
+                "grade": "79.77829779996978",
+                "courseid": "c0d9833b-6686-41f6-88ac-b6395ba51560",
+                "attempts": "1",
+                "isCompleted": "true"
+            },
+            {
+                "grade": "66.89462040226257",
+                "courseid": "fe1fc2f9-1684-463c-8317-c23dbc72c4f7",
+                "attempts": "1",
+                "isCompleted": "true"
+            }
         ],
-        "notes":"you need to pass 145/you need to pass 146"
+        "notes": [
+            "almost graduated!!"
+        ],
+        "major": "Computer Science",
+        "GPA": "3.5",
+        "id": "9dee31e4-ed5e-4dc2-bfd1-634c9c9222da",
+        "userName": "brax123"
     }
 ]

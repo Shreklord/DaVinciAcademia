@@ -38,6 +38,7 @@ public class DataWriter extends DataConstants {
 
     public static JSONObject getStudentJSON(Student student) {
         JSONObject studentDetails = new JSONObject();
+        System.out.println(student.getUsername());
         studentDetails.put("id", String.valueOf(student.getID()));
         studentDetails.put("standing", student.getStanding());
         studentDetails.put("firstName", student.getFirstName());

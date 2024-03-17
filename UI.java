@@ -1,6 +1,7 @@
 import java.util.ArrayList;
 import java.util.Scanner;
 import java.util.UUID;
+import java.util.concurrent.TimeUnit;
 import java.util.HashMap;
 
 public class UI {
@@ -10,19 +11,103 @@ public class UI {
     // COURSE LIST MUST BE INITIALIZED BEFORE WE LOAD ANY STUDENTS WHAT SO EVER
 
     public UI() {
-        facade = new Facade();
+        this.scanner = new Scanner(System.in);
+        this.facade = new Facade(); 
     }
 
     public void run() {
-        displayLoginMenu(); //Testing JSON file loading and login scenarios 
-        getMajorTest();
-        System.out.println();
-        System.out.println("Testing Eight Semester Plan");
-        System.out.println("---------------------------------------------");
-        testEightSemesterPlan();
-        //scenario1();
-        //scenario2();
-        // testDataWriter();
+        loginScreen();
+        if (this.facade.getCurrentUser() instanceof Student)
+            studentScreen();
+        if (this.facade.getCurrentUser() instanceof Faculty)
+            facultyScreen();
+        
+    }
+
+    public void loginScreen() {
+
+        System.out.print("\033[H\033[2J");  
+        System.out.flush();
+        while (this.facade.getCurrentUser() == null) {
+            System.out.println("-----DaVinci Academia-----");
+            System.out.println("Enter username: ");
+            String enteredUsername = scanner.nextLine();
+
+            if (enteredUsername.equals("q"))
+                System.exit(0);;
+
+            System.out.println("Enter password: ");
+            String enteredPassword = scanner.nextLine();
+
+            if (this.facade.login(enteredUsername, enteredPassword)) {
+                break;
+            } else {
+                System.out.print("\033[H\033[2J");  
+                System.out.flush();
+                System.out.println("log in information was incorrected please try again");
+            }
+            
+        }
+
+        System.out.print("\033[H\033[2J");  
+        System.out.flush();
+
+        System.out.println("logging in");
+        for (int i = 0; i < 1; i++) {
+            try {
+                TimeUnit.SECONDS.sleep(1);
+            } catch (Exception e) {}
+            System.out.print(".");
+        }
+
+        System.out.print("\033[H\033[2J");  
+        System.out.flush();
+
+        String legalName = this.facade.getCurrentUser().getFirstName() + " " + this.facade.getCurrentUser().getLastName();
+        System.out.println("logged in as " + legalName);
+    }
+
+    public void studentScreen() {
+        System.out.println("User type: student");
+    }
+
+    public void facultyScreen() {
+        System.out.println("User type: faculty");
+    }
+
+    public void createBraxWest() {
+        System.out.println("creating Brax West...");
+
+        MajorList majors =  MajorList.getInstance();
+        Major computerScience = majors.getMajorByName("Computer Science");
+
+        CourseList courseList = CourseList.getInstance();
+        ArrayList<Course> allCourses = courseList.getCoursesByMajor("Computer Science");
+        ArrayList<StudentCourse> courses = new ArrayList<StudentCourse>();
+        for (Course c : allCourses) {
+
+            // Math.random() returns a double in the set [0, 1)
+            Double rand = Math.random();
+
+            StudentCourse sCourse = new StudentCourse(c.getID(), c.getTitle(), c.getHours(),
+             c.getSubject(), c.getCourseNumber(), c.getPrereqs(), (rand > .5), (int)(rand * 2), rand * 100);
+
+            courses.add(sCourse);
+        }
+
+        ArrayList<String> notes = new ArrayList<String>();
+        notes.add("almost graduated!!");
+
+        Student brax = new Student(UUID.fromString("9dee31e4-ed5e-4dc2-bfd1-634c9c9222da"),
+        "brax123", "password", "Brax", "West", "junior", computerScience, 3.5, courses, notes);
+
+        System.out.println("created brax");
+
+        ArrayList<Student> allStudents = UserList.getStudents();
+        allStudents.add(brax);
+        DataWriter.saveStudents(allStudents);
+
+        System.out.println("saved brax");
     }
 
     public void getMajorTest() {
@@ -119,6 +204,7 @@ public class UI {
     }
 
     public static void main(String[] args) {
+        
         UI ui = new UI();
         ui.run();
     }

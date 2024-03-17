@@ -543,5 +543,37 @@
         "hours": "3",
         "subject": "SPCH",
         "prereqs": ""
+    },
+    {
+        "id":"da661d49-dc7a-4cb5-bd48-d20669f250d2",
+        "title":"Beginning French I",
+        "courseNumber":"109",
+        "hours":"3",
+        "subject":"FREN",
+        "prereqs":""
+    },
+    {
+        "id":"c975e73b-1403-400b-9511-18f0dbcba798",
+        "title":"Beginning Spanish I",
+        "courseNumber":"109",
+        "hours":"3",
+        "subject":"SPAN",
+        "prereqs":""
+    },
+    {
+        "id":"41d8403b-8da8-43f6-9ad7-2afebf4702f8",
+        "title":"Beginning German I",
+        "courseNumber":"109",
+        "hours":"3",
+        "subject":"GERM",
+        "prereqs":""
+    },
+    {
+        "id":"405d8022-ed69-498e-a518-c420e20e72c6",
+        "title":"Elementary Italian",
+        "courseNumber":"121",
+        "hours":"3",
+        "subject":"ITAL",
+        "prereqs":""
     }
 ]

@@ -28,6 +28,30 @@ public class CourseList {
     }
 
     /**
+     * returns an array list of courses
+     * number does not have to be of length 3 - returns any matches for the amount of digits provided
+     */
+    public static ArrayList<Course> searchCourseByNameAndNumber(String nameParam, String numberParam) {
+        ArrayList<Course> searchResult = new ArrayList<Course>();
+        for (Course c : courses) {
+            if (c.getSubject().equals(nameParam)) {
+                String[] cNumber = String.valueOf(c.getCourseNumber()).split("");
+                String[] numberParamArr = numberParam.split("");
+                boolean isMatch = true;
+                for (int i = 0; i < numberParam.length(); i++) {
+                    if (cNumber[i].equals(numberParamArr[i]) == false) {
+                        isMatch = false;
+                    }
+                }
+                if (isMatch) {
+                    searchResult.add(c);
+                }
+            }
+        }
+        return searchResult;
+    }
+
+    /**
      * returns an unsorted list of major reqs and elective reqs
      * input string is case sensitive
      */

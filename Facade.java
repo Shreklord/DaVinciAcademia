@@ -66,7 +66,6 @@ public class Facade {
     }
 
     public String formattedStudentCourses(boolean isCompleted) {
-        System.out.println("im printing this one!!!");
         String returnString = "";
 
         // will only be called after the user has logged into student so we will handle the user as one
@@ -135,10 +134,9 @@ public class Facade {
         // now we've handled our information lets format the string
 
         for (Course c : coursesNotTakenMajor) {
-            returnString += "----- " + c.getTitle() + " (" + c.getSubject() + c.getCourseNumber()+ ")\n";
+            returnString += "----- " + c.getTitle() + " (" + c.getSubject() + c.getCourseNumber() + ")\n";
             returnString += "\n";
             returnString += "   Hours: " + c.getHours() + "\n";
-            returnString += "   for testing: " + c.getID() + "\n";
             returnString += "\n";
         }
 

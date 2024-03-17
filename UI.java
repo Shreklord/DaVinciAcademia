@@ -48,11 +48,11 @@ public class UI {
         System.out.flush();
 
         System.out.println("logging in");
-        for (int i = 0; i < 1; i++) {
+        for (int i = 0; i < 30; i++) {
             try {
-                TimeUnit.SECONDS.sleep(1);
+                TimeUnit.MILLISECONDS.sleep((int)(Math.random() * 100));
             } catch (Exception e) {}
-            System.out.print(".");
+            System.out.print("..");
         }
 
         System.out.print("\033[H\033[2J");  
@@ -70,12 +70,12 @@ public class UI {
     public void studentScreen() {
         while (true) {
             System.out.println("Please choose an option to display: ");
-            System.out.println("1. My current courses ");
-            System.out.println("2. All my past courses ");
-            System.out.println("3. View uncompleted Major Courses: ");
+            System.out.println("1. View my current courses ");
+            System.out.println("2. View my past courses ");
+            System.out.println("3. View uncompleted major courses ");
             System.out.println("4. Search for a course ");
             System.out.println("5. View my eight-semester plan ");
-            System.out.println("6. logout");
+            System.out.println("q. logout");
             System.out.println("\n\n\nEnter choice: ");
 
             String choice = this.scanner.nextLine();
@@ -90,15 +90,15 @@ public class UI {
                 System.out.println(this.facade.formattedStudentCourses(true));
             }
             if (choice.equals("3")) {
-                System.out.println(this.facade.formattedStudentCoursesLeft()); // to do
+                System.out.println(this.facade.formattedStudentCoursesLeft());
             }
             if (choice.equals("4")) {
-                System.out.println("we will handle searching here"); // to do
+                searchScreen();
             }
             if (choice.equals("5")) { // to do
                 System.out.println(this.facade.formattedStudentEightSemesterPlan());
             }
-            if (choice.equals("6")) {
+            if (choice.equals("q")) {
                 this.facade.setCurrentUser(null);
                 loginScreen();
             }
@@ -117,6 +117,44 @@ public class UI {
 
     public void facultyScreen() {
         System.out.println("User type: faculty");
+    }
+
+    public void searchScreen() {
+        System.out.println("Enter a parameter to search courses by: "); 
+        System.out.println("1. By name and number");
+        System.out.println("2. By requirement");
+        System.out.println("q. exit");
+
+        String searchChoice = this.scanner.nextLine();
+
+        if (searchChoice.equals("1")) {
+            System.out.println("Enter the subject to search by: ");
+            String subject = this.scanner.nextLine();
+            System.out.println("Enter the number to search by: ");
+            System.out.println("    *optional ('1' will return any 100 level classes, etc)");
+            String number = this.scanner.nextLine();
+
+            ArrayList<Course> results = CourseList.searchCourseByNameAndNumber(subject, number);
+            displayResults(results);
+
+        } else if (searchChoice.equals("2")) {
+            System.out.println("choose a requirement to search by: ");
+            System.out.println("1. Carolina Core GFL");
+            System.out.println("2. Carolina Core GSS");
+            System.out.println("3. Carolina Core AIU");
+            System.out.println("4. Carolina Core SCI");
+            System.out.println("5. Carolina Core CMS");
+            System.out.println("6. Application Area Elective");
+            System.out.println("7. Laboratory Science Elective");
+            System.out.println("q. exit");
+        }
+    }
+
+
+    public void displayResults(ArrayList<Course> results) {
+        for (Course c : results) {
+            System.out.println(c.getTitle());
+        }
     }
 
     public void createBraxWest() {

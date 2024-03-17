@@ -21,6 +21,7 @@ public class DataLoader extends DataConstants {
             JSONArray studentsJSON = (JSONArray)new JSONParser().parse(reader);
 
             for (int i = 0; i < studentsJSON.size(); i++) {
+                
                 JSONObject studentJSON = (JSONObject)studentsJSON.get(i); 
                 UUID id = UUID.fromString((String)studentJSON.get("id"));
                 String standing = (String)studentJSON.get("standing");
@@ -32,8 +33,10 @@ public class DataLoader extends DataConstants {
                 Major major = MajorList.getMajorByName((String)studentJSON.get("major")); // shoudnt this not work because MajorList could be null?
                                                                                               // we might need a getInstance
                 ArrayList<StudentCourse> coursesTaken = new ArrayList<StudentCourse>();
+                
+                
                 JSONArray courseArray = (JSONArray)studentJSON.get("coursesTaken"); // here we are handling the courses
-
+                
                 for (int j = 0; j < courseArray.size(); j++) {
                     JSONObject courseJSON = (JSONObject)courseArray.get(j);
                     String courseID = (String)courseJSON.get("courseid");
@@ -50,12 +53,16 @@ public class DataLoader extends DataConstants {
                 }
 
 
-                String[] notes = ((String)studentJSON.get("notes")).split("/");
+                
+                JSONArray notesArray = (JSONArray)studentJSON.get("notes");
                 ArrayList<String> notesList = new ArrayList<String>();
-                for (String note : notes) {
+                for (int j = 0; j < notesArray.size(); j++) {
+                    String note = (String)notesArray.get(j);
                     notesList.add(note);
                 }
 
+
+                
                 students.add(new Student(id, userName, password,
                             firstName, lastName, standing,
                             major, GPA, coursesTaken, notesList)); // add our new student to the returned arrayList

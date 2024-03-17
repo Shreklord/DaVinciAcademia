@@ -223,6 +223,11 @@
             "courseName": "Carolina Core GHS",
             "courseID": "c650a617-66da-4970-a8ec-b667aa450b1b",
             "reccomendedSemester": "8"
+        },
+        {
+            "courseName":"Carolina Core GFL",
+            "courseID": "b168d1ac-3b7d-486d-9163-61bb02a3d5dc",
+            "reccomendedSemester":"4"
         }]  
     }
 ]

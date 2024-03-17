@@ -75,7 +75,7 @@
             "reccomendedSemester": "5"
         },
         {
-            "courseName": "ENGL 462",
+            "courseName": "ENGL462",
             "courseID": "1b35f7ba-f1fa-4635-b66d-41b273e496e9",
             "reccomendedSemester": "5"
         },
@@ -85,7 +85,7 @@
             "reccomendedSemester": "5"
         },
         {  
-            "courseName": "CSCE 416",
+            "courseName": "CSCE416",
             "courseID": "5a0303cc-c7a0-4cae-9400-848c17cc8a79",
             "reccomendedSemester": "6"
         },
@@ -95,7 +95,7 @@
             "reccomendedSemester": "6"
         },
         {  
-            "courseName": "STAT 509",
+            "courseName": "STAT509",
             "courseID": "0ee5dfd1-d4bd-46b5-a70d-c0c006a6ee7e",
             "reccomendedSemester": "6"
         },
@@ -110,12 +110,12 @@
             "reccomendedSemester": "6"
         },
         {  
-            "courseName": "CSCE 490",
+            "courseName": "CSCE490",
             "courseID": "7b7ad695-2ab2-4e7e-ad12-b07f8ad1e7c1",
             "reccomendedSemester": "7"
         },
         {  
-            "courseName": "CSCE 355",
+            "courseName": "CSCE355",
             "courseID": "cc8af1e8-11db-4e76-93f6-4b2407451b2b",
             "reccomendedSemester": "7"
         },
@@ -125,12 +125,12 @@
             "reccomendedSemester": "7"
         },
         {  
-            "courseName": "MATH 344",
+            "courseName": "MATH344",
             "courseID": "0d593112-6bc5-4817-8509-14fc5efb1083",
             "reccomendedSemester": "7"
         },
         {  
-            "courseName": "MATH 344L",
+            "courseName": "MATH344L",
             "courseID": "a195cfb9-0fa1-4daf-adfb-5b032bc148d4",
             "reccomendedSemester": "7"
         },
@@ -140,7 +140,7 @@
             "reccomendedSemester": "7"
         },
         {
-            "courseName": "CSCE 492",
+            "courseName": "CSCE492",
             "courseID": "b16d1381-999b-4be9-81cf-d664f75b2521",
             "reccomendedSemester": "8"
         },
@@ -215,7 +215,7 @@
             "reccomendedSemester": "4"
         },
         {  
-            "courseName": "CSCE 390",
+            "courseName": "CSCE390",
             "courseID": "cc64bfdf-44aa-4ef3-a0cf-acb2abcafa26",
             "reccomendedSemester": "5"
         },
@@ -224,5 +224,182 @@
             "courseID": "c650a617-66da-4970-a8ec-b667aa450b1b",
             "reccomendedSemester": "8"
         }]  
+    },
+    {
+        "id": "dbc833d3-84f9-477c-8c17-70238011e337",
+        "name": "Computer Information Systems",
+        "type": "BS",
+        "hours": "121",
+        "majorreq": [{
+            "courseName": "CSCE145",
+            "courseID": "d1433d4e-8c32-4edc-adba-348b5ddcc087",
+            "reccomendedSemester": "1"
+        },
+        {
+            "courseName":"ENGL101",
+            "courseID": "1028df38-cdc6-4bbf-a7b3-abf1bf9b4b43",
+            "reccomendedSemester":"1"
+        },
+        {
+            "courseName": "MATH122",
+            "courseID": "3fe12e99-832c-4a5e-b771-33ec9b1b48e7",
+            "reccomendedSemester": "1"
+        },
+        {
+            "courseName": "MATH141",
+            "courseID": "cc74abf2-339a-4ac8-9c2b-7f9b79a4f233",
+            "reccomendedSemester": "1"
+        },
+        {
+            "courseName": "CSCE190",
+            "courseID": "04d4c585-3ff3-454c-b6bd-ddc2698a5640",
+            "reccomendedSemester": "1"
+        },
+        {
+            "courseName": "Carolina Core SCI",
+            "courseID": "49c4cd5b-4d0e-47b6-9607-3b3c98f42991",
+            "reccomendedSemester": "1"
+        },
+        {
+            "courseName": "ENGL102",
+            "courseID": "fe1fc2f9-1684-463c-8317-c23dbc72c4f7",
+            "reccomendedSemester": "2"
+        },
+        {
+            "courseName": "Carolina Core SCI",
+            "courseID": "49c4cd5b-4d0e-47b6-9607-3b3c98f42991",
+            "reccomendedSemester": "2"
+        },
+        {
+            "courseName": "CSCE146",
+            "courseID": "211f112f-9d26-4531-a9d5-106433e8f79b",
+            "reccomendedSemester": "2"
+        },
+        {
+            "courseName": "CSCE215",
+            "courseID": "82bcab5c-8252-455e-b0e7-4f3864d827f5",
+            "reccomendedSemester": "2"
+        },
+        {
+            "courseName": "Carolina Core AIU",
+            "courseID": "b47a90a5-2770-42b0-9ce6-67cf4dc704aa",
+            "reccomendedSemester": "2"
+        },
+        {
+            "courseName": "CSCE210",
+            "courseID": "00682ec9-d314-401c-ae1d-4d30c961d936",
+            "reccomendedSemester": "3"
+        },
+        {
+            "courseName": "CSCE240",
+            "courseID": "fbe348d9-9e66-4da1-b714-d1950b37e402",
+            "reccomendedSemester": "3"
+        },
+        {
+            "courseName": "ECON224",
+            "courseID": "083462b4-5d9e-4f2b-9327-507021c986cc",
+            "reccomendedSemester": "3"
+        },
+        {
+            "courseName": "SPCH140",
+            "courseID": "2ea21702-a697-40da-a8a7-93688d0d570f",
+            "reccomendedSemester": "3"
+        },
+        {
+            "courseName": "Carolina Core GSS",
+            "courseID": "a2d09af4-1a87-4177-9233-c6fbfcfc2754",
+            "reccomendedSemester": "3"
+        },
+        {
+            "courseName": "CSCE201",
+            "courseID": "e021dd81-271e-48e5-9f41-27820d3f447a",
+            "reccomendedSemester": "4"
+        },
+        {
+            "courseName": "MATH174",
+            "courseID": "3ae8576c-d061-4360-9064-2a5f4f9d196a",
+            "reccomendedSemester": "4"
+        },
+        {
+            "courseName": "MATH374",
+            "courseID": "f40b2ed7-971a-4190-aaf8-98f0035bc5e2",
+            "reccomendedSemester": "4"
+        },
+        {
+            "courseName": "ACCT222",
+            "courseID": "7ac11741-b2f4-4252-b767-ac932ee3f99a",
+            "reccomendedSemester": "4"
+        },
+        {
+            "courseName": "MGMT371",
+            "courseID": "3da944eb-985f-4076-9223-764ea62fec84",
+            "reccomendedSemester": "4"
+        },
+        {
+            "courseName": "Carolina Core GHS",
+            "courseID": "c650a617-66da-4970-a8ec-b667aa450b1b",
+            "reccomendedSemester": "4"
+        },
+        {
+            "courseName": "CSCE205",
+            "courseID": "39fe0d2e-8345-46ef-b999-f332883caf41",
+            "reccomendedSemester": "5"
+        },
+        {
+            "courseName": "CSCE311",
+            "courseID": "da6d031b-70d9-4aeb-ab7f-73d25a088033",
+            "reccomendedSemester": "5"
+        },
+        {
+            "courseName": "CSCE390",
+            "courseID": "cc64bfdf-44aa-4ef3-a0cf-acb2abcafa26",
+            "reccomendedSemester": "5"
+        },
+        {
+            "courseName": "STAT509",
+            "courseID": "0ee5dfd1-d4bd-46b5-a70d-c0c006a6ee7e",
+            "reccomendedSemester": "5"
+        },
+        {
+            "courseName": "STAT515",
+            "courseID": "0a9429d3-c0eb-49bf-a90e-e0d82480fb23",
+            "reccomendedSemester": "5"
+        },
+        {
+            "courseName": "MGSC390",
+            "courseID": "c6cd846f-a071-4135-8f57-b06b2eb84b8a",
+            "reccomendedSemester": "5"
+        },
+        {
+            "courseName": "BIM Minor Elective",
+            "courseID": "262ad912-8e6d-411e-818b-e4417b428a9b",
+            "reccomendedSemester": "5"
+        },
+        {
+            "courseName": "CSCE350",
+            "courseID": "06236ad6-a1ea-4bb2-b9e5-468e3b5acc51",
+            "reccomendedSemester": "6"
+        },
+        {
+            "courseName": "",
+            "courseID": "",
+            "reccomendedSemester": "6"
+        },
+        {
+            "courseName": "",
+            "courseID": "",
+            "reccomendedSemester": "6"
+        },
+        {
+            "courseName": "",
+            "courseID": "",
+            "reccomendedSemester": "6"
+        },
+        {
+            "courseName": "",
+            "courseID": "",
+            "reccomendedSemester": "6"
+        },
+    ]
     }
 ]

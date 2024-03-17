@@ -2,7 +2,7 @@ import java.util.ArrayList;
 import java.util.UUID;
 
 public class Facade {
-    public User currentUser;
+    private User currentUser;
     private UserList users = UserList.getInstance();
     private CourseList courses = CourseList.getInstance();
     private MajorList majors = MajorList.getInstance();
@@ -59,5 +59,25 @@ public class Facade {
     public User getCurrentUser() {
         return currentUser;
     }
+
+    public void setCurrentUser(User u) {
+        this.currentUser = u;
+    }
+
+    public String formattedStudentCurrentCourses() {
+        return "";
+    }
+
+    public String formattedStudentCoursesLeft() {
+        return "";
+    }
+
+    public String formattedStudentPastCourses() {
+        return "";
+    }
+
+	public String formattedStudentEightSemesterPlan() {
+		return "";
+	}
 
 }

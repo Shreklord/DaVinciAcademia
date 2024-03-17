@@ -17,10 +17,6 @@ public class UI {
 
     public void run() {
         loginScreen();
-        if (this.facade.getCurrentUser() instanceof Student)
-            studentScreen();
-        if (this.facade.getCurrentUser() instanceof Faculty)
-            facultyScreen();
         
     }
 
@@ -65,10 +61,59 @@ public class UI {
 
         String legalName = this.facade.getCurrentUser().getFirstName() + " " + this.facade.getCurrentUser().getLastName();
         System.out.println("logged in as " + legalName);
+
+        if (this.facade.getCurrentUser() instanceof Student)
+            studentScreen();
+        if (this.facade.getCurrentUser() instanceof Faculty)
+            facultyScreen();
     }
 
     public void studentScreen() {
-        System.out.println("User type: student");
+        while (true) {
+            System.out.println("Please choose an option to display: ");
+            System.out.println("1. My current courses ");
+            System.out.println("2. All my past courses ");
+            System.out.println("3. Courses I have left to take ");
+            System.out.println("4. Search for a course ");
+            System.out.println("5. View my eight-semester plan ");
+            System.out.println("6. logout");
+            System.out.println("\n\n\nEnter choice: ");
+
+            String choice = this.scanner.nextLine();
+
+            System.out.print("\033[H\033[2J");  
+            System.out.flush();
+
+            if (choice.equals("1")) {
+                System.out.println(this.facade.formattedStudentCurrentCourses());
+            }
+            if (choice.equals("2")) {
+                System.out.println(this.facade.formattedStudentPastCourses());
+            }
+            if (choice.equals("3")) {
+                System.out.println(this.facade.formattedStudentCoursesLeft());
+            }
+            if (choice.equals("4")) {
+                System.out.println("we will handle searching here");
+            }
+            if (choice.equals("5")) {
+                System.out.println(this.facade.formattedStudentEightSemesterPlan());
+            }
+            if (choice.equals("6")) {
+                this.facade.setCurrentUser(null);
+                loginScreen();
+            }
+
+
+            while (true) {
+                System.out.println("Enter 'q' to return home: ");
+                if (this.scanner.nextLine().equalsIgnoreCase("q")) {
+                    System.out.print("\033[H\033[2J");  
+                    System.out.flush();
+                    break;
+                }
+            }
+        }
     }
 
     public void facultyScreen() {
@@ -133,46 +178,6 @@ public class UI {
         }
     }
 
-    public void displayLoginMenu() {
-        System.out.println("Hello DaVinci Academia Students!");
-        
-    }
-
-    public void scenario1() {
-        System.out.println("");
-        System.out.println("Testing Login Success Scenario");
-        Boolean temp = facade.login("JS20", "password");
-        if(temp) {
-            System.out.println("Welcome " + facade.currentUser.getFirstName() + " " + facade.currentUser.getLastName());
-        }
-        else
-            System.out.println("Invalid username or password");
-        temp = facade.login("LD30", "ilovemykids");
-        if(temp) {
-            System.out.println("Welcome " + facade.currentUser.getFirstName() + " " + facade.currentUser.getLastName());
-        }
-        else
-            System.out.println("Invalid username or password");
-        return;
-    }
-
-    public void scenario2(){
-        System.out.println();
-        System.out.println("Testing Login Failure Scenario");
-        Boolean temp = facade.login("JS20", "password1");
-        if(temp) {
-            System.out.println("Welcome " + facade.currentUser.getFirstName() + " " + facade.currentUser.getLastName());
-        }
-        else
-            System.out.println("Invalid username or password");
-        temp = facade.login("LD30", "ilovemykids1");
-        if(temp) {
-            System.out.println("Welcome " + facade.currentUser.getFirstName() + " " + facade.currentUser.getLastName());
-        }
-        else
-            System.out.println("Invalid username or password");
-        return;
-    }
     public void testDataWriter() {
         // //This can be deleted eventually. 
         // System.out.println();

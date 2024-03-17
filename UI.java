@@ -85,18 +85,18 @@ public class UI {
             System.out.flush();
 
             if (choice.equals("1")) {
-                System.out.println(this.facade.formattedStudentCurrentCourses());
+                System.out.println(this.facade.formattedStudentCourses(false));
             }
             if (choice.equals("2")) {
-                System.out.println(this.facade.formattedStudentPastCourses());
+                System.out.println(this.facade.formattedStudentCourses(true));
             }
             if (choice.equals("3")) {
-                System.out.println(this.facade.formattedStudentCoursesLeft());
+                System.out.println(this.facade.formattedStudentCoursesLeft()); // to do
             }
             if (choice.equals("4")) {
-                System.out.println("we will handle searching here");
+                System.out.println("we will handle searching here"); // to do
             }
-            if (choice.equals("5")) {
+            if (choice.equals("5")) { // to do
                 System.out.println(this.facade.formattedStudentEightSemesterPlan());
             }
             if (choice.equals("6")) {

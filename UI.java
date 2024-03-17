@@ -16,8 +16,7 @@ public class UI {
     }
 
     public void run() {
-        loginScreen();
-        
+        loginScreen(); // comment this line out if you don't want the app to run
     }
 
     public void loginScreen() {
@@ -73,7 +72,7 @@ public class UI {
             System.out.println("Please choose an option to display: ");
             System.out.println("1. My current courses ");
             System.out.println("2. All my past courses ");
-            System.out.println("3. Courses I have left to take ");
+            System.out.println("3. View uncompleted Major Courses: ");
             System.out.println("4. Search for a course ");
             System.out.println("5. View my eight-semester plan ");
             System.out.println("6. logout");

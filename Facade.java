@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.UUID;
 
 public class Facade {
@@ -65,6 +66,7 @@ public class Facade {
     }
 
     public String formattedStudentCourses(boolean isCompleted) {
+        System.out.println("im printing this one!!!");
         String returnString = "";
 
         // will only be called after the user has logged into student so we will handle the user as one
@@ -90,7 +92,58 @@ public class Facade {
 
 
     public String formattedStudentCoursesLeft() {
-        return "";
+        String returnString = "";
+
+        // will only be called after the user has logged into student so we will handle the user as one
+        Student currentStudent = users.getStudentByID(this.currentUser.getID());
+        ArrayList<StudentCourse> studentCourses = currentStudent.getCourses();
+        Major compSci = MajorList.getMajorByName("Computer Science");
+
+        HashMap<Course, Integer> majorReqs = compSci.getMajorRequirements();
+        HashMap<Course, Integer> elecReqs = compSci.getElectiveCourseReqs();
+
+        ArrayList<Course> coursesNotTakenMajor = new ArrayList<Course>();
+
+        // check to see if it is in students course list
+        for (Course c : majorReqs.keySet()) {
+            Boolean courseFound = false;
+            for (Course s : studentCourses) {
+                if (c.getID().equals(s.getID())) {
+                    courseFound = true;
+                    break;
+                }
+            }
+            if (!courseFound) {
+                coursesNotTakenMajor.add(c);
+            }
+        }
+
+        // check to see if it is in students course list
+        for (Course c : elecReqs.keySet()) {
+            Boolean courseFound = false;
+            for (Course s : studentCourses) {
+                if (c.getID().equals(s.getID())) {
+                    courseFound = true;
+                    break;
+                }
+            }
+            if (!courseFound) {
+                coursesNotTakenMajor.add(c);
+            }
+        }
+
+        // now we've handled our information lets format the string
+
+        for (Course c : coursesNotTakenMajor) {
+            returnString += "----- " + c.getTitle() + " (" + c.getSubject() + c.getCourseNumber()+ ")\n";
+            returnString += "\n";
+            returnString += "   Hours: " + c.getHours() + "\n";
+            returnString += "   for testing: " + c.getID() + "\n";
+            returnString += "\n";
+        }
+
+
+        return returnString;
     }
 
 

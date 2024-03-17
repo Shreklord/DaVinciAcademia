@@ -60,7 +60,7 @@
         "title": "General Chemistry I Lab",
         "courseNumber": "111",
         "hours": "3",
-        "subject": "CHEM",
+        "subject": "CHEML",
         "prereqs": "C<MATH111/MATH115/MATH122/MATH141/PHYS211"
     },
     {
@@ -255,5 +255,173 @@
         "hours": "3",
         "subject": "CSCE",
         "prereqs": "D<CSCE240&CSCE350&CSCE490"
+    },
+    {
+        "id":"",
+        "title":"Calc. for Bus Admin & Soc. Sci.",
+        "courseNumber":"122",
+        "hours":"3",
+        "subject":"MATH",
+        "prereqs":"C<MATH111/MATHI111"
+    },
+    {
+        "id":"",
+        "title":"Computer Hardware Foundations",
+        "courseNumber":"210",
+        "hours":"3",
+        "subject":"CSCE",
+        "prereqs":"C<CSCE145/CSCE204/CSCE205/CSCE206/CSCE207"
+    },
+    {
+        "id":"",
+        "title":"Introduction to Economics",
+        "courseNumber":"224",
+        "hours":"3",
+        "subject":"ECON",
+        "prereqs":""
+    },
+    {
+        "id":"",
+        "title":"Public Communication",
+        "courseNumber":"140",
+        "hours":"3",
+        "subject":"SPCH",
+        "prereqs":""
+    },
+    {
+        "id":"",
+        "title":"Introduction to Computer Security",
+        "courseNumber":"201",
+        "hours":"3",
+        "subject":"CSCE",
+        "prereqs":"C<CSCE101/CSCE102/CSCE145"
+    },
+    {
+        "id":"",
+        "title":"Discrete Math. for Computer Sci.",
+        "courseNumber":"174",
+        "hours":"3",
+        "subject":"MATH",
+        "prereqs":"C<MATH111/MATH112/MATH115/MATH116"
+    },
+    {
+        "id":"",
+        "title":"Introduction to Accounting",
+        "courseNumber":"222",
+        "hours":"3",
+        "subject":"ACCT",
+        "prereqs":"C<MATH122/MATH141"
+    },
+    {
+        "id":"",
+        "title":"Principles of Management",
+        "courseNumber":"371",
+        "hours":"3",
+        "subject":"MGMT",
+        "prereqs":""
+    },
+    {
+        "id":"",
+        "title":"Buisness Applications Programming",
+        "courseNumber":"205",
+        "hours":"3",
+        "subject":"CSCE",
+        "prereqs":"C<MSGC290/CSCE101"
+    },
+    {
+        "id":"",
+        "title":"Statistical Methods I",
+        "courseNumber":"515",
+        "hours":"3",
+        "subject":"STAT",
+        "prereqs":"C<MATH112/MATH141"
+    },
+    {
+        "id":"",
+        "title":"Database System Design",
+        "courseNumber":"520",
+        "hours":"3",
+        "subject":"CSCE",
+        "prereqs":"C<CSCE240/GEOG563"
+    },
+    {
+        "id":"",
+        "title":"Statistical Methods II",
+        "courseNumber":"516",
+        "hours":"3",
+        "subject":"STAT",
+        "prereqs":"C<STAT515/STAT509/STAT512"
+    },
+    {
+        "id":"",
+        "title":"Information Security Principles",
+        "courseNumber":"522",
+        "hours":"3",
+        "subject":"CSCE",
+        "prereqs":"C<CSCE146&MATH174/MATH374"
+    },
+    {
+        "id":"",
+        "title":"Info. Systems Analysis & Design",
+        "courseNumber":"490",
+        "hours":"3",
+        "subject":"MGSC",
+        "prereqs":"C<MGSC298&MGSC390"
+    },
+    {
+        "id":"",
+        "title":"E-Commerce Concepts & Research Topics",
+        "courseNumber":"590",
+        "hours":"3",
+        "subject":"MGSC",
+        "prereqs":"C<MGSC390"
+    },
+    {
+        "id":"",
+        "title":"Computer Information Systems in Business",
+        "courseNumber":"290",
+        "hours":"3",
+        "subject":"MGSC",
+        "prereqs":""
+    },
+    {
+        "id":"",
+        "title":"Intensive Basic College Mathematics",
+        "courseNumber":"111",
+        "hours":"3",
+        "subject":"MATHI",
+        "prereqs":""
+    },
+    {
+        "id":"",
+        "title":"Basic College Mathematics",
+        "courseNumber":"111",
+        "hours":"3",
+        "subject":"MATH",
+        "prereqs":""
+    },
+    {
+        "id":"",
+        "title":"Trigonometry",
+        "courseNumber":"112",
+        "hours":"2",
+        "subject":"MATH",
+        "prereqs":"C<MATHI111/MATH111"
+    },
+    {
+        "id":"",
+        "title":"Precalculus Mathematics",
+        "courseNumber":"115",
+        "hours":"4",
+        "subject":"MATH",
+        "prereqs":"C<MATHI111/MATH111"
+    },
+    {
+        "id":"",
+        "title":"Brief Precalculus Mathematics",
+        "courseNumber":"116",
+        "hours":"2",
+        "subject":"MATH",
+        "prereqs":"C<MATH112/MATH115"
     }
 ]

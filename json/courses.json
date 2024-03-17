@@ -16,6 +16,14 @@
         "prereqs": "" 
     },
     {
+        "id": "262ad912-8e6d-411e-818b-e4417b428a9b",
+        "title": "BIM Minor Elective",
+        "courseNumber": "",
+        "hours": "3",
+        "subject": "",
+        "prereqs": "" 
+    },
+    {
         "id": "febe96e4-b98e-4379-8e18-acb1397ff1a9",
         "title": "Liberal Arts Elective",
         "courseNumber": "",
@@ -455,6 +463,14 @@
         "hours":"3",
         "subject":"CSCE",
         "prereqs":"C<CSCE146&MATH174/MATH374"
+    },
+    {
+        "id":"c6cd846f-a071-4135-8f57-b06b2eb84b8a",
+        "title":"Business Information Systems",
+        "courseNumber":"390",
+        "hours":"3",
+        "subject":"MGSC",
+        "prereqs":"C<MGSC290"
     },
     {
         "id":"1a8cd589-1ee6-4fc9-ba20-083c9d3ba2fd",

@@ -21,6 +21,7 @@ public class DataLoader extends DataConstants {
             JSONArray studentsJSON = (JSONArray)new JSONParser().parse(reader);
 
             for (int i = 0; i < studentsJSON.size(); i++) {
+                
                 JSONObject studentJSON = (JSONObject)studentsJSON.get(i); 
                 UUID id = UUID.fromString((String)studentJSON.get("id"));
                 String standing = (String)studentJSON.get("standing");
@@ -30,11 +31,12 @@ public class DataLoader extends DataConstants {
                 String password = (String)studentJSON.get("password");
                 double GPA = Double.parseDouble((String)studentJSON.get("GPA"));
                 Major major = MajorList.getMajorByName((String)studentJSON.get("major")); // shoudnt this not work because MajorList could be null?
-                                                                                              // we might need a getInstance()
-               
+                                                                                              // we might need a getInstance
                 ArrayList<StudentCourse> coursesTaken = new ArrayList<StudentCourse>();
+                
+                
                 JSONArray courseArray = (JSONArray)studentJSON.get("coursesTaken"); // here we are handling the courses
-
+                
                 for (int j = 0; j < courseArray.size(); j++) {
                     JSONObject courseJSON = (JSONObject)courseArray.get(j);
                     String courseID = (String)courseJSON.get("courseid");
@@ -51,12 +53,16 @@ public class DataLoader extends DataConstants {
                 }
 
 
-                String[] notes = ((String)studentJSON.get("notes")).split("/");
+                
+                JSONArray notesArray = (JSONArray)studentJSON.get("notes");
                 ArrayList<String> notesList = new ArrayList<String>();
-                for (String note : notes) {
+                for (int j = 0; j < notesArray.size(); j++) {
+                    String note = (String)notesArray.get(j);
                     notesList.add(note);
                 }
 
+
+                
                 students.add(new Student(id, userName, password,
                             firstName, lastName, standing,
                             major, GPA, coursesTaken, notesList)); // add our new student to the returned arrayList
@@ -115,14 +121,29 @@ public class DataLoader extends DataConstants {
             FileReader reader = new FileReader(COURSE_FILE_PATH);
             JSONArray coursesJSON = (JSONArray)new JSONParser().parse(reader);
 
+            UUID id;
+            String title;
+            int courseNumber;
+            int hours;
+            String subject;
+            String prereqs;
+
             for (int i = 0; i <coursesJSON.size(); i++) {
                 JSONObject courseJSON = (JSONObject)coursesJSON.get(i);
-                UUID id = UUID.fromString((String)courseJSON.get("id"));
-                String title = (String)courseJSON.get("title");
-                int courseNumber = Integer.parseInt((String)courseJSON.get("courseNumber"));
-                int hours = Integer.parseInt((String)courseJSON.get("hours"));
-                String subject = (String)courseJSON.get("subject");
-                String prereqs = (String)courseJSON.get("prereqs");
+                id = UUID.fromString((String)courseJSON.get("id"));
+                title = (String)courseJSON.get("title");
+                //So weird, basically if you dont check the empty slots within
+                //the Carolina Core Classes, it flips because its trying to parse an int from nothing
+                if(courseJSON.get("courseNumber") == "" || courseJSON.get("courseNumber") == null)
+                    courseNumber = 0;
+                else
+                    courseNumber = Integer.parseInt((String)courseJSON.get("courseNumber"));
+                if(courseJSON.get("hours") == "" || courseJSON.get("hours") == null)
+                    hours = 0;
+                else
+                    hours = Integer.parseInt((String)courseJSON.get("hours"));
+                subject = (String)courseJSON.get("subject");
+                prereqs = (String)courseJSON.get("prereqs");
 
                 ArrayList<String> preqArrayList = new ArrayList<String>();
                 for (String prereq : prereqs.split("&"))
@@ -156,13 +177,15 @@ public class DataLoader extends DataConstants {
                 int hours = Integer.parseInt((String)majorJSON.get("hours"));
                 
                 JSONArray requirementsJSON = (JSONArray) majorJSON.get("majorreq");
-                ArrayList<Course> requirementsList = parseCourses(requirementsJSON);
+                // for(Object o : requirementsJSON) {
+                //     String courseID = (String)majorJSON.get("courseID");
+                //     int reccomendedSemester = Integer.parseInt((String)majorJSON.get("reccomendedSemester"));
+                // }
+                HashMap<Course, Integer> requirementsList = parseCourses(requirementsJSON);
     
                 JSONArray electiveRequirementsJSON = (JSONArray) majorJSON.get("electivereq");
-                ArrayList<Course> electiveRequirementsList = parseCourses(electiveRequirementsJSON);
-
-                CourseList list = CourseList.getInstance(); // here we create our instance variables to be used
-
+                HashMap<Course, Integer> electiveRequirementsList = parseCourses(electiveRequirementsJSON);
+               // CourseList list = CourseList.getInstance(); // here we create our instance variables to be used
                 majors.add(new Major(id, name, type, hours, requirementsList, electiveRequirementsList));
             }
         } catch (Exception e) {
@@ -172,20 +195,37 @@ public class DataLoader extends DataConstants {
         return majors;
     }
 
-    private static ArrayList<Course> parseCourses(JSONArray coursesJSON) {
-        ArrayList<Course> coursesList = new ArrayList<>();
+    // --------- pissy caca --------------
+    // private static ArrayList<Course> parseCourses(JSONArray coursesJSON) {
+    //     ArrayList<Course> coursesList = new ArrayList<>();
+    //     CourseList courseList = CourseList.getInstance(); // Get the singleton instance of CourseList
+
+    //     for (Object o : coursesJSON) {
+    //         String courseCode = (String) o;
+    //         // first 4 characters are the subject and the last 3 are the course number
+    //         String subject = courseCode.substring(0, 4);
+    //         int courseNumber = Integer.parseInt(courseCode.substring(4));
+
+    //         // Attempt to find the matching Course object
+    //         Course course = courseList.getByTitleAndNumber(subject, courseNumber);
+    //         if (course != null) {
+    //             coursesList.add(course);
+    //         }
+    //     }
+    //     return coursesList;
+    // }
+
+    private static HashMap<Course, Integer> parseCourses(JSONArray coursesJSON) {
+        HashMap<Course, Integer> coursesList = new HashMap<>();
         CourseList courseList = CourseList.getInstance(); // Get the singleton instance of CourseList
-
         for (Object o : coursesJSON) {
-            String courseCode = (String) o;
-            // first 4 characters are the subject and the last 3 are the course number
-            String subject = courseCode.substring(0, 4);
-            int courseNumber = Integer.parseInt(courseCode.substring(4));
-
+            JSONObject courseJSON = (JSONObject) o;
+            String courseID = (String) courseJSON.get("courseID");
+            int reccomendedSemester = Integer.parseInt((String)courseJSON.get("reccomendedSemester"));
             // Attempt to find the matching Course object
-            Course course = courseList.getByTitleAndNumber(subject, courseNumber);
+            Course course = courseList.getByUUID(courseID);
             if (course != null) {
-                coursesList.add(course);
+                coursesList.put(course, reccomendedSemester);
             }
         }
         return coursesList;

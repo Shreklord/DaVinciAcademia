@@ -5,7 +5,9 @@ public class MajorList {
     private static MajorList majorList;
     private static ArrayList<Major> majors = new ArrayList<Major>();
 
-    public MajorList() {}
+    public MajorList() {
+
+    }
 
     public ArrayList<Major> getMajors() {
         return majors;
@@ -24,6 +26,7 @@ public class MajorList {
     }
 
     public static Major getMajorByName(String major) {
+        majors = DataLoader.getMajors();
         for (Major m : majors) {
             if (m.getName().equals(major)) {
                 return m;
@@ -40,7 +43,7 @@ public class MajorList {
      * @param String
      * @return major
      */
-    public Major getByUUID(String id) {
+    public static Major getByUUID(String id) {
         for (Major m : majors) {
             if (m.getID().toString() == id)
                 return m;

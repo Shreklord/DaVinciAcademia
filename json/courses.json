@@ -8,6 +8,94 @@
         "prereqs": "C<CSCE146"
     },
     {
+        "id": "598d16e8-d602-4cd7-bcd9-eb199ad348fa",
+        "title": "Carolina Core VSR",
+        "courseNumber": "",
+        "hours": "3",
+        "subject": "",
+        "prereqs": "" 
+    },
+    {
+        "id": "febe96e4-b98e-4379-8e18-acb1397ff1a9",
+        "title": "Liberal Arts Elective",
+        "courseNumber": "",
+        "hours": "3",
+        "subject": "",
+        "prereqs": "" 
+    },
+    {
+        "id": "b8ef19b5-58b8-4bae-a126-723b77df0532",
+        "title": "CSCE Major Elective",
+        "courseNumber": "",
+        "hours": "3",
+        "subject": "",
+        "prereqs": "" 
+    },
+    {
+        "id": "6884c146-329b-4798-a687-70c411f8aeac",
+        "title": "Application Area Elective",
+        "courseNumber": "",
+        "hours": "3",
+        "subject": "",
+        "prereqs": "" 
+    },
+    {
+        "id": "170d8de1-2c8d-4d81-975e-ab3b77b0409d",
+        "title": "Laboratory Science Elective",
+        "courseNumber": "",
+        "hours": "4",
+        "subject": "",
+        "prereqs": "" 
+    },
+    {
+        "id": "b168d1ac-3b7d-486d-9163-61bb02a3d5dc",
+        "title": "Carolina Core GFL",
+        "courseNumber": "",
+        "hours": "3",
+        "subject": "",
+        "prereqs": "" 
+    },
+    {
+        "id": "a2d09af4-1a87-4177-9233-c6fbfcfc2754",
+        "title": "Carolina Core GSS",
+        "courseNumber": "",
+        "hours": "3",
+        "subject": "",
+        "prereqs": "" 
+    },
+    {
+        "id": "c650a617-66da-4970-a8ec-b667aa450b1b",
+        "title": "Carolina Core GHS",
+        "courseNumber": "",
+        "hours": "3",
+        "subject": "",
+        "prereqs": "" 
+    },
+    {
+        "id": "b47a90a5-2770-42b0-9ce6-67cf4dc704aa",
+        "title": "Carolina Core AIU",
+        "courseNumber": "",
+        "hours": "3",
+        "subject": "",
+        "prereqs": ""
+    },
+    {
+        "id": "49c4cd5b-4d0e-47b6-9607-3b3c98f42991",
+        "title": "Carolina Core SCI",
+        "courseNumber": "",
+        "hours": "3",
+        "subject": "",
+        "prereqs": ""
+    },
+    {
+        "id": "de5bbdb3-d011-4512-a783-7c66232c08df",
+        "title": "Carolina Core CMS",
+        "courseNumber": "",
+        "hours": "3",
+        "subject": "",
+        "prereqs": ""
+    },
+    {
         "id": "fbe348d9-9e66-4da1-b714-d1950b37e402",
         "title": "Advancing Programming Techniques",
         "courseNumber": "240",
@@ -62,6 +150,22 @@
         "hours": "3",
         "subject": "CHEML",
         "prereqs": "C<MATH111/MATH115/MATH122/MATH141/PHYS211"
+    },
+    {
+        "id": "c663c627-ea6f-4c85-8806-f9dec0199c03",
+        "title": "General Chemistry II",
+        "courseNumber": "112",
+        "hours": "3",
+        "subject": "CHEM",
+        "prereqs": "C<CHEM111/CHEM111L/CHEM141"
+    },
+    {
+        "id": "a01321d4-cba5-467d-86b1-938b7c03d37c",
+        "title": "General Chemistry II Lab",
+        "courseNumber": "112",
+        "hours": "3",
+        "subject": "CHEM",
+        "prereqs": "C<CHEM111/CHEM111L/CHEM141&MATH111/MATH115/MATH122/MATH141"
     },
     {
         "id": "04d4c585-3ff3-454c-b6bd-ddc2698a5640",
@@ -423,5 +527,13 @@
         "hours":"2",
         "subject":"MATH",
         "prereqs":"C<MATH112/MATH115"
+    },
+    {
+        "id": "2ea21702-a697-40da-a8a7-93688d0d570f",
+        "title": "Public Communication",
+        "courseNumber": "140",
+        "hours": "3",
+        "subject": "SPCH",
+        "prereqs": ""
     }
 ]

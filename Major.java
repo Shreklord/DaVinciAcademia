@@ -1,16 +1,17 @@
 import java.util.ArrayList;
 import java.util.UUID;
+import java.util.HashMap;
+import java.util.UUID;
 
 public class Major {
     private UUID id;
     private String name;
     private String type;
     private int hours;
-    private ArrayList<Course> majorRequirements;
-    private ArrayList<Course> electiveCourseReq;
-    private int reccomendedSemester;
+    private HashMap<Course, Integer> majorRequirements;
+    private HashMap<Course, Integer> electiveCourseReq;
 
-    public Major(UUID id, String name, String type, int hours, ArrayList<Course> majorReqs, ArrayList<Course> electiveReqs, int reccomendedSemester) {
+    public Major(UUID id, String name, String type, int hours, HashMap<Course, Integer> majorReqs, HashMap<Course, Integer> electiveReqs) {
         setID(id);
         setName(name);
         setType(type);
@@ -51,23 +52,19 @@ public class Major {
         this.type = type;
     }
 
-    public ArrayList<Course> getMajorRequirements() {
+    public HashMap<Course, Integer> getMajorRequirements() {
         return this.majorRequirements;
     }
 
-    private void setMajorRequirements(ArrayList<Course> reqs) {
+    private void setMajorRequirements(HashMap<Course, Integer> reqs) {
         this.majorRequirements = reqs;
     }
 
-    public ArrayList<Course> getElectiveCourseReqs() {
+    public HashMap<Course, Integer> getElectiveCourseReqs() {
         return this.electiveCourseReq;
     }
 
-    private void setElectiveCourseReqs(ArrayList<Course> reqs) {
+    private void setElectiveCourseReqs(HashMap<Course, Integer> reqs) {
         this.electiveCourseReq = reqs;
-    }
-
-    public int getReccomendedSemester() {
-        return this.reccomendedSemester;
     }
 }

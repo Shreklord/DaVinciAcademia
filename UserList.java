@@ -65,7 +65,7 @@ public class UserList {
         return null;
     }
 
-    public Student getStudentByID(UUID id) {              //I don't believe this method isnt neccesary, given getUser(UUID id)  
+    public static Student getStudentByID(UUID id) {              //I don't believe this method isnt neccesary, given getUser(UUID id)  
          for (int i = 0; i < students.size(); i++)  {      //does the same thing.
              Student s = students.get(i);
              if (s.getID().equals(id))

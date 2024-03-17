@@ -51,6 +51,16 @@ public class CourseList {
         return searchResult;
     }
 
+    public static ArrayList<Course> searchCourseByNameAndNumber(String[] nameParams, String numberParam) {
+        ArrayList<Course> finalResult = new ArrayList<Course>();
+        for (int i = 0; i < nameParams.length; i++) {
+            ArrayList<Course> currentResult = searchCourseByNameAndNumber(nameParams[i], numberParam);
+            for (Course c : currentResult)
+                finalResult.add(c);
+        }
+        return finalResult;
+    }
+
     /**
      * returns an unsorted list of major reqs and elective reqs
      * input string is case sensitive

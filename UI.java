@@ -123,7 +123,6 @@ public class UI {
         System.out.println("Enter a parameter to search courses by: "); 
         System.out.println("1. By name and number");
         System.out.println("2. By requirement");
-        System.out.println("q. exit");
 
         String searchChoice = this.scanner.nextLine();
 
@@ -146,8 +145,27 @@ public class UI {
             System.out.println("5. Carolina Core CMS");
             System.out.println("6. Application Area Elective");
             System.out.println("7. Laboratory Science Elective");
-            System.out.println("q. exit");
+
+            String reqChoice = scanner.nextLine();
+            ArrayList<Course> results = new ArrayList<Course>();
+            if (reqChoice.equals("1")) {
+                ArrayList<Course> result = CourseList.searchCourseByNameAndNumber(new String[]{"GERM", "SPAN", "ITAL", "FREN"}, reqChoice);
+                displayResults(result);
+            } else if (reqChoice.equals("2")) {
+
+            } else if (reqChoice.equals("3")) {
+
+            } else if (reqChoice.equals("4")) {
+
+            } else if (reqChoice.equals("5")) {
+
+            } else if (reqChoice.equals("6")) {
+
+            } else if (reqChoice.equals("7")) {
+
+            }
         }
+
     }
 
 

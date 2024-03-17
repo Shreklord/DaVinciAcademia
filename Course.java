@@ -8,16 +8,14 @@ public class Course {
     private int courseNumber;
     private ArrayList<String> prereqs;
     private String title;
-    private int recSemester;
 
-    public Course(UUID id, String title, int hours, String subject, int coursenumber, ArrayList<String> prereqs, int recSemester){
+    public Course(UUID id, String title, int hours, String subject, int coursenumber, ArrayList<String> prereqs){
         this.id = id;
         this.title = title;
         this.hours = hours;
         this.subject = subject;
         this.courseNumber = coursenumber;
         this.prereqs = prereqs;
-        this.recSemester = recSemester;
     }
 
     public ArrayList<String> getPrereqs(){
@@ -30,13 +28,6 @@ public class Course {
 
     public int getCourseNumber(){
         return this.courseNumber;
-    }
-
-    public void setRecSemester(int recSemester) {
-        this.recSemester = recSemester;
-    }
-    public int getRecSemester() {
-        return this.recSemester;
     }
 
     public String getTitle() {

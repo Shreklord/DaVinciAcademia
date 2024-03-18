@@ -16,7 +16,19 @@ public class UI {
     }
 
     public void run() {
-        loginScreen(); // comment this line out if you don't want the app to run
+        System.out.println("Enter 1 to create an account Enter 2 to login ('q' to quit): ");
+        while (true) {
+            String choice = this.scanner.nextLine();
+            if (choice.equals("1")) {
+                createAccountScreen();
+            } else if (choice.equals("2")) {
+                loginScreen();
+                break;
+            } else if (choice.equals("q")) {
+                break;
+            }
+        }
+         // comment this line out if you don't want the app to run
     }
 
     public void loginScreen() {
@@ -165,6 +177,11 @@ public class UI {
             }
         }
 
+    }
+
+    public void createAccountScreen() {
+        System.out.println("Welcome to the account creator");
+        System.out.println("If you are a new student enter 1, if you are a new faculty member press 2");
     }
 
     public void displayResults(ArrayList<Course> results) {

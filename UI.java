@@ -181,7 +181,15 @@ public class UI {
 
     public void createAccountScreen() {
         System.out.println("Welcome to the account creator");
-        System.out.println("If you are a new student enter 1, if you are a new faculty member press 2");
+        System.out.println("If you are a new student enter 1, if you are a new faculty member press 2 (Enter q to quit)");
+
+        String choice = this.scanner.nextLine();
+        if (choice.equals("1")) {
+
+        } else if (choice.equals("2")) {
+            System.out.println("Creating faculty member...");
+            System.out.println();
+        }
     }
 
     public void displayResults(ArrayList<Course> results) {

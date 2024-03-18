@@ -170,11 +170,11 @@ public class UI {
             
                 String studentMenuChoice = this.scanner.nextLine();
                 if (studentMenuChoice.equals("1")) {
-                    
+                    System.out.println(this.facade.formattedStudentCourses(false));
                 } else if (studentMenuChoice.equals("2")) {
-                   
+                   System.out.println(this.facade.formattedStudentCourses(true));
                 } else if (studentMenuChoice.equals("3")) {
-
+                    System.out.println(this.facade.formattedStudentCoursesLeft());
                 }
                 
             } else if (menuChoice.equals("q")) {

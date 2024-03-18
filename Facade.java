@@ -140,7 +140,6 @@ public class Facade {
             returnString += "\n";
         }
 
-
         return returnString;
     }
 

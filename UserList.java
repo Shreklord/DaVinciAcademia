@@ -72,7 +72,16 @@ public class UserList {
                  return s;
          }
          return null;
-     }
+    }
+
+    public static Faculty getFacultyByID(UUID id) {
+        for (int i = 0; i < faculty.size(); i++) {
+            Faculty f = faculty.get(i);
+            if (f.getID().equals(id))
+                return f;
+        }
+        return null;
+    }
 
     public static ArrayList<Student> getStudents() {
         return students;

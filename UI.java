@@ -84,6 +84,7 @@ public class UI {
     }
 
     public void studentScreen() {
+        Student currentStudent = UserList.getStudentByID(this.facade.getCurrentUser().getID());
         while (true) {
             System.out.println("Please choose an option to display: ");
             System.out.println("1. View my current courses ");
@@ -100,13 +101,13 @@ public class UI {
             System.out.flush();
 
             if (choice.equals("1")) {
-                System.out.println(this.facade.formattedStudentCourses(false));
+                System.out.println(this.facade.formattedStudentCourses(currentStudent, false));
             }
             if (choice.equals("2")) {
-                System.out.println(this.facade.formattedStudentCourses(true));
+                System.out.println(this.facade.formattedStudentCourses(currentStudent, true));
             }
             if (choice.equals("3")) {
-                System.out.println(this.facade.formattedStudentCoursesLeft());
+                System.out.println(this.facade.formattedStudentCoursesLeft(currentStudent));
             }
             if (choice.equals("4")) {
                 searchScreen();
@@ -170,12 +171,15 @@ public class UI {
             
                 String studentMenuChoice = this.scanner.nextLine();
                 if (studentMenuChoice.equals("1")) {
-                    System.out.println(this.facade.formattedStudentCourses(false));
+                    System.out.println(this.facade.formattedStudentCourses(s, false));
                 } else if (studentMenuChoice.equals("2")) {
-                   System.out.println(this.facade.formattedStudentCourses(true));
+                   System.out.println(this.facade.formattedStudentCourses(s, true));
                 } else if (studentMenuChoice.equals("3")) {
-                    System.out.println(this.facade.formattedStudentCoursesLeft());
+                    System.out.println(this.facade.formattedStudentCoursesLeft(s));
                 }
+
+                System.out.println("Enter 'q' to quit");
+                this.scanner.nextLine();
                 
             } else if (menuChoice.equals("q")) {
                 this.facade.setCurrentUser(null);

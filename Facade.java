@@ -65,12 +65,11 @@ public class Facade {
         this.currentUser = u;
     }
 
-    public String formattedStudentCourses(boolean isCompleted) {
+    public String formattedStudentCourses(Student s, boolean isCompleted) {
         String returnString = "";
 
         // will only be called after the user has logged into student so we will handle the user as one
-        Student currentStudent = users.getStudentByID(this.currentUser.getID());
-        ArrayList<StudentCourse> studentCourses = currentStudent.getCourses();
+        ArrayList<StudentCourse> studentCourses = s.getCourses();
         for (StudentCourse c : studentCourses) {
             
             if (isCompleted && !c.getIsCompleted()) {
@@ -90,11 +89,11 @@ public class Facade {
     }
 
 
-    public String formattedStudentCoursesLeft() {
+    public String formattedStudentCoursesLeft(Student student) {
         String returnString = "";
 
         // will only be called after the user has logged into student so we will handle the user as one
-        Student currentStudent = users.getStudentByID(this.currentUser.getID());
+        Student currentStudent = student;
         ArrayList<StudentCourse> studentCourses = currentStudent.getCourses();
         Major compSci = MajorList.getMajorByName("Computer Science");
 

@@ -1,8 +1,14 @@
+import java.io.FileWriter;
+import java.io.IOException;
+import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.Scanner;
+import java.util.TreeMap;
 import java.util.UUID;
 import java.util.concurrent.TimeUnit;
 import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 public class UI {
     private Scanner scanner;
@@ -111,6 +117,7 @@ public class UI {
             }
             if (choice.equals("5")) { // to do
                 System.out.println(this.facade.formattedStudentEightSemesterPlan());
+                writeEightSemesterPlanToFile();
             }
             if (choice.equals("q")) {
                 this.facade.setCurrentUser(null);
@@ -360,6 +367,21 @@ public class UI {
         }
         System.out.println("Total Hours: " + totalHours);
     }
+
+    public void writeEightSemesterPlanToFile() {
+        // Call the method that formats the eight-semester plan
+        String plan = this.facade.formattedStudentEightSemesterPlan();
+        
+        // Specify the output file name
+        String fileName = "output.txt";
+        
+        try (PrintWriter out = new PrintWriter(new FileWriter(fileName))) {
+            out.println(plan);
+        } catch (IOException e) {
+            System.err.println("An error occurred while writing to the file: " + e.getMessage());
+        }
+    }
+
 
     public static void main(String[] args) {
         

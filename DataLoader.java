@@ -115,46 +115,38 @@ public class DataLoader extends DataConstants {
      * Spencer Philips and Anthony Goldhammer
      */
     public static ArrayList<Course> getCourses() {
-        
         ArrayList<Course> courses = new ArrayList<>();
         try {
             FileReader reader = new FileReader(COURSE_FILE_PATH);
             JSONArray coursesJSON = (JSONArray)new JSONParser().parse(reader);
-
-            UUID id;
-            String title;
-            int courseNumber;
-            int hours;
-            String subject;
-            String prereqs;
-
+    
             for (int i = 0; i <coursesJSON.size(); i++) {
                 JSONObject courseJSON = (JSONObject)coursesJSON.get(i);
-                id = UUID.fromString((String)courseJSON.get("id"));
-                title = (String)courseJSON.get("title");
-                //So weird, basically if you dont check the empty slots within
-                //the Carolina Core Classes, it flips because its trying to parse an int from nothing
-                if(courseJSON.get("courseNumber") == "" || courseJSON.get("courseNumber") == null)
-                    courseNumber = 0;
-                else
-                    courseNumber = Integer.parseInt((String)courseJSON.get("courseNumber"));
-                if(courseJSON.get("hours") == "" || courseJSON.get("hours") == null)
-                    hours = 0;
-                else
-                    hours = Integer.parseInt((String)courseJSON.get("hours"));
-                subject = (String)courseJSON.get("subject");
-                prereqs = (String)courseJSON.get("prereqs");
-
+                UUID id = UUID.fromString((String)courseJSON.get("id"));
+                String title = (String)courseJSON.get("title");
+    
+                String courseNumberStr = (String)courseJSON.get("courseNumber");
+                int courseNumber = courseNumberStr.isEmpty() ? 0 : Integer.parseInt(courseNumberStr);
+    
+                String hoursStr = (String)courseJSON.get("hours");
+                int hours = hoursStr.isEmpty() ? 0 : Integer.parseInt(hoursStr);
+    
+                String subject = (String)courseJSON.get("subject");
+                String prereqs = (String)courseJSON.get("prereqs");
+    
                 ArrayList<String> preqArrayList = new ArrayList<String>();
-                for (String prereq : prereqs.split("&"))
-                    preqArrayList.add(prereq);
+                for (String prereq : prereqs.split("&")) {
+                    if (!prereq.isEmpty()) {
+                        preqArrayList.add(prereq);
+                    }
+                }
                 
                 courses.add(new Course(id, title, hours, subject, courseNumber, preqArrayList));
             }
         } catch (Exception e) {
             e.printStackTrace();
         }
-
+    
         return courses;
     }
 

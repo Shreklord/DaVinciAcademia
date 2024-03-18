@@ -129,7 +129,41 @@ public class UI {
     }
 
     public void facultyScreen() {
-        System.out.println("User type: faculty");
+        while (true) {
+            System.out.print("\033[H\033[2J");  
+            System.out.flush();
+            System.out.println("1. Add advisee by StudentUUID");
+            System.out.println("2. View advisees");
+            System.out.println("q. Logout");
+
+            String menuChoice = this.scanner.nextLine();
+
+            if (menuChoice.equals("1")) {
+                System.out.print("\033[H\033[2J");  
+                System.out.flush();
+                System.out.println("Enter student's UUID: ");
+                UUID inputUUID = UUID.fromString(this.scanner.nextLine());
+                Faculty currentUser = UserList.getFacultyByID(this.facade.getCurrentUser().getID());
+                currentUser.addStudent(UserList.getStudentByID(inputUUID));
+
+            } else if (menuChoice.equals("2")) {
+                Faculty currentUser = UserList.getFacultyByID(this.facade.getCurrentUser().getID());
+                ArrayList<Student> students = currentUser.getAssignedStudents();
+                for (Student s : students) {
+                    System.out.println(s.getFirstName());
+                }
+
+            } else if (menuChoice.equals("q")) {
+                this.facade.setCurrentUser(null);
+                loginScreen();
+            }
+
+            while (true) {
+                System.out.println("enter 'q' to quit: "); 
+                if (this.scanner.nextLine().equals("q"))
+                    break;
+            }
+        }
     }
 
     public void searchScreen() {

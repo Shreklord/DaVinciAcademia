@@ -147,22 +147,40 @@ public class UI {
                 currentUser.addStudent(UserList.getStudentByID(inputUUID));
 
             } else if (menuChoice.equals("2")) {
+                System.out.print("\033[H\033[2J");  
+                System.out.flush();
                 Faculty currentUser = UserList.getFacultyByID(this.facade.getCurrentUser().getID());
                 ArrayList<Student> students = currentUser.getAssignedStudents();
-                for (Student s : students) {
-                    System.out.println(s.getFirstName());
+                for (int i = 0; i < students.size(); i++) {
+                    Student s = students.get(i);
+                    System.out.println((i+1) + ": " + s.getFirstName() + " " + s.getLastName());
                 }
 
+                System.out.println("Enter the number to select student");
+                String studentChoice = this.scanner.nextLine();
+                int index = Integer.parseInt(studentChoice) - 1;
+                Student s = students.get(index);
+                System.out.println("your current student is: " + s.getFirstName() + " " + s.getLastName());
+                System.out.println("1. View current courses");
+                System.out.println("2. View taken courses");
+                System.out.println("3. View courses to be taken in major");
+                System.out.println("q. exit");
+            
+                String studentMenuChoice = this.scanner.nextLine();
+                if (studentMenuChoice.equals("1")) {
+                    
+                } else if (studentMenuChoice.equals("2")) {
+                   
+                } else if (studentMenuChoice.equals("3")) {
+
+                }
+                
             } else if (menuChoice.equals("q")) {
                 this.facade.setCurrentUser(null);
                 loginScreen();
             }
 
-            while (true) {
-                System.out.println("enter 'q' to quit: "); 
-                if (this.scanner.nextLine().equals("q"))
-                    break;
-            }
+
         }
     }
 

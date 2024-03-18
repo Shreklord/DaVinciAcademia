@@ -16,6 +16,7 @@ public class UI {
     }
 
     public void run() {
+        CreateTawnie();
         while (true) {
             System.out.print("\033[H\033[2J");  
             System.out.flush();
@@ -30,6 +31,7 @@ public class UI {
                 break;
             }
         }
+        
          // comment this line out if you don't want the app to run
     }
 
@@ -273,14 +275,14 @@ public class UI {
         System.out.println("\n#--------------------------------------#\n\n\n\n");
     }
 
-    public void createBraxWest() {
+    public void CreateTawnie() {
         System.out.println("creating Brax West...");
 
         MajorList majors =  MajorList.getInstance();
-        Major computerScience = majors.getMajorByName("Computer Science");
+        Major computerInfoSystems = majors.getMajorByName("Computer Information Systems");
 
         CourseList courseList = CourseList.getInstance();
-        ArrayList<Course> allCourses = courseList.getCoursesByMajor("Computer Science");
+        ArrayList<Course> allCourses = courseList.getCoursesByMajor("Computer Information Systems");
         ArrayList<StudentCourse> courses = new ArrayList<StudentCourse>();
         for (Course c : allCourses) {
 
@@ -294,18 +296,18 @@ public class UI {
         }
 
         ArrayList<String> notes = new ArrayList<String>();
-        notes.add("almost graduated!!");
+        notes.add("");
 
-        Student brax = new Student(UUID.fromString("9dee31e4-ed5e-4dc2-bfd1-634c9c9222da"),
-        "brax123", "password", "Brax", "West", "junior", computerScience, 3.5, courses, notes);
+        Student tawnie = new Student(UUID.fromString("45a0b8be-5b55-4555-a835-eeab21a8ba0e"),
+        "thill", "fortnite", "Tawnie", "Hill", "sophomore", computerInfoSystems, 1.7, courses, notes);
 
-        System.out.println("created brax");
+        System.out.println("created Tawnie");
 
         ArrayList<Student> allStudents = UserList.getStudents();
-        allStudents.add(brax);
+        allStudents.add(tawnie);
         DataWriter.saveStudents(allStudents);
 
-        System.out.println("saved brax");
+        System.out.println("saved tawnie");
     }
 
     public void getMajorTest() {
@@ -331,7 +333,7 @@ public class UI {
         }
     }
 
-    public void testDataWriter() {
+    // public void testDataWriter() {
         // //This can be deleted eventually. 
         // System.out.println();
         // DataLoader dl = new DataLoader();
@@ -346,7 +348,7 @@ public class UI {
         // System.out.println(michael.getStanding());
         // st.add(michael);
         // DataWriter.saveStudents(st);
-    }
+    // }
 
     public void testEightSemesterPlan() {
         ArrayList<Student> students = UserList.getStudents();
@@ -362,7 +364,6 @@ public class UI {
     }
 
     public static void main(String[] args) {
-        
         UI ui = new UI();
         ui.run();
     }

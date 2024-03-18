@@ -146,7 +146,16 @@ public class Facade {
 
 
 	public String formattedStudentEightSemesterPlan() {
-		return "";
+        // will only be called after the user has logged into student so we will handle the user as one
+        String returnString = "@@@@@@@@@@@@@@@@@@@ EIGHT-SEMESTER PLAN @@@@@@@@@@@@@@@@@@@\n";
+        Student currentStudent = users.getStudentByID(this.currentUser.getID());
+        ArrayList<Course> sortedCourseList = currentStudent.displayEightSemesterPlan();
+
+        for (Course c : sortedCourseList) {
+            returnString += c.getTitle() + "\n";
+        }
+
+		return returnString;
 	}
 
 }

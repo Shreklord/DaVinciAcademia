@@ -48,9 +48,9 @@ public class UI {
         System.out.flush();
 
         System.out.println("logging in");
-        for (int i = 0; i < 30; i++) {
+        for (int i = 0; i < 10; i++) {
             try {
-                TimeUnit.MILLISECONDS.sleep((int)(Math.random() * 100));
+                TimeUnit.MILLISECONDS.sleep((int)(Math.random() * 300));
             } catch (Exception e) {}
             System.out.print("..");
         }
@@ -58,8 +58,8 @@ public class UI {
         System.out.print("\033[H\033[2J");  
         System.out.flush();
 
-        String legalName = this.facade.getCurrentUser().getFirstName() + " " + this.facade.getCurrentUser().getLastName();
-        System.out.println("logged in as " + legalName);
+        String govName = this.facade.getCurrentUser().getFirstName() + " " + this.facade.getCurrentUser().getLastName();
+        System.out.println("logged in as " + govName);
 
         if (this.facade.getCurrentUser() instanceof Student)
             studentScreen();
@@ -102,7 +102,6 @@ public class UI {
                 this.facade.setCurrentUser(null);
                 loginScreen();
             }
-
 
             while (true) {
                 System.out.println("Enter 'q' to return home: ");
@@ -168,11 +167,13 @@ public class UI {
 
     }
 
-
     public void displayResults(ArrayList<Course> results) {
+        System.out.println("\n#--------------------------------------#\n");
         for (Course c : results) {
-            System.out.println(c.getTitle());
+            System.out.println("----- " + c.getTitle() + " (" + c.getSubject() + c.getCourseNumber()+ ")\n");
+            System.out.println("    Hours: " + c.getHours() + "\n");
         }
+        System.out.println("\n#--------------------------------------#\n\n\n\n");
     }
 
     public void createBraxWest() {

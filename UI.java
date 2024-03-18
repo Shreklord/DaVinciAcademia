@@ -170,6 +170,7 @@ public class UI {
         System.out.println("Enter a parameter to search courses by: "); 
         System.out.println("1. By name and number");
         System.out.println("2. By requirement");
+        System.out.println("3. By Application Area");
 
         String searchChoice = this.scanner.nextLine();
 
@@ -211,8 +212,29 @@ public class UI {
             } else if (reqChoice.equals("7")) {
 
             }
-        }
+        } else if (searchChoice.equals("3")){
+            System.out.println("choose a Application Area to search by: ");
+            System.out.println("1. Science");
+            System.out.println("2. Math");
+            System.out.println("3. Digital Design");
+            System.out.println("4. Robotics");
+            System.out.println("5. Speech");
 
+            String ApAreaChoice = scanner.nextLine();
+            
+            if (ApAreaChoice.equals("1")){
+
+            } else if (ApAreaChoice.equals("2")) {
+
+            } else if (ApAreaChoice.equals("3")) {
+                ArrayList<Course> result2 = CourseList.searchCourseByNameAndNumber(new String[]{"CSCE"}, ApAreaChoice);
+                displayResults(result2);
+            } else if (ApAreaChoice.equals("4")) {
+
+            } else if (ApAreaChoice.equals("5")) {
+
+            }
+        }
     }
 
     public void createAccountScreen() {

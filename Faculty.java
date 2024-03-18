@@ -44,5 +44,6 @@ public class Faculty extends User{
         ArrayList<String> notes = student.getNotes();
         notes.add(note);
         student.setNotes(notes);
+        DataWriter.saveStudents(UserList.getStudents());
     }
 }

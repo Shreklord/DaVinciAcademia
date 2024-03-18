@@ -261,18 +261,8 @@
             "reccomendedSemester": "1"
         },
         {
-            "courseName": "Carolina Core SCI",
-            "courseID": "49c4cd5b-4d0e-47b6-9607-3b3c98f42991",
-            "reccomendedSemester": "1"
-        },
-        {
             "courseName": "ENGL102",
             "courseID": "fe1fc2f9-1684-463c-8317-c23dbc72c4f7",
-            "reccomendedSemester": "2"
-        },
-        {
-            "courseName": "Carolina Core SCI",
-            "courseID": "49c4cd5b-4d0e-47b6-9607-3b3c98f42991",
             "reccomendedSemester": "2"
         },
         {
@@ -283,11 +273,6 @@
         {
             "courseName": "CSCE215",
             "courseID": "82bcab5c-8252-455e-b0e7-4f3864d827f5",
-            "reccomendedSemester": "2"
-        },
-        {
-            "courseName": "Carolina Core AIU",
-            "courseID": "b47a90a5-2770-42b0-9ce6-67cf4dc704aa",
             "reccomendedSemester": "2"
         },
         {
@@ -308,11 +293,6 @@
         {
             "courseName": "SPCH140",
             "courseID": "2ea21702-a697-40da-a8a7-93688d0d570f",
-            "reccomendedSemester": "3"
-        },
-        {
-            "courseName": "Carolina Core GSS",
-            "courseID": "a2d09af4-1a87-4177-9233-c6fbfcfc2754",
             "reccomendedSemester": "3"
         },
         {
@@ -338,11 +318,6 @@
         {
             "courseName": "MGMT371",
             "courseID": "3da944eb-985f-4076-9223-764ea62fec84",
-            "reccomendedSemester": "4"
-        },
-        {
-            "courseName": "Carolina Core GHS",
-            "courseID": "c650a617-66da-4970-a8ec-b667aa450b1b",
             "reccomendedSemester": "4"
         },
         {
@@ -376,11 +351,6 @@
             "reccomendedSemester": "5"
         },
         {
-            "courseName": "BIM Minor Elective",
-            "courseID": "262ad912-8e6d-411e-818b-e4417b428a9b",
-            "reccomendedSemester": "5"
-        },
-        {
             "courseName": "CSCE350",
             "courseID": "06236ad6-a1ea-4bb2-b9e5-468e3b5acc51",
             "reccomendedSemester": "6"
@@ -406,11 +376,6 @@
             "reccomendedSemester": "6"
         },
         {
-            "courseName": "BIM Minor Elective",
-            "courseID": "262ad912-8e6d-411e-818b-e4417b428a9b",
-            "reccomendedSemester": "6"
-        },
-        {
             "courseName": "CSCE490",
             "courseID": "7b7ad695-2ab2-4e7e-ad12-b07f8ad1e7c1",
             "reccomendedSemester": "7"
@@ -431,35 +396,71 @@
             "reccomendedSemester": "7"
         },
         {
-            "courseName": "Liberal Arts Elective",
-            "courseID": "febe96e4-b98e-4379-8e18-acb1397ff1a9",
-            "reccomendedSemester": "7"
-        },
-        {
             "courseName": "CSCE492",
             "courseID": "b16d1381-999b-4be9-81cf-d664f75b2521",
             "reccomendedSemester": "8"
         },
         {
-            "courseName": "Computer Information Systems Major Elective",
-            "courseID": "",
+            "courseName": "MGSC590",
+            "courseID": "60de8570-7b19-461e-b222-87fd68fa2edd",
             "reccomendedSemester": "8"
-        },
-        {
-            "courseName": "",
-            "courseID": "",
-            "reccomendedSemester": "8"
-        },
-        {
-            "courseName": "",
-            "courseID": "",
-            "reccomendedSemester": "8"
-        },
-        {
-            "courseName": "",
-            "courseID": "",
-            "reccomendedSemester": "8"
-        },
-    ]
+        }],
+        "electivereq": [
+            {
+                "courseName": "Carolina Core SCI",
+                "courseID": "49c4cd5b-4d0e-47b6-9607-3b3c98f42991",
+                "reccomendedSemester": "1"
+            },
+            {
+                "courseName": "Carolina Core SCI",
+                "courseID": "49c4cd5b-4d0e-47b6-9607-3b3c98f42991",
+                "reccomendedSemester": "2"
+            },
+            {
+                "courseName": "Carolina Core AIU",
+                "courseID": "b47a90a5-2770-42b0-9ce6-67cf4dc704aa",
+                "reccomendedSemester": "2"
+            },
+            {
+                "courseName": "Carolina Core GSS",
+                "courseID": "a2d09af4-1a87-4177-9233-c6fbfcfc2754",
+                "reccomendedSemester": "3"
+            },
+            {
+                "courseName": "Carolina Core GHS",
+                "courseID": "c650a617-66da-4970-a8ec-b667aa450b1b",
+                "reccomendedSemester": "4"
+            },
+            {
+                "courseName": "BIM Minor Elective",
+                "courseID": "262ad912-8e6d-411e-818b-e4417b428a9b",
+                "reccomendedSemester": "5"
+            },
+            {
+                "courseName": "BIM Minor Elective",
+                "courseID": "262ad912-8e6d-411e-818b-e4417b428a9b",
+                "reccomendedSemester": "6"
+            },
+            {
+                "courseName": "Liberal Arts Elective",
+                "courseID": "febe96e4-b98e-4379-8e18-acb1397ff1a9",
+                "reccomendedSemester": "7"
+            },
+            {
+                "courseName": "Computer Information Systems Major Elective",
+                "courseID": "25d02b86-78bb-4aff-8cc3-cc70c4caa4aa",
+                "reccomendedSemester": "8"
+            },
+            {
+                "courseName": "Liberal Arts Elective",
+                "courseID": "febe96e4-b98e-4379-8e18-acb1397ff1a9",
+                "reccomendedSemester": "8"
+            },
+            {
+                "courseName": "Liberal Arts Elective",
+                "courseID": "febe96e4-b98e-4379-8e18-acb1397ff1a9",
+                "reccomendedSemester": "8"
+            }
+        ]
     }
 ]

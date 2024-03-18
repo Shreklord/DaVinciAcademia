@@ -575,5 +575,13 @@
         "hours":"3",
         "subject":"ITAL",
         "prereqs":""
-        }
+    },
+    {
+        "id":"25d02b86-78bb-4aff-8cc3-cc70c4caa4aa",
+        "title":"Computer Information Systems Major Elective",
+        "courseNumber":"",
+        "hours":"3",
+        "subject":"",
+        "prereqs":""
+    }
 ]

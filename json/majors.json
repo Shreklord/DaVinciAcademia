@@ -386,25 +386,80 @@
             "reccomendedSemester": "6"
         },
         {
-            "courseName": "",
-            "courseID": "",
+            "courseName": "CSCE520",
+            "courseID": "196f4ae1-2974-4667-9c25-5acdc630e401",
             "reccomendedSemester": "6"
+        },
+        {
+            "courseName": "STAT516",
+            "courseID": "575ee062-552d-43ee-bb22-e62a2532a517",
+            "reccomendedSemester": "6"
+        },
+        {
+            "courseName": "ENGL462",
+            "courseID": "1b35f7ba-f1fa-4635-b66d-41b273e496e9",
+            "reccomendedSemester": "6"
+        },
+        {
+            "courseName": "ENGL463",
+            "courseID": "97193686-41d0-4993-9fc7-a07b4617d32f",
+            "reccomendedSemester": "6"
+        },
+        {
+            "courseName": "BIM Minor Elective",
+            "courseID": "262ad912-8e6d-411e-818b-e4417b428a9b",
+            "reccomendedSemester": "6"
+        },
+        {
+            "courseName": "CSCE490",
+            "courseID": "7b7ad695-2ab2-4e7e-ad12-b07f8ad1e7c1",
+            "reccomendedSemester": "7"
+        },
+        {
+            "courseName": "CSCE416",
+            "courseID": "5a0303cc-c7a0-4cae-9400-848c17cc8a79",
+            "reccomendedSemester": "7"
+        },
+        {
+            "courseName": "CSCE522",
+            "courseID": "c2656f4b-a66f-4a7e-b1e3-569aa2b4d60a",
+            "reccomendedSemester": "7"
+        },
+        {
+            "courseName": "MGSC490",
+            "courseID": "1a8cd589-1ee6-4fc9-ba20-083c9d3ba2fd",
+            "reccomendedSemester": "7"
+        },
+        {
+            "courseName": "Liberal Arts Elective",
+            "courseID": "febe96e4-b98e-4379-8e18-acb1397ff1a9",
+            "reccomendedSemester": "7"
+        },
+        {
+            "courseName": "CSCE492",
+            "courseID": "b16d1381-999b-4be9-81cf-d664f75b2521",
+            "reccomendedSemester": "8"
+        },
+        {
+            "courseName": "Computer Information Systems Major Elective",
+            "courseID": "",
+            "reccomendedSemester": "8"
         },
         {
             "courseName": "",
             "courseID": "",
-            "reccomendedSemester": "6"
+            "reccomendedSemester": "8"
         },
         {
             "courseName": "",
             "courseID": "",
-            "reccomendedSemester": "6"
+            "reccomendedSemester": "8"
         },
         {
             "courseName": "",
             "courseID": "",
-            "reccomendedSemester": "6"
-        }
+            "reccomendedSemester": "8"
+        },
     ]
     }
 ]

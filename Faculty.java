@@ -16,7 +16,7 @@ public class Faculty extends User{
     public void removeCourse(ArrayList<Course> courses, Course course) {
 
     }
-    
+
     public void editCourse(ArrayList<Course> courses, String category, String description) {
 
     }
@@ -27,8 +27,9 @@ public class Faculty extends User{
     public void removeStudent(UUID id) {
         // Remove student as advisee
     }
-    public void editStudent(UUID id) {
-
+    public void editStudent(Student student) {
+        // This function is kinda vague.
+        // Might want to break this up into smaller functions?
     }
 
     public void setAssignedStudents(ArrayList<Student> assignedStudents) {
@@ -42,5 +43,6 @@ public class Faculty extends User{
     public void addNote(Student student, String note) {
         ArrayList<String> notes = student.getNotes();
         notes.add(note);
+        student.setNotes(notes);
     }
 }

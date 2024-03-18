@@ -190,6 +190,7 @@ public class UI {
                     System.out.println("\nType out the note you would like to add:");
                     String note = this.scanner.nextLine();
                     currentUser.addNote(s, note);
+                    DataWriter.saveStudents(UserList.getStudents());
                 }
 
                 System.out.println("Enter 'q' to quit");

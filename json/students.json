@@ -34,24 +34,6 @@
         "password": "password",
         "coursesTaken": [
             {
-                "grade": "90.23149398724682",
-                "courseid": "cc8af1e8-11db-4e76-93f6-4b2407451b2b",
-                "attempts": "1",
-                "isCompleted": "false"
-            },
-            {
-                "grade": "86.40754024772058",
-                "courseid": "0d593112-6bc5-4817-8509-14fc5efb1083",
-                "attempts": "1",
-                "isCompleted": "false"
-            },
-            {
-                "grade": "58.52440625686393",
-                "courseid": "8aab2d59-4815-463f-9406-444d42b8e62b",
-                "attempts": "1",
-                "isCompleted": "false"
-            },
-            {
                 "grade": "64.61432797597631",
                 "courseid": "10fa13e6-f148-4495-a059-6642f5d952bb",
                 "attempts": "1",
@@ -167,5 +149,116 @@
         "GPA": "3.5",
         "id": "9dee31e4-ed5e-4dc2-bfd1-634c9c9222da",
         "userName": "brax123"
+    },
+    {
+        "standing": "sophomore",
+        "firstName": "Tawnie",
+        "lastName": "Hill",
+        "password": "fortnite",
+        "coursesTaken": [
+            {
+                "grade": "76.69487364710956",
+                "courseid": "3ae8576c-d061-4360-9064-2a5f4f9d196a",
+                "attempts": "1",
+                "isCompleted": "true"
+            },
+            {
+                "grade": "94.78477412294272",
+                "courseid": "3da944eb-985f-4076-9223-764ea62fec84",
+                "attempts": "1",
+                "isCompleted": "true"
+            },
+            {
+                "grade": "51.58619433973961",
+                "courseid": "2ea21702-a697-40da-a8a7-93688d0d570f",
+                "attempts": "1",
+                "isCompleted": "true"
+            },
+            {
+                "grade": "74.00710183938286",
+                "courseid": "39fe0d2e-8345-46ef-b999-f332883caf41",
+                "attempts": "1",
+                "isCompleted": "true"
+            },
+            {
+                "grade": "69.1365688956534",
+                "courseid": "e021dd81-271e-48e5-9f41-27820d3f447a",
+                "attempts": "1",
+                "isCompleted": "true"
+            },
+            {
+                "grade": "61.0243965075155",
+                "courseid": "da6d031b-70d9-4aeb-ab7f-73d25a088033",
+                "attempts": "1",
+                "isCompleted": "true"
+            },
+            {
+                "grade": "90.19442858297474",
+                "courseid": "7b7ad695-2ab2-4e7e-ad12-b07f8ad1e7c1",
+                "attempts": "1",
+                "isCompleted": "true"
+            },
+            {
+                "grade": "87.5631747031346",
+                "courseid": "fe1fc2f9-1684-463c-8317-c23dbc72c4f7",
+                "attempts": "1",
+                "isCompleted": "true"
+            },
+            {
+                "grade": "73.4025687214769",
+                "courseid": "cc74abf2-339a-4ac8-9c2b-7f9b79a4f233",
+                "attempts": "1",
+                "isCompleted": "true"
+            },
+            {
+                "grade": "55.43180326369945",
+                "courseid": "1028df38-cdc6-4bbf-a7b3-abf1bf9b4b43",
+                "attempts": "1",
+                "isCompleted": "true"
+            },
+            {
+                "grade": "69.51416434757579",
+                "courseid": "c2656f4b-a66f-4a7e-b1e3-569aa2b4d60a",
+                "attempts": "1",
+                "isCompleted": "true"
+            },
+            {
+                "grade": "99.06485209583579",
+                "courseid": "083462b4-5d9e-4f2b-9327-507021c986cc",
+                "attempts": "1",
+                "isCompleted": "true"
+            },
+            {
+                "grade": "85.52221204476186",
+                "courseid": "febe96e4-b98e-4379-8e18-acb1397ff1a9",
+                "attempts": "1",
+                "isCompleted": "true"
+            },
+            {
+                "grade": "85.0741698341242",
+                "courseid": "c650a617-66da-4970-a8ec-b667aa450b1b",
+                "attempts": "1",
+                "isCompleted": "true"
+            },
+            {
+                "grade": "61.87917917076764",
+                "courseid": "25d02b86-78bb-4aff-8cc3-cc70c4caa4aa",
+                "attempts": "1",
+                "isCompleted": "true"
+            },
+            {
+                "grade": "70.25896196341307",
+                "courseid": "49c4cd5b-4d0e-47b6-9607-3b3c98f42991",
+                "attempts": "1",
+                "isCompleted": "true"
+            }
+        ],
+        "notes": [
+            ""
+        ],
+        "major": "Computer Information Systems",
+        "GPA": "1.7",
+        "id": "45a0b8be-5b55-4555-a835-eeab21a8ba0e",
+        "userName": "thill"
     }
 ]

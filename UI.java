@@ -16,7 +16,6 @@ public class UI {
     }
 
     public void run() {
-        CreateTawnie();
         while (true) {
             System.out.print("\033[H\033[2J");  
             System.out.flush();
@@ -154,6 +153,9 @@ public class UI {
                 System.out.flush();
                 Faculty currentUser = UserList.getFacultyByID(this.facade.getCurrentUser().getID());
                 ArrayList<Student> students = currentUser.getAssignedStudents();
+
+                //If students is null, do something
+
                 for (int i = 0; i < students.size(); i++) {
                     Student s = students.get(i);
                     System.out.println((i+1) + ": " + s.getFirstName() + " " + s.getLastName());
@@ -167,6 +169,7 @@ public class UI {
                 System.out.println("1. View current courses");
                 System.out.println("2. View taken courses");
                 System.out.println("3. View courses to be taken in major");
+                System.out.println("4. Add a note to the student's profile");
                 System.out.println("q. exit");
             
                 String studentMenuChoice = this.scanner.nextLine();
@@ -176,6 +179,10 @@ public class UI {
                    System.out.println(this.facade.formattedStudentCourses(s, true));
                 } else if (studentMenuChoice.equals("3")) {
                     System.out.println(this.facade.formattedStudentCoursesLeft(s));
+                } else if (studentMenuChoice.equals("4")) {
+                    System.out.println("\nType out the note you would like to add:");
+                    String note = this.scanner.nextLine();
+                    currentUser.addNote(s, note);
                 }
 
                 System.out.println("Enter 'q' to quit");

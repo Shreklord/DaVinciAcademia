@@ -16,15 +16,16 @@ public class Faculty extends User{
     public void removeCourse(ArrayList<Course> courses, Course course) {
 
     }
+    
     public void editCourse(ArrayList<Course> courses, String category, String description) {
 
     }
     
-    public void addStudent(UUID id){
-
+    public void addStudent(Student student){
+        assignedStudents.add(student);
     }
     public void removeStudent(UUID id) {
-        // Remove student from what?
+        // Remove student as advisee
     }
     public void editStudent(UUID id) {
 
@@ -38,7 +39,8 @@ public class Faculty extends User{
         return assignedStudents;
     }
 
-    public void addNote(Student student) {
-        
+    public void addNote(Student student, String note) {
+        ArrayList<String> notes = student.getNotes();
+        notes.add(note);
     }
 }

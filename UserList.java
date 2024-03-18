@@ -77,7 +77,7 @@ public class UserList {
     public static ArrayList<Student> getStudents() {
         return students;
     }
-    public ArrayList<Faculty> getFaculty() {
+    public static ArrayList<Faculty> getFaculty() {
         return faculty;
     }
 

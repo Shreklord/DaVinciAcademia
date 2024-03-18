@@ -16,8 +16,10 @@ public class UI {
     }
 
     public void run() {
-        System.out.println("Enter 1 to create an account Enter 2 to login ('q' to quit): ");
         while (true) {
+            System.out.print("\033[H\033[2J");  
+            System.out.flush();
+            System.out.println("Enter 1 to create an account Enter 2 to login ('q' to quit): ");
             String choice = this.scanner.nextLine();
             if (choice.equals("1")) {
                 createAccountScreen();
@@ -188,7 +190,21 @@ public class UI {
 
         } else if (choice.equals("2")) {
             System.out.println("Creating faculty member...");
-            System.out.println();
+            UUID newID = UUID.randomUUID();
+            System.out.println("Enter first name: ");
+            String firstName = this.scanner.nextLine();
+            System.out.println("Enter last name: ");
+            String lastName = this.scanner.nextLine();
+            System.out.println("Enter username: ");
+            String userName = this.scanner.nextLine();
+            System.out.println("Enter password: ");
+            String password = this.scanner.nextLine();
+
+            ArrayList<Student> emptyList = new ArrayList<Student>();
+            Faculty newFac = new Faculty(newID, userName, password, firstName, lastName, emptyList);
+            ArrayList<Faculty> tempList = UserList.getFaculty();
+            tempList.add(newFac);
+            DataWriter.saveFaculty(tempList);
         }
     }
 

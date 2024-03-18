@@ -112,7 +112,7 @@ public class DataWriter extends DataConstants {
         JSONArray assignedStudentIDs = new JSONArray();
 
         for(Student student : faculty.getAssignedStudents()) {
-            assignedStudentIDs.add(student.getID());
+            assignedStudentIDs.add(String.valueOf(student.getID()));
         }
         
         facultyDetails.put("assignedStudents", assignedStudentIDs);

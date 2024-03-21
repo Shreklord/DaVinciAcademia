@@ -1,3 +1,6 @@
+import java.io.FileWriter;
+import java.io.IOException;
+import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.UUID;
@@ -155,5 +158,19 @@ public class Facade {
 
 		return returnString;
 	}
+
+        public void writeEightSemesterPlanToFile() {
+        // Call the method that formats the eight-semester plan
+        String plan = formattedStudentEightSemesterPlan();
+        
+        // Specify the output file name
+        String fileName = "output.txt";
+        
+        try (PrintWriter out = new PrintWriter(new FileWriter(fileName))) {
+            out.println(plan);
+        } catch (IOException e) {
+            System.err.println("An error occurred while writing to the file: " + e.getMessage());
+        }
+    }
 
 }

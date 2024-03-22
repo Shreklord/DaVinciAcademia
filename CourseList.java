@@ -1,5 +1,6 @@
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.UUID;
 
 public class CourseList {
     private static CourseList courseList;
@@ -90,6 +91,10 @@ public class CourseList {
                 return c;
         }
         return null;
+    }
+
+    public Course getByUUID(UUID id) {
+        return this.getByUUID(id.toString());
     }
 
 }

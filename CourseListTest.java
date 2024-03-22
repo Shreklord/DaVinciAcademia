@@ -12,11 +12,10 @@ import org.junit.jupiter.api.Test;
 
 class CourseListTest {
 
-    private CourseList courses;
+    protected CourseList courses;
 
     @BeforeClass
     public void oneTimeSetup() {
-        courses = CourseList.getInstance();
     }
 
     @AfterClass
@@ -26,7 +25,7 @@ class CourseListTest {
 
     @BeforeEach
     public void setup() {
-        // runs before each test
+        courses = CourseList.getInstance();
     }
 
     @AfterEach
@@ -81,7 +80,7 @@ class CourseListTest {
     @Test
     public void testGetByUUIDinvalidID() {
         Course returnVal = courses.getByUUID("not an id");
-        assertNull(returnVal, "parameter 'not an id' should return null");
+        assertNull(returnVal, "parameter 'not an id' should return");
     }
 
 }

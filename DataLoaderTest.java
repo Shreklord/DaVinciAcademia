@@ -32,7 +32,25 @@ public class DataLoaderTest {
     @Test
     public void testgetStudents() {
         userList = DataLoader.getStudents();
-        assertEquals(1, userList.size());
+        assertEquals(3, userList.size());
+    }
+
+    @Test
+    public void testgetMajors() {
+        ArrayList<Major> majorList = DataLoader.getMajors();
+        assertEquals(2, majorList.size());
+    }
+
+    @Test
+    public void testgetfaculty() {
+        ArrayList<Faculty> facultyList = DataLoader.getFaculty();
+        assertEquals(3, facultyList.size());
+    }
+
+    @Test
+    public void testgetCourse() {
+        ArrayList<Course> courseList = DataLoader.getCourses();
+        assertEquals(73, courseList.size());
     }
 
 

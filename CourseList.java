@@ -1,5 +1,6 @@
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.UUID;
 
 public class CourseList {
     private static CourseList courseList;
@@ -92,18 +93,8 @@ public class CourseList {
         return null;
     }
 
-    /**
-     * iterates through courses and returns a course if found null if not
-     * @param String
-     * @param int
-     * @return Course
-     */
-    public Course getByTitleAndNumber(String subject, int courseNumber) {
-        for (Course c : courses) {
-            if (c.getSubject().equalsIgnoreCase(subject) && c.getCourseNumber() == courseNumber) {
-                return c;
-            }
-        }
-        return null;
+    public Course getByUUID(UUID id) {
+        return this.getByUUID(id.toString());
     }
+
 }

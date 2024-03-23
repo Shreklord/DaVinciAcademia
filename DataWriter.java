@@ -11,9 +11,7 @@ import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 
 public class DataWriter extends DataConstants {
-    
-    //SHOULD WORK
-    //NOT TESTED
+
     public static boolean saveStudents(ArrayList<Student> students) {
         JSONArray jsonStudents = new JSONArray();
 
@@ -77,8 +75,6 @@ public class DataWriter extends DataConstants {
         return studentDetails;
     }
 
-    //SHOULD WORK
-    //NOT TESTED
     public static boolean saveFaculty(ArrayList<Faculty> faculty) {
         JSONArray jsonFaculty = new JSONArray();
 
@@ -98,8 +94,6 @@ public class DataWriter extends DataConstants {
         return true;
     }
 
-    //SHOULD WORK
-    //NOT TESTED
     public static JSONObject getFacultyJSON(Faculty faculty) {
         JSONObject facultyDetails = new JSONObject();
 
@@ -120,8 +114,6 @@ public class DataWriter extends DataConstants {
         return facultyDetails;
     }
     
-    //SHOULD WORK
-    //NOT TESTED
     public static boolean saveCourses(ArrayList<Course> courses) {
         JSONArray jsonCourses = new JSONArray();
 
@@ -155,7 +147,7 @@ public class DataWriter extends DataConstants {
         for (int i = 0; i < course.getPrereqs().size(); i++) {
             str.append(course.getPrereqs().get(i)).append("&");
         }
-        courseDetails.put("prereqs", str);
+        courseDetails.put("prereqs", str.toString());
 
         return courseDetails;
     }
@@ -202,7 +194,7 @@ public class DataWriter extends DataConstants {
             String recSemester = String.valueOf(entry.getValue());
 
             majorClassWithRec.put("courseName", targetCourse.getTitle() + String.valueOf(targetCourse.getCourseNumber()));  
-            majorClassWithRec.put("courseID", targetCourse.getID());
+            majorClassWithRec.put("courseID", String.valueOf(targetCourse.getID()));
             majorClassWithRec.put("reccomendedSemester", recSemester);
 
             majorClassJSON.add(majorClassWithRec);
@@ -212,7 +204,7 @@ public class DataWriter extends DataConstants {
             String recSemester = String.valueOf(entry.getValue());
             
             majorElecWithRec.put("courseName", targetCourse.getTitle() + String.valueOf(targetCourse.getCourseNumber()));  
-            majorElecWithRec.put("courseID", targetCourse.getID());
+            majorElecWithRec.put("courseID", String.valueOf(targetCourse.getID()));
             majorElecWithRec.put("reccomendedSemester", recSemester); 
             majorElectJSON.add(majorElecWithRec);
         }

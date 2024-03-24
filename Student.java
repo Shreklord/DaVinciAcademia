@@ -36,6 +36,9 @@ public class Student extends User{
     }
 
     public ArrayList<Course> displayEightSemesterPlan() {
+        if(standing == null) {
+            return null;
+        }
         ArrayList<Course> plan = new ArrayList<Course>();
         HashMap<Course, Integer> majorReqs = major.getMajorRequirements();
         HashMap<Course, Integer> electiveReqs = major.getElectiveCourseReqs();

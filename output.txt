@@ -1,41 +1,41 @@
 @@@@@@@@@@@@@@@@@@@ EIGHT-SEMESTER PLAN @@@@@@@@@@@@@@@@@@@
+Algorithmic Design I
+Carolina Core AIU
+Calculus 1
 Critical Reading and Composition
 Computing in the Modern World
-Algorithmic Design I
-Calculus 1
-Carolina Core AIU
-Algorithmic Design II
-Calculus II
 UNIX/Linux Fundamentals
+Algorithmic Design II
+General Chemistry I
 Rhetoric and Composition
 General Chemistry I Lab
-General Chemistry I
-General Chemistry II Lab
+Calculus II
 General Chemistry II
 Digital Logic Design
 Discrete Structures
-Public Communication
+General Chemistry II Lab
 Advancing Programming Techniques
-Vector Calculus
-Software Engineering
+Public Communication
 Laboratory Science Elective
-Carolina Core GFL
 Carolina Core GSS
 Introduction to Computer Architecture
+Carolina Core GFL
+Software Engineering
+Vector Calculus
+Professional Issues in Computer Science Engineering
 Operating Systems
 Technical Writing
 Data Structures & Algorithms
-Professional Issues in Computer Science Engineering
 Programming Language Structures
-Introduction to Computer Networks
 Statistics for Engineers
-Applied Linear Algebra
+Introduction to Computer Networks
 Application Area Elective
+Applied Linear Algebra
 Foundations of Computation
 Applied Linear Algebra Lab
 Capstone Computing Project I
-Capstone Computing Project II
-CSCE Major Elective
 Carolina Core GHS
 Liberal Arts Elective
+CSCE Major Elective
+Capstone Computing Project II
 

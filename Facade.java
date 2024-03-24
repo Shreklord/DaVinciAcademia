@@ -47,9 +47,13 @@ public class Facade {
 
     public ArrayList<Course> getEightSemesterPlan(UUID id) {
         
+        if(users.getStudentByID(id) == null) {
+            return null;
+        } else {
         Student temp = users.getStudentByID(id);
         System.out.println(temp.getMajor().getName());
         return temp.displayEightSemesterPlan();
+        }
     }
 
     public ArrayList<Major> getMajors() {
@@ -72,6 +76,9 @@ public class Facade {
         String returnString = "";
 
         // will only be called after the user has logged into student so we will handle the user as one
+        if(users.getUser(s.getUsername(), s.getPassword()) == null) {
+            return null;
+        }
         ArrayList<StudentCourse> studentCourses = s.getCourses();
         for (StudentCourse c : studentCourses) {
             
@@ -94,7 +101,9 @@ public class Facade {
 
     public String formattedStudentCoursesLeft(Student student) {
         String returnString = "";
-
+        if(users.getUser(student.getID())== null){
+            return null;
+        }
         // will only be called after the user has logged into student so we will handle the user as one
         Student currentStudent = student;
         ArrayList<StudentCourse> studentCourses = currentStudent.getCourses();

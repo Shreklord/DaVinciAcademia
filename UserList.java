@@ -83,6 +83,14 @@ public class UserList {
         return null;
     }
 
+    public void addStudent(Student student){
+        students.add(student);
+    }
+
+    public void addFaculty(Faculty faculty){
+        this.faculty.add(faculty);
+    }
+
     public static ArrayList<Student> getStudents() {
         return students;
     }

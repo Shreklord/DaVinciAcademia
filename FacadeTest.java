@@ -73,6 +73,14 @@ public class FacadeTest {
         assertNull(formattedCourses);
     }
 
+    @Test
+    public void formattedStudentEightSemesterPlanTest() {
+        Student user = DataLoader.getStudents().get(0);
+        facade.setCurrentUser(user);
+        String formattedPlan = facade.formattedStudentEightSemesterPlan();
+        assertNotNull(formattedPlan);
+    }
+
 
     
 }

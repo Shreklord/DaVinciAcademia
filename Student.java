@@ -2,6 +2,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.UUID;
+import java.util.stream.Collectors;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -61,6 +62,31 @@ public class Student extends User{
         plan = sortedMajorReqs;
         return plan;
     }
+
+    public ArrayList<Course> displaySemesterbyInt(int semester) {
+        ArrayList<Course> semesterCourses = new ArrayList<>();
+
+        // Check if the major is set
+        if (this.major == null) {
+            System.out.println("Major is not set for this student.");
+            return semesterCourses; // Return empty list
+        }
+
+        // Combine major and elective requirements
+        HashMap<Course, Integer> combinedReqs = new HashMap<>(this.major.getMajorRequirements());
+        combinedReqs.putAll(this.major.getElectiveCourseReqs());
+
+        // Filter courses by the specified semester
+        for (Map.Entry<Course, Integer> entry : combinedReqs.entrySet()) {
+            if(entry.getValue().equals(semester)) {
+                semesterCourses.add(entry.getKey());
+            }
+        }
+
+        return semesterCourses;
+    }
+
+  
     
     @Override
     public UUID getID() {

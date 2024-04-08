@@ -97,6 +97,7 @@ public class UI {
             System.out.println("3. View uncompleted major courses ");
             System.out.println("4. Search for a course ");
             System.out.println("5. View my eight-semester plan ");
+            System.out.println("6. View eight semester plan by each semester ");
             System.out.println("q. logout");
             System.out.println("\n\n\nEnter choice: ");
 
@@ -120,6 +121,11 @@ public class UI {
             if (choice.equals("5")) { // to do
                 System.out.println(this.facade.formattedStudentEightSemesterPlan());
                 this.facade.writeEightSemesterPlanToFile();
+            }
+            if (choice.equals("6")) {
+                System.out.println("Enter the semester you would like to view: ");
+                int semester = scanner.nextInt();
+                System.out.println(this.facade.displaySemesterByNumber(currentStudent, semester));
             }
             if (choice.equals("q")) {
                 this.facade.setCurrentUser(null);

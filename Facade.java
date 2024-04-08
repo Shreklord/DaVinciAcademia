@@ -2,7 +2,11 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 import java.util.UUID;
 
 public class Facade {
@@ -153,6 +157,13 @@ public class Facade {
 
         return returnString;
     }
+
+      public ArrayList<Course> displaySemesterByNumber(Student student, int semester) {
+        Student currentStudent = student;
+        return currentStudent.displaySemesterbyInt(semester);
+
+      }
+
 
 
 	public String formattedStudentEightSemesterPlan() {

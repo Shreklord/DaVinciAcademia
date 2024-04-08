@@ -125,7 +125,8 @@ public class UI {
             if (choice.equals("6")) {
                 System.out.println("Enter the semester you would like to view: ");
                 int semester = scanner.nextInt();
-                System.out.println(this.facade.displaySemesterByNumber(currentStudent, semester));
+                //System.out.println(this.facade.displaySemesterByNumber(currentStudent, semester));
+                System.out.println(this.facade.formattedDisplaySemesterByNumber(currentStudent, semester));
             }
             if (choice.equals("q")) {
                 this.facade.setCurrentUser(null);

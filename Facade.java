@@ -161,8 +161,27 @@ public class Facade {
       public ArrayList<Course> displaySemesterByNumber(Student student, int semester) {
         Student currentStudent = student;
         return currentStudent.displaySemesterbyInt(semester);
-
       }
+
+      public String formattedDisplaySemesterByNumber(Student student, int semester){
+        Student currentStudent = student;
+        
+        // Retrieve the semester courses for the given semester
+        ArrayList<Course> semesterCourses = currentStudent.displaySemesterbyInt(semester);
+        
+        // If no courses found for the semester
+        if (semesterCourses.isEmpty()) {
+            return "No courses found for Semester " + semester + ".";
+        }
+        
+        // Build the return string with a dynamic semester title
+        String returnString = "----- SEMESTER " + semester + " -----\n";
+        for (Course c : semesterCourses) {
+            returnString += c.getTitle() + "\n"; // Using getTitle() for course name
+        }
+        
+        return returnString;
+    }
 
 
 
